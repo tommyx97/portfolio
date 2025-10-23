@@ -61,7 +61,9 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         duration: 0.8,
         delay: 0.2
       }} className="max-w-[1800px] mx-auto flex items-center justify-between" data-magicpath-id="4" data-magicpath-path="TommasoPortfolio.tsx">
-          {navLinks.map((link, idx) => <a key={link.id} href={link.href} className="text-sm lg:text-base font-light tracking-[0.2em] text-white/90 hover:text-white transition-colors duration-300 uppercase" data-magicpath-uuid={(link as any)["mpid"] ?? "unsafe"} data-magicpath-id="5" data-magicpath-path="TommasoPortfolio.tsx">
+          {navLinks.map((link, idx) => <a key={link.id} href={link.href} className="text-sm lg:text-base font-light tracking-[0.2em] text-white/90 hover:text-white transition-colors duration-300 uppercase" data-magicpath-uuid={(link as any)["mpid"] ?? "unsafe"} data-magicpath-id="5" data-magicpath-path="TommasoPortfolio.tsx" style={{
+          fontFamily: "Inter"
+        }}>
               <motion.span data-magicpath-motion-tag="motion.span" initial={{
             opacity: 0,
             y: -10
@@ -71,7 +73,11 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           }} transition={{
             duration: 0.6,
             delay: 0.3 + idx * 0.1
-          }} data-magicpath-uuid={(link as any)["mpid"] ?? "unsafe"} data-magicpath-field="label:unknown" data-magicpath-id="6" data-magicpath-path="TommasoPortfolio.tsx">
+          }} data-magicpath-uuid={(link as any)["mpid"] ?? "unsafe"} data-magicpath-field="label:unknown" data-magicpath-id="6" data-magicpath-path="TommasoPortfolio.tsx" style={{
+            fontFamily: "Inter",
+            fontSize: "30px",
+            letterSpacing: "0.5em"
+          }}>
                 {link.label}
               </motion.span>
             </a>)}
