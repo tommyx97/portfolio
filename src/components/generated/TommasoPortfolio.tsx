@@ -126,8 +126,23 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1,
         delay: 0.8
-      }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center" data-magicpath-id="12" data-magicpath-path="TommasoPortfolio.tsx">
-          <p className="text-xs sm:text-sm lg:text-base font-light tracking-[0.3em] text-white/90 uppercase" data-magicpath-id="13" data-magicpath-path="TommasoPortfolio.tsx">
+      }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center" data-magicpath-id="12" data-magicpath-path="TommasoPortfolio.tsx" style={{
+        width: "fit-content",
+        maxWidth: "fit-content",
+        height: "fit-content",
+        minHeight: "fit-content"
+      }}>
+          <p className="text-xs sm:text-sm lg:text-base font-light tracking-[0.3em] text-white/90 uppercase" data-magicpath-id="13" data-magicpath-path="TommasoPortfolio.tsx" style={{
+          marginTop: "350px",
+          textAlign: "center",
+          justifyContent: "center",
+          fontFamily: "Inter",
+          letterSpacing: "0.05em",
+          marginLeft: "0px",
+          width: "100%",
+          maxWidth: "100%",
+          fontSize: "50px"
+        }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
         </SortableContainer>
@@ -153,8 +168,12 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           </SortableContainer>
 
           {/* Silhouette - Using a gradient shape as placeholder */}
-          <SortableContainer dndKitId="5234435c-7c60-4bf5-a8be-0f9ff9d8fa91" containerType="regular" prevTag="div" className="relative z-10 w-[280px] h-[420px]" data-magicpath-id="17" data-magicpath-path="TommasoPortfolio.tsx">
-            <svg viewBox="0 0 280 420" className="w-full h-full" aria-hidden="true" data-magicpath-id="18" data-magicpath-path="TommasoPortfolio.tsx">
+          <SortableContainer dndKitId="5234435c-7c60-4bf5-a8be-0f9ff9d8fa91" containerType="regular" prevTag="div" className="relative z-10 w-[280px] h-[420px]" data-magicpath-id="17" data-magicpath-path="TommasoPortfolio.tsx" style={{
+          display: "none"
+        }}>
+            <svg viewBox="0 0 280 420" className="w-full h-full" aria-hidden="true" data-magicpath-id="18" data-magicpath-path="TommasoPortfolio.tsx" style={{
+            display: "none"
+          }}>
               <defs data-magicpath-id="19" data-magicpath-path="TommasoPortfolio.tsx">
                 <linearGradient id="silhouetteGradient" x1="0%" y1="0%" x2="0%" y2="100%" data-magicpath-id="20" data-magicpath-path="TommasoPortfolio.tsx">
                   <stop offset="0%" stopColor="#000000" stopOpacity="1" />
@@ -180,10 +199,17 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1.2,
         delay: 1
-      }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full" data-magicpath-id="23" data-magicpath-path="TommasoPortfolio.tsx">
+      }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full" data-magicpath-id="23" data-magicpath-path="TommasoPortfolio.tsx" style={{
+        height: "160px",
+        minHeight: "auto",
+        width: "fit-content",
+        maxWidth: "fit-content"
+      }}>
           <h1 className="text-center" data-magicpath-id="24" data-magicpath-path="TommasoPortfolio.tsx">
             <span className="block text-[clamp(3rem,12vw,10rem)] font-extralight leading-none tracking-[0.35em] text-white" data-magicpath-id="25" data-magicpath-path="TommasoPortfolio.tsx" style={{
-            marginTop: "550px"
+            marginTop: "550px",
+            fontFamily: "Inter",
+            fontWeight: "100"
           }}>
               PORTFOLIO
             </span>
