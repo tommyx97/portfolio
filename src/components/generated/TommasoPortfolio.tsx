@@ -109,7 +109,13 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       </SortableContainer>
 
       {/* Main hero content */}
-      <SortableContainer dndKitId="0e3feb75-66b0-43a1-95ee-4c866847863a" containerType="regular" prevTag="div" className="relative z-10 w-full h-full flex flex-col items-center justify-center" data-magicpath-id="11" data-magicpath-path="TommasoPortfolio.tsx">
+      <SortableContainer dndKitId="0e3feb75-66b0-43a1-95ee-4c866847863a" containerType="regular" prevTag="div" className="relative z-10 w-full h-full flex flex-col items-center justify-center" data-magicpath-id="11" data-magicpath-path="TommasoPortfolio.tsx" style={{
+      backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/b079aa99-43af-4843-bba9-7cfabadbc051.png)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      opacity: "1"
+    }}>
         {/* Subtitle text above */}
         <SortableContainer dndKitId="aafd41af-2f0b-4bbe-b101-43b8112952c5" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0,
@@ -138,7 +144,11 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         delay: 0.4
       }} className="relative w-full max-w-[600px] h-[500px] flex items-center justify-center" data-magicpath-id="14" data-magicpath-path="TommasoPortfolio.tsx">
           {/* Background glow behind silhouette */}
-          <SortableContainer dndKitId="f80b35f5-9942-4c6d-b85b-279790faf202" containerType="regular" prevTag="div" className="absolute inset-0 flex items-center justify-center" data-magicpath-id="15" data-magicpath-path="TommasoPortfolio.tsx">
+          <SortableContainer dndKitId="f80b35f5-9942-4c6d-b85b-279790faf202" containerType="regular" prevTag="div" className="absolute inset-0 flex items-center justify-center" data-magicpath-id="15" data-magicpath-path="TommasoPortfolio.tsx" style={{
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center"
+        }}>
             <div className="w-[400px] h-[500px] bg-gradient-radial from-[#C8966B]/60 via-[#C8966B]/30 to-transparent blur-[100px]" data-magicpath-id="16" data-magicpath-path="TommasoPortfolio.tsx" />
           </SortableContainer>
 
@@ -152,8 +162,12 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
                 </linearGradient>
               </defs>
               {/* Head and shoulders silhouette shape */}
-              <ellipse cx="140" cy="80" rx="70" ry="85" fill="url(#silhouetteGradient)" data-magicpath-id="21" data-magicpath-path="TommasoPortfolio.tsx" />
-              <path d="M 70 140 Q 70 200, 50 280 L 50 420 L 230 420 L 230 280 Q 210 200, 210 140 Z" fill="url(#silhouetteGradient)" data-magicpath-id="22" data-magicpath-path="TommasoPortfolio.tsx" />
+              <ellipse cx="140" cy="80" rx="70" ry="85" fill="url(#silhouetteGradient)" data-magicpath-id="21" data-magicpath-path="TommasoPortfolio.tsx" style={{
+              display: "none"
+            }} />
+              <path d="M 70 140 Q 70 200, 50 280 L 50 420 L 230 420 L 230 280 Q 210 200, 210 140 Z" fill="url(#silhouetteGradient)" data-magicpath-id="22" data-magicpath-path="TommasoPortfolio.tsx" style={{
+              display: "none"
+            }} />
             </svg>
           </SortableContainer>
         </SortableContainer>
@@ -168,7 +182,9 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         delay: 1
       }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full" data-magicpath-id="23" data-magicpath-path="TommasoPortfolio.tsx">
           <h1 className="text-center" data-magicpath-id="24" data-magicpath-path="TommasoPortfolio.tsx">
-            <span className="block text-[clamp(3rem,12vw,10rem)] font-extralight leading-none tracking-[0.35em] text-white" data-magicpath-id="25" data-magicpath-path="TommasoPortfolio.tsx">
+            <span className="block text-[clamp(3rem,12vw,10rem)] font-extralight leading-none tracking-[0.35em] text-white" data-magicpath-id="25" data-magicpath-path="TommasoPortfolio.tsx" style={{
+            marginTop: "550px"
+          }}>
               PORTFOLIO
             </span>
           </h1>
