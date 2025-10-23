@@ -148,9 +148,9 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           height: "100%",
           minHeight: "100%",
           marginLeft: "1000px",
-          marginRight: "2780px",
           fontSize: "25px",
-          letterSpacing: "0.5em"
+          letterSpacing: "0.5em",
+          marginRight: "2750px"
         }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
@@ -226,7 +226,8 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
             marginTop: "400px",
             fontSize: "120px",
             letterSpacing: "1.2em",
-            lineHeight: "0.5"
+            lineHeight: "0.5",
+            marginRight: "200px"
           }}>
               PORTFOLIO
             </span>
