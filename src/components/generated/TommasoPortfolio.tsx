@@ -75,8 +75,8 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
             delay: 0.3 + idx * 0.1
           }} data-magicpath-uuid={(link as any)["mpid"] ?? "unsafe"} data-magicpath-field="label:unknown" data-magicpath-id="6" data-magicpath-path="TommasoPortfolio.tsx" style={{
             fontFamily: "Inter",
-            fontSize: "30px",
-            letterSpacing: "0.5em"
+            letterSpacing: "0.5em",
+            fontSize: "15px"
           }}>
                 {link.label}
               </motion.span>
