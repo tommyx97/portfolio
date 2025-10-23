@@ -219,15 +219,15 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
             fontFamily: "Inter",
             fontWeight: "100",
             paddingTop: "150px",
-            width: "100%",
-            maxWidth: "100%",
             height: "100%",
             minHeight: "100%",
             marginTop: "400px",
-            fontSize: "120px",
-            letterSpacing: "1.2em",
-            lineHeight: "0.5",
-            marginRight: "200px"
+            marginRight: "200px",
+            fontSize: "150px",
+            width: "100%",
+            maxWidth: "100%",
+            lineHeight: "0.8",
+            letterSpacing: "2.5em"
           }}>
               PORTFOLIO
             </span>
