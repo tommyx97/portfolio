@@ -145,10 +145,10 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           width: "100%",
           maxWidth: "100%",
           fontSize: "50px",
-          marginTop: "600px",
           textAlign: "left",
           justifyContent: "flex-start",
-          marginRight: "3180px"
+          marginRight: "3000px",
+          marginTop: "400px"
         }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
