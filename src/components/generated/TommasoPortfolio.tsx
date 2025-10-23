@@ -133,15 +133,16 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         minHeight: "fit-content"
       }}>
           <p className="text-xs sm:text-sm lg:text-base font-light tracking-[0.3em] text-white/90 uppercase" data-magicpath-id="13" data-magicpath-path="TommasoPortfolio.tsx" style={{
-          marginTop: "350px",
-          textAlign: "center",
-          justifyContent: "center",
           fontFamily: "Inter",
           letterSpacing: "0.05em",
           marginLeft: "0px",
           width: "100%",
           maxWidth: "100%",
-          fontSize: "50px"
+          fontSize: "50px",
+          marginTop: "600px",
+          textAlign: "left",
+          justifyContent: "flex-start",
+          marginRight: "3180px"
         }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
@@ -209,7 +210,11 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
             <span className="block text-[clamp(3rem,12vw,10rem)] font-extralight leading-none tracking-[0.35em] text-white" data-magicpath-id="25" data-magicpath-path="TommasoPortfolio.tsx" style={{
             marginTop: "550px",
             fontFamily: "Inter",
-            fontWeight: "100"
+            fontWeight: "100",
+            fontSize: "350px",
+            letterSpacing: "0.5em",
+            lineHeight: "0.5",
+            paddingTop: "150px"
           }}>
               PORTFOLIO
             </span>
