@@ -223,11 +223,11 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
             minHeight: "100%",
             marginTop: "400px",
             marginRight: "200px",
-            fontSize: "150px",
             width: "100%",
             maxWidth: "100%",
             lineHeight: "0.8",
-            letterSpacing: "2.5em"
+            letterSpacing: "2.5em",
+            fontSize: "100px"
           }}>
               PORTFOLIO
             </span>
