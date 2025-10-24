@@ -63,7 +63,7 @@ export const AboutSection = ({
             }} className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-[0.02em] text-white" style={{
               fontFamily: 'Urbanist, sans-serif',
               letterSpacing: '0.05em',
-              color: "#61a1f4"
+              color: "#aec7e9"
             }} data-magicpath-id="5" data-magicpath-path="AboutSection.tsx">CHI SONO</motion.h2>
               
               <motion.p data-magicpath-motion-tag="motion.p" initial={{
