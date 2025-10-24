@@ -47,7 +47,7 @@ export const MobileNavigation = () => {
           position: 'fixed',
           top: '1rem',
           right: '1rem',
-          zIndex: 9999,
+          zIndex: 10000,
           width: '48px',
           height: '48px',
           background: 'rgba(0, 0, 0, 0.9)',
@@ -93,7 +93,7 @@ export const MobileNavigation = () => {
                 inset: 0,
                 background: 'rgba(0, 0, 0, 0.95)',
                 backdropFilter: 'blur(20px)',
-                zIndex: 9998,
+                zIndex: 9999,
                 visibility: 'visible',
                 opacity: 1
               }}
@@ -114,7 +114,7 @@ export const MobileNavigation = () => {
                 background: 'rgba(0, 0, 0, 0.98)',
                 backdropFilter: 'blur(20px)',
                 borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                zIndex: 9999,
+                zIndex: 10001,
                 padding: '5rem 1rem 2rem',
                 visibility: 'visible',
                 opacity: 1,
