@@ -154,10 +154,10 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         duration: 1,
         delay: 0.8
       }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center" style={{
-        width: "fit-content",
-        maxWidth: "fit-content",
-        height: "fit-content",
-        minHeight: "fit-content"
+        height: "437.5px",
+        minHeight: "auto",
+        width: "4244.71px",
+        maxWidth: "4244.71px"
       }} data-magicpath-id="14" data-magicpath-path="TommasoPortfolio.tsx">
           <p className="text-xs sm:text-sm lg:text-base font-light tracking-[0.3em] text-white/90 uppercase" style={{
           fontFamily: "Inter",
@@ -187,12 +187,15 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1.2,
         delay: 0.4
-      }} className="relative w-full max-w-[600px] h-[500px] flex items-center justify-center" data-magicpath-id="16" data-magicpath-path="TommasoPortfolio.tsx">
+      }} className="relative w-full max-w-[600px] h-[500px] flex items-center justify-center" data-magicpath-id="16" data-magicpath-path="TommasoPortfolio.tsx" style={{
+        display: "none"
+      }}>
           {/* Background glow behind silhouette */}
           <SortableContainer dndKitId="8451f49a-de9b-4d1a-accd-33a60f1bf716" containerType="regular" prevTag="div" className="absolute inset-0 flex items-center justify-center" style={{
           flexDirection: "column",
           justifyContent: "flex-end",
-          alignItems: "center"
+          alignItems: "center",
+          display: "none"
         }} data-magicpath-id="17" data-magicpath-path="TommasoPortfolio.tsx">
             <div className="w-[400px] h-[500px] bg-gradient-radial from-[#C8966B]/60 via-[#C8966B]/30 to-transparent blur-[100px]" data-magicpath-id="18" data-magicpath-path="TommasoPortfolio.tsx" />
           </SortableContainer>
