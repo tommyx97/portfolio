@@ -27,6 +27,22 @@
   /* Hide desktop navigation completely */
   .sticky-nav {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  
+  /* Hide any desktop navigation elements */
+  nav.sticky-nav,
+  .sticky-nav,
+  [class*="sticky-nav"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
   
   /* Mobile typography */
@@ -102,6 +118,18 @@
     align-items: center !important;
     justify-content: center !important;
     transition: all 0.3s ease !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Ensure mobile menu button is always visible */
+  button.mobile-menu-button,
+  .mobile-menu-button,
+  [class*="mobile-menu-button"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
   
   .mobile-menu-button:active {
@@ -116,6 +144,8 @@
     background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(20px) !important;
     z-index: 999 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   /* Mobile menu content */
@@ -129,6 +159,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     z-index: 1000 !important;
     padding: var(--mobile-spacing-2xl) var(--mobile-spacing-sm) var(--mobile-spacing-xl) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   /* Mobile menu links */
@@ -298,6 +330,31 @@
   .contact-grid {
     grid-template-columns: 1fr !important;
     gap: var(--mobile-spacing-lg) !important;
+  }
+  
+  /* Force mobile layout for all sections */
+  .section-with-nav {
+    padding-top: 0 !important;
+  }
+  
+  /* Ensure no desktop navigation interference */
+  body {
+    padding-top: 0 !important;
+  }
+  
+  /* Mobile-specific body adjustments */
+  html, body {
+    overflow-x: hidden !important;
+  }
+  
+  /* Additional mobile navigation fixes */
+  nav[class*="sticky"],
+  [class*="sticky-nav"],
+  .fixed.top-0 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }
 
