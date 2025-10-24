@@ -23,40 +23,40 @@ const creativeProcess = [{
   title: 'Visione Creativa',
   description: 'Definizione del concept visivo che esalta le linee scultoree e l\'eleganza senza tempo della BMW X3',
   tools: ['Mid Journey', 'Mood Boards', 'Art Direction'],
-  mpid: "10f96105-24a6-408c-8be6-dd6c28bf0b8a"
+  mpid: "515b4931-086a-4422-bdff-64523d1f0b56"
 }, {
   id: 'generation-phase',
   icon: Camera,
   title: 'AI Generation',
   description: 'Creazione di ambienti fotografici cinematografici attraverso prompt engineering avanzato',
   tools: ['Mid Journey V6', 'Runway Gen-2', 'Leonardo AI'],
-  mpid: "7da079fc-adb0-4a43-a9e4-cb4f12026c45"
+  mpid: "6efab009-c82c-420a-97e4-3506d8cc00df"
 }, {
   id: 'refinement-phase',
   icon: Palette,
   title: 'Raffinamento',
   description: 'Post-produzione meticolosa per raggiungere un equilibrio perfetto tra realismo e identità visiva',
   tools: ['Lightroom', 'Photoshop', 'Color Grading'],
-  mpid: "54d8e885-a610-4a19-b5e8-25d51c04ecb8"
+  mpid: "5e78f1de-cbb1-429b-b174-65a040f71419"
 }] as const;
 const technicalAspects = [{
   id: 'tech-1',
   icon: Zap,
   title: 'AI Prompt Engineering',
   description: 'Sviluppo di prompt complessi per ottenere il massimo controllo sulla composizione, illuminazione e atmosfera',
-  mpid: "f9315b52-18f1-490f-9370-ae5f34f85980"
+  mpid: "55352afb-18a4-439b-b754-69f8e94e4428"
 }, {
   id: 'tech-2',
   icon: Film,
   title: 'Motion Generation',
   description: 'Utilizzo di Runway per creare variazioni dinamiche e animazioni fluide delle scene statiche',
-  mpid: "d452ac9b-b629-4299-9271-ea49d5259dbe"
+  mpid: "6ae27b20-a027-457b-a5d5-27c63ff7aec5"
 }, {
   id: 'tech-3',
   icon: Sparkles,
   title: 'Post-Processing',
   description: 'Raffinamento professionale per garantire coerenza visiva e qualità da campagna premium',
-  mpid: "ad6157a4-96e8-42f6-aaf3-30745c02f89b"
+  mpid: "664efe63-4852-4898-8ecd-d80987ebddcc"
 }] as const;
 
 // TUTTE LE IMMAGINI SONO ORA SEPARATE - OGNI SLOT HA LA PROPRIA URL UNICA
@@ -112,11 +112,11 @@ export default function BMWX3ProjectDetail({
       behavior: 'smooth'
     });
   };
-  return <SortableContainer dndKitId="40d639cb-562a-4817-bf00-9f6ea49a93e9" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-x-hidden" style={{
+  return <SortableContainer dndKitId="83fc216c-8b15-41f5-b912-acb2d6b6bc56" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-x-hidden" style={{
     fontFamily: 'Montserrat, sans-serif'
   }} data-magicpath-id="0" data-magicpath-path="BMWX3ProjectDetail.tsx">
       {/* Sticky Header Navigation */}
-      <SortableContainer dndKitId="71aab9df-1651-44bd-bfdc-46d0efde2c04" containerType="regular" prevTag="motion.header" initial={{
+      <SortableContainer dndKitId="061d52ab-5f07-42ed-91c6-e972a3e9c0e2" containerType="regular" prevTag="motion.header" initial={{
       opacity: 0,
       y: -20
     }} animate={{
@@ -126,8 +126,8 @@ export default function BMWX3ProjectDetail({
       duration: 0.8,
       delay: 0.3
     }} className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 lg:px-16 py-6 backdrop-blur-xl bg-black/60 border-b border-white/5" data-magicpath-id="1" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="bb680d7c-eb82-488b-834b-e205006d805e" containerType="regular" prevTag="nav" className="max-w-[1800px] mx-auto flex items-center justify-between" data-magicpath-id="2" data-magicpath-path="BMWX3ProjectDetail.tsx">
-          <SortableContainer dndKitId="31960687-7a69-4675-a787-82c5108652a8" containerType="regular" prevTag="div" className="flex items-center gap-6" data-magicpath-id="3" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="6d925ee1-2f7e-4084-9be9-77e52a09f9b5" containerType="regular" prevTag="nav" className="max-w-[1800px] mx-auto flex items-center justify-between" data-magicpath-id="2" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="e53fb8aa-5d0e-45e6-b823-e6eaf40a5159" containerType="regular" prevTag="div" className="flex items-center gap-6" data-magicpath-id="3" data-magicpath-path="BMWX3ProjectDetail.tsx">
             <h2 onClick={() => {
             if (onBack) {
               onBack();
@@ -158,7 +158,7 @@ export default function BMWX3ProjectDetail({
             </span>
           </SortableContainer>
 
-          <SortableContainer dndKitId="0b702593-88bc-46e8-aaf1-2d92ddb64939" containerType="regular" prevTag="button" onClick={handleContactClick} className="px-6 py-2.5 bg-white text-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-white/90 transition-all duration-300" style={{
+          <SortableContainer dndKitId="08ef18ab-fee1-4b8c-9cfa-990ad687e425" containerType="regular" prevTag="button" onClick={handleContactClick} className="px-6 py-2.5 bg-white text-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-white/90 transition-all duration-300" style={{
           fontFamily: 'Montserrat, sans-serif',
           fontWeight: 400
         }} data-magicpath-id="11" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -168,8 +168,8 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Hero Section with Parallax */}
-      <SortableContainer dndKitId="0bb942eb-0cb0-44ec-becd-2b8e3d4e71b2" containerType="regular" prevTag="section" className="relative w-full h-screen overflow-hidden" data-magicpath-id="13" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="84bb53e4-0dd3-43d9-90e7-f161978a55e0" containerType="regular" prevTag="motion.div" style={{
+      <SortableContainer dndKitId="040ae801-3db5-477c-90df-861d18224aee" containerType="regular" prevTag="section" className="relative w-full h-screen overflow-hidden" data-magicpath-id="13" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="7f6e0676-57a5-4326-90bc-40a212615ea0" containerType="regular" prevTag="motion.div" style={{
         opacity: heroOpacity,
         scale: heroScale
       }} className="absolute inset-0" data-magicpath-id="14" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -178,9 +178,9 @@ export default function BMWX3ProjectDetail({
         </SortableContainer>
 
         {/* Hero Content */}
-        <SortableContainer dndKitId="3365b366-c862-4743-97ca-75d98843f696" containerType="regular" prevTag="div" className="relative z-10 h-full flex items-end pb-20 lg:pb-32" data-magicpath-id="17" data-magicpath-path="BMWX3ProjectDetail.tsx">
-          <SortableContainer dndKitId="9e4d4ccc-d2e1-417f-9cf6-ee1119be1ff9" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto w-full px-6 sm:px-8 lg:px-16" data-magicpath-id="18" data-magicpath-path="BMWX3ProjectDetail.tsx">
-            <SortableContainer dndKitId="26cdf7f3-5720-40cb-9140-1fa8ca753da9" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="8d4a9099-5318-46f1-9a22-ec80c2afd139" containerType="regular" prevTag="div" className="relative z-10 h-full flex items-end pb-20 lg:pb-32" data-magicpath-id="17" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="19f45325-8da8-4dec-ac87-63963ac3fbe8" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto w-full px-6 sm:px-8 lg:px-16" data-magicpath-id="18" data-magicpath-path="BMWX3ProjectDetail.tsx">
+            <SortableContainer dndKitId="a0233a2c-f1a6-4441-b690-4544029f511a" containerType="regular" prevTag="motion.div" initial={{
             opacity: 0,
             y: 60
           }} animate={{
@@ -219,7 +219,7 @@ export default function BMWX3ProjectDetail({
                 </span>
               </h1>
 
-              <SortableContainer dndKitId="b220334b-59de-4477-8fc9-82519648a465" containerType="regular" prevTag="motion.div" initial={{
+              <SortableContainer dndKitId="fb5aa339-a108-4afc-8a71-8fa985966027" containerType="regular" prevTag="motion.div" initial={{
               opacity: 0,
               y: 20
             }} animate={{
@@ -229,7 +229,7 @@ export default function BMWX3ProjectDetail({
               duration: 0.8,
               delay: 0.9
             }} className="grid grid-cols-2 gap-6 lg:gap-8" data-magicpath-id="24" data-magicpath-path="BMWX3ProjectDetail.tsx">
-                <SortableContainer dndKitId="4073540b-94cd-4c22-88c7-7d418ab08acf" containerType="regular" prevTag="div" className="space-y-2" data-magicpath-id="25" data-magicpath-path="BMWX3ProjectDetail.tsx">
+                <SortableContainer dndKitId="175b569f-65d4-47f4-a1e7-1c2de3e0952d" containerType="regular" prevTag="div" className="space-y-2" data-magicpath-id="25" data-magicpath-path="BMWX3ProjectDetail.tsx">
                   <p className="text-xs tracking-[0.2em] uppercase" style={{
                   color: '#aec7e9',
                   fontFamily: 'Montserrat, sans-serif',
@@ -245,7 +245,7 @@ export default function BMWX3ProjectDetail({
                   </p>
                 </SortableContainer>
 
-                <SortableContainer dndKitId="1a9cc353-d3c6-4898-ac59-2eda84e99c22" containerType="regular" prevTag="div" className="space-y-2" data-magicpath-id="30" data-magicpath-path="BMWX3ProjectDetail.tsx">
+                <SortableContainer dndKitId="515ee318-fad7-4aa3-838c-47157c3dec4a" containerType="regular" prevTag="div" className="space-y-2" data-magicpath-id="30" data-magicpath-path="BMWX3ProjectDetail.tsx">
                   <p className="text-xs tracking-[0.2em] uppercase" style={{
                   color: '#aec7e9',
                   fontFamily: 'Montserrat, sans-serif',
@@ -266,7 +266,7 @@ export default function BMWX3ProjectDetail({
         </SortableContainer>
 
         {/* Scroll Indicator */}
-        <SortableContainer dndKitId="2872a02f-1c32-4b4f-8977-c56240082632" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="3c9f4968-b932-42fc-af5b-9c474398ce7f" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0
       }} animate={{
         opacity: 1
@@ -285,13 +285,13 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Project Overview */}
-      <SortableContainer dndKitId="19625413-7429-48ec-9238-36f381345974" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="37" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="3b6e47a4-7047-410b-919b-0bbc2da5d54a" containerType="regular" prevTag="div" className="absolute inset-0 z-0 overflow-hidden" data-magicpath-id="38" data-magicpath-path="BMWX3ProjectDetail.tsx">
+      <SortableContainer dndKitId="8d6a01cb-e9d4-48c4-b152-93d08d6eeb38" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="37" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="da29c510-e6d6-4f09-a38c-d24b86b315a8" containerType="regular" prevTag="div" className="absolute inset-0 z-0 overflow-hidden" data-magicpath-id="38" data-magicpath-path="BMWX3ProjectDetail.tsx">
           <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-[#aec7e9]/10 via-transparent to-transparent blur-3xl" data-magicpath-id="39" data-magicpath-path="BMWX3ProjectDetail.tsx" />
         </SortableContainer>
 
-        <SortableContainer dndKitId="eb802c7f-9fa6-476a-abb5-a8808e570922" containerType="regular" prevTag="div" className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="40" data-magicpath-path="BMWX3ProjectDetail.tsx">
-          <SortableContainer dndKitId="1175b840-f013-4c9b-b186-9be3de70d32e" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="1acf30ee-2f2f-4ace-8935-3a45f31c50de" containerType="regular" prevTag="div" className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="40" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="bc1f8327-7bb9-4e7d-9fdb-388e62e7163f" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 40
         }} whileInView={{
@@ -304,7 +304,7 @@ export default function BMWX3ProjectDetail({
           duration: 0.9
         }} className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20" data-magicpath-id="41" data-magicpath-path="BMWX3ProjectDetail.tsx">
             {/* Left: Title */}
-            <SortableContainer dndKitId="6d4187ac-ebb5-40fb-89f0-fac6f20ae6cb" containerType="regular" prevTag="div" className="space-y-6" style={{
+            <SortableContainer dndKitId="39928556-96eb-4718-b3e8-3734d8f5bec3" containerType="regular" prevTag="div" className="space-y-6" style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center"
@@ -320,7 +320,7 @@ export default function BMWX3ProjectDetail({
             </SortableContainer>
 
             {/* Right: Description */}
-            <SortableContainer dndKitId="fa4c23d8-6124-48eb-871e-71241536a7ca" containerType="regular" prevTag="div" className="space-y-8" data-magicpath-id="46" data-magicpath-path="BMWX3ProjectDetail.tsx">
+            <SortableContainer dndKitId="76ef80ea-3191-4cfd-b79d-2cfb9e675999" containerType="regular" prevTag="div" className="space-y-8" data-magicpath-id="46" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <p className="text-[15px] leading-[2] text-white/90" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
@@ -338,10 +338,10 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Visual Direction Section - 3 IMMAGINI SEPARATE */}
-      <SortableContainer dndKitId="839dd699-8fb2-4f46-aca0-298d234c8799" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="49" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="05f29452-3bb3-4a05-83ed-17b15262ad2a" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="50" data-magicpath-path="BMWX3ProjectDetail.tsx">
+      <SortableContainer dndKitId="1cd96164-bf6d-4bf1-985d-99b03bcea6f5" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="49" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="3a135b23-204e-4670-bf60-ad593827e72d" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="50" data-magicpath-path="BMWX3ProjectDetail.tsx">
           {/* Section Header */}
-          <SortableContainer dndKitId="cd7be5f5-ce1c-44cc-a418-d18c40fa4fc6" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="70a43522-26ab-43cb-af9c-859e3dbd59e1" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 30
         }} whileInView={{
@@ -360,7 +360,7 @@ export default function BMWX3ProjectDetail({
           }} data-magicpath-id="52" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <span data-magicpath-id="53" data-magicpath-path="BMWX3ProjectDetail.tsx">VISUAL DIRECTION</span>
             </h2>
-            <SortableContainer dndKitId="3b5cd3e0-1193-4e69-9e5b-2b9594a910d7" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="54" data-magicpath-path="BMWX3ProjectDetail.tsx">
+            <SortableContainer dndKitId="2bfbfda2-66ed-43b2-a9f8-f6269b5eb594" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="54" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <p className="text-[15px] leading-[2] text-white/70" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
@@ -375,7 +375,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Hero Image */}
-          <SortableContainer dndKitId="60502d21-be82-42ff-818f-4f0b7bdaeccf" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="ea472539-7774-4fdf-935b-7d22d4f550c4" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 60
         }} whileInView={{
@@ -387,8 +387,8 @@ export default function BMWX3ProjectDetail({
         }} transition={{
           duration: 1
         }} className="mb-8 lg:mb-12" data-magicpath-id="57" data-magicpath-path="BMWX3ProjectDetail.tsx">
-            <SortableContainer dndKitId="3ddea54e-ce65-47fb-a669-8961885afe3f" containerType="regular" prevTag="figure" className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5" data-magicpath-id="58" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="a7a40d03-11de-4ce5-a57e-fdb481e3f2a6" containerType="regular" prevTag="div" className="relative w-full" style={{
+            <SortableContainer dndKitId="87f87998-735e-46f9-af94-8cba8ecfdaea" containerType="regular" prevTag="figure" className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5" data-magicpath-id="58" data-magicpath-path="BMWX3ProjectDetail.tsx">
+              <SortableContainer dndKitId="6a833921-02bf-462c-ad3b-bcba74cecab6" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${9 / 21 * 100}%`
             }} data-magicpath-id="59" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.visualDirectionHero} alt="BMW X3 visual direction and concept" className="absolute inset-0 w-full h-full object-cover" data-magicpath-id="60" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -398,7 +398,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Supporting Images Grid - 2 IMMAGINI SEPARATE */}
-          <SortableContainer dndKitId="9a99fb91-121d-4062-986f-e17009de916f" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" data-magicpath-id="62" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="975cc2b8-72cb-4f38-a7a8-7cb93135b1c9" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" data-magicpath-id="62" data-magicpath-path="BMWX3ProjectDetail.tsx">
             <motion.figure data-magicpath-motion-tag="motion.figure" initial={{
             opacity: 0,
             y: 50
@@ -412,7 +412,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer" data-magicpath-id="63" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="e65eee5f-89ac-45a3-b80d-d471c1f0a9bf" containerType="regular" prevTag="div" className="relative w-full" style={{
+              <SortableContainer dndKitId="8e1b8ef4-1da0-4bef-92a5-a56ac837fb2a" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${3 / 4 * 100}%`
             }} data-magicpath-id="64" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.visualDirectionSupport1} alt="BMW X3 visual direction detail 1" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="65" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -433,7 +433,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0.15
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer" data-magicpath-id="67" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="00c538f7-11ee-4c3f-813c-da7fa8a1c7f9" containerType="regular" prevTag="div" className="relative w-full" style={{
+              <SortableContainer dndKitId="5a62e1c2-88af-41ed-8ef6-a0dcd4ba1361" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${3 / 4 * 100}%`
             }} data-magicpath-id="68" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.visualDirectionSupport2} alt="BMW X3 visual direction detail 2" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="69" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -451,12 +451,12 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Design Philosophy Section - 3 IMMAGINI SEPARATE */}
-      <SortableContainer dndKitId="7f611092-6dc1-4cdb-98fe-145194cecf81" containerType="regular" prevTag="section" className="relative w-full bg-[#0D0D0D] text-white py-24 lg:py-32" data-magicpath-id="71" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="ab2eb87f-dad2-4f6b-8541-30e8630b181b" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" style={{
+      <SortableContainer dndKitId="fdcc5fc6-3cd1-4070-b296-947caf7662a8" containerType="regular" prevTag="section" className="relative w-full bg-[#0D0D0D] text-white py-24 lg:py-32" data-magicpath-id="71" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="97d0a123-f5cf-4eb0-b071-ce8caf08d700" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" style={{
         display: "none"
       }} data-magicpath-id="72" data-magicpath-path="BMWX3ProjectDetail.tsx">
           {/* Section Header */}
-          <SortableContainer dndKitId="f5c09356-0280-4195-8922-f90485a5f5ad" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="1fd231aa-3d93-454d-afc9-baa102624fd9" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 40
         }} whileInView={{
@@ -477,7 +477,7 @@ export default function BMWX3ProjectDetail({
             </h2>
 
             {/* Description */}
-            <SortableContainer dndKitId="f863ba18-cfcc-4d84-b1c9-9815b71a669e" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="76" data-magicpath-path="BMWX3ProjectDetail.tsx">
+            <SortableContainer dndKitId="c6c632d2-bac3-4fc0-b8a3-df83b94195b0" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="76" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <motion.p data-magicpath-motion-tag="motion.p" initial={{
               opacity: 0,
               y: 20
@@ -500,7 +500,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Three Highlights Grid - 3 IMMAGINI SEPARATE */}
-          <SortableContainer dndKitId="72912d87-0e1b-4671-8820-fd554f60b804" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16" data-magicpath-id="79" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="24766fab-be95-4ae1-bb2f-65614e5345b9" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16" data-magicpath-id="79" data-magicpath-path="BMWX3ProjectDetail.tsx">
             <motion.figure data-magicpath-motion-tag="motion.figure" initial={{
             opacity: 0,
             y: 50
@@ -514,14 +514,14 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer" data-magicpath-id="80" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="169a9362-15de-47b2-9b3e-aaec7498eda4" containerType="regular" prevTag="div" className="relative w-full" style={{
+              <SortableContainer dndKitId="6922a27c-3209-4e2e-b78e-cc74884a2533" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${4 / 3 * 100}%`
             }} data-magicpath-id="81" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.philosophyHighlight1} alt="Urban Context" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="82" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" data-magicpath-id="83" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 
                 {/* Caption Overlay */}
-                <SortableContainer dndKitId="30783312-7cf6-4609-b85e-b052af8767d1" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="84" data-magicpath-path="BMWX3ProjectDetail.tsx">
+                <SortableContainer dndKitId="114202e4-f3bb-41d3-965c-65cc882dbc22" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="84" data-magicpath-path="BMWX3ProjectDetail.tsx">
                   <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
                   fontFamily: 'Montserrat, sans-serif',
                   fontWeight: 300
@@ -545,14 +545,14 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0.15
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer" data-magicpath-id="87" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="71d0d714-6c37-403b-89a1-87aec25ad377" containerType="regular" prevTag="div" className="relative w-full" style={{
+              <SortableContainer dndKitId="0aaa89b9-0146-460f-9f19-9113e5ae0adc" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${4 / 3 * 100}%`
             }} data-magicpath-id="88" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.philosophyHighlight2} alt="Cinematic Lighting" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="89" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" data-magicpath-id="90" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 
                 {/* Caption Overlay */}
-                <SortableContainer dndKitId="e68e62b2-ac42-4b21-bdfd-1bf2abf8b191" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="91" data-magicpath-path="BMWX3ProjectDetail.tsx">
+                <SortableContainer dndKitId="4048251c-6b4b-48f4-86d0-fcad96d1284c" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="91" data-magicpath-path="BMWX3ProjectDetail.tsx">
                   <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
                   fontFamily: 'Montserrat, sans-serif',
                   fontWeight: 300
@@ -576,14 +576,14 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0.3
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer" data-magicpath-id="94" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="0713fbab-79ab-42f0-80d1-2bc6502c0c2d" containerType="regular" prevTag="div" className="relative w-full" style={{
+              <SortableContainer dndKitId="6d0ac892-e345-47ec-b7bc-57869d5e9b70" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${4 / 3 * 100}%`
             }} data-magicpath-id="95" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.philosophyHighlight3} alt="Material Details" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="96" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" data-magicpath-id="97" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 
                 {/* Caption Overlay */}
-                <SortableContainer dndKitId="d9ef1820-79c1-48b1-a33c-78bb04681da5" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="98" data-magicpath-path="BMWX3ProjectDetail.tsx">
+                <SortableContainer dndKitId="8ef66165-54fd-40ed-afb9-4033a851aeba" containerType="regular" prevTag="div" className="absolute bottom-0 left-0 right-0 p-6" data-magicpath-id="98" data-magicpath-path="BMWX3ProjectDetail.tsx">
                   <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
                   fontFamily: 'Montserrat, sans-serif',
                   fontWeight: 300
@@ -598,10 +598,10 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Gallery Grid - 4 IMMAGINI SEPARATE */}
-      <SortableContainer dndKitId="7df1afd3-b4ff-4a7c-8623-1bae2712c5b0" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="101" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="54464632-0f3c-474a-8fd8-8d7b1024b007" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="102" data-magicpath-path="BMWX3ProjectDetail.tsx">
+      <SortableContainer dndKitId="728088e1-0f4f-4c1f-b187-e0a93fb9217a" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32" data-magicpath-id="101" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="34e0d8f7-5c70-4c3a-8493-44377c6836a2" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" data-magicpath-id="102" data-magicpath-path="BMWX3ProjectDetail.tsx">
           {/* Section Header */}
-          <SortableContainer dndKitId="908095e8-7160-41e9-accb-1930efc5ddc2" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="3fcfbc1b-8eb6-4a7c-b288-8ce383beb279" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 30
         }} whileInView={{
@@ -624,7 +624,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Hero Image */}
-          <SortableContainer dndKitId="b753d90d-3376-4286-96d6-6a7b10b78431" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="976b2a99-b1ea-4c83-bd5c-1a6fe09c3dd2" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 40
         }} whileInView={{
@@ -636,14 +636,14 @@ export default function BMWX3ProjectDetail({
         }} transition={{
           duration: 0.9
         }} className="mb-8 lg:mb-12" data-magicpath-id="107" data-magicpath-path="BMWX3ProjectDetail.tsx">
-            <SortableContainer dndKitId="294b2a22-5bec-4b89-b554-5b0dbc7ce311" containerType="regular" prevTag="figure" className="relative w-full overflow-hidden group" data-magicpath-id="108" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="7ea48099-2b8c-4064-868e-aa90f506ce41" containerType="regular" prevTag="div" className="relative w-full" style={{
+            <SortableContainer dndKitId="e433d8f3-1e98-480f-952d-795d7fe04d9a" containerType="regular" prevTag="figure" className="relative w-full overflow-hidden group" data-magicpath-id="108" data-magicpath-path="BMWX3ProjectDetail.tsx">
+              <SortableContainer dndKitId="e88564b9-469c-4ec1-bd3f-1c4c11d330de" containerType="regular" prevTag="div" className="relative w-full" style={{
               paddingBottom: `${9 / 16 * 100}%`
             }} data-magicpath-id="109" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.galleryHero} alt="BMW X3 Full Body Cinematic Mood" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="110" data-magicpath-path="BMWX3ProjectDetail.tsx" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" data-magicpath-id="111" data-magicpath-path="BMWX3ProjectDetail.tsx" />
               </SortableContainer>
-              <SortableContainer dndKitId="217460c2-ae3e-4a12-9a4b-fe298cff071f" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
+              <SortableContainer dndKitId="e1255220-768d-4fb5-905d-59f137299bdf" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300
             }} data-magicpath-id="112" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -653,7 +653,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Three Column Grid - 3 IMMAGINI SEPARATE */}
-          <SortableContainer dndKitId="f87486a3-2159-4fbf-9d73-e68e057ac742" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12" data-magicpath-id="114" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="ffe6de32-21bc-43ad-ab81-fa1ac7fcfd44" containerType="regular" prevTag="div" className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12" data-magicpath-id="114" data-magicpath-path="BMWX3ProjectDetail.tsx">
             <motion.figure data-magicpath-motion-tag="motion.figure" initial={{
             opacity: 0,
             y: 40
@@ -667,7 +667,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0
           }} className="relative group" data-magicpath-id="115" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="09759e34-1a4f-48ae-b765-433a0b5f064b" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
+              <SortableContainer dndKitId="7064968f-700e-415c-9d58-7a0defb84408" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
               paddingBottom: `${5 / 4 * 100}%`
             }} data-magicpath-id="116" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.galleryImage1} alt="Design Language — Frontal Perspective" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="117" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -680,7 +680,7 @@ export default function BMWX3ProjectDetail({
                 opacity: "1"
               }} data-magicpath-id="119" data-magicpath-path="BMWX3ProjectDetail.tsx" />
               </SortableContainer>
-              <SortableContainer dndKitId="a102076b-82f0-46de-b448-7c64b5d5a322" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
+              <SortableContainer dndKitId="5d8dfebb-f420-4d44-85e0-e123497f2a66" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300
             }} data-magicpath-id="120" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -701,7 +701,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0.15
           }} className="relative group" data-magicpath-id="122" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="b2fbc1a7-2a4d-450e-8ecc-3d5bc8c68ae9" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
+              <SortableContainer dndKitId="6d3062f2-0758-4a3e-8add-a6faa3b96d8d" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
               paddingBottom: `${5 / 4 * 100}%`
             }} data-magicpath-id="123" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.galleryImage2} alt="Dettaglio Ruota — Texture e Materiali" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="124" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -714,7 +714,7 @@ export default function BMWX3ProjectDetail({
                 opacity: "1"
               }} data-magicpath-id="126" data-magicpath-path="BMWX3ProjectDetail.tsx" />
               </SortableContainer>
-              <SortableContainer dndKitId="b5602b87-0bcf-4ed4-ac60-9166f54dd2f6" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
+              <SortableContainer dndKitId="1514c938-532f-40c4-be75-7d7ff5784832" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300
             }} data-magicpath-id="127" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -735,7 +735,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.8,
             delay: 0.3
           }} className="relative group" data-magicpath-id="129" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="010fb650-ab12-4338-aa0e-0e87de5a23fc" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
+              <SortableContainer dndKitId="af2254a0-453a-41ff-a029-5db03f18e561" containerType="regular" prevTag="div" className="relative w-full overflow-hidden" style={{
               paddingBottom: `${5 / 4 * 100}%`
             }} data-magicpath-id="130" data-magicpath-path="BMWX3ProjectDetail.tsx">
                 <img src={images.galleryImage3} alt="Contesto Urbano — Urban Minimalism" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-magicpath-id="131" data-magicpath-path="BMWX3ProjectDetail.tsx" />
@@ -748,7 +748,7 @@ export default function BMWX3ProjectDetail({
                 opacity: "1"
               }} data-magicpath-id="133" data-magicpath-path="BMWX3ProjectDetail.tsx" />
               </SortableContainer>
-              <SortableContainer dndKitId="5d30486a-6490-40d6-97e1-14cb4a7a1c3d" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
+              <SortableContainer dndKitId="0f91319a-3e91-48cb-ab4c-c3e184e697bb" containerType="regular" prevTag="figcaption" className="mt-4 text-sm tracking-wide text-white/60" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300
             }} data-magicpath-id="134" data-magicpath-path="BMWX3ProjectDetail.tsx">
@@ -760,10 +760,10 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Social Grid Preview - 9 IMMAGINI SEPARATE */}
-      <SortableContainer dndKitId="41d97a80-e189-44e5-9dff-6862de3b6b72" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32 border-t border-white/10" data-magicpath-id="136" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="ac0df5ec-053a-4092-ab4e-83f695a3f988" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-8 sm:px-12 lg:px-20" data-magicpath-id="137" data-magicpath-path="BMWX3ProjectDetail.tsx">
+      <SortableContainer dndKitId="5d47ae3a-2d2e-4286-9d05-2be09052f72f" containerType="regular" prevTag="section" className="relative w-full bg-black py-24 lg:py-32 border-t border-white/10" data-magicpath-id="136" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="f70a376a-fc1a-4688-b2b1-00b2ed4475c8" containerType="regular" prevTag="div" className="max-w-[1800px] mx-auto px-8 sm:px-12 lg:px-20" data-magicpath-id="137" data-magicpath-path="BMWX3ProjectDetail.tsx">
           {/* Section Header */}
-          <SortableContainer dndKitId="fa2ce8bf-9624-4ab0-882b-df0c339b28b3" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="04f10b01-d980-4d0e-a62e-b324b7f3f42f" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 40
         }} whileInView={{
@@ -782,7 +782,7 @@ export default function BMWX3ProjectDetail({
           }} data-magicpath-id="139" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <span data-magicpath-id="140" data-magicpath-path="BMWX3ProjectDetail.tsx">CAMPAIGN ASSETS</span>
             </h2>
-            <SortableContainer dndKitId="6641f96f-0437-4663-955e-7756ac1b45ea" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="141" data-magicpath-path="BMWX3ProjectDetail.tsx">
+            <SortableContainer dndKitId="ec2d7768-7421-41a8-a1c0-aff5eb258bc4" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="141" data-magicpath-path="BMWX3ProjectDetail.tsx">
               <p className="text-[15px] leading-[2] text-white/70" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 300,
@@ -797,7 +797,7 @@ export default function BMWX3ProjectDetail({
           </SortableContainer>
 
           {/* Instagram 3x3 Grid - 9 IMMAGINI SEPARATE */}
-          <SortableContainer dndKitId="6eff9938-0c07-48b3-ac14-a0a55d099b13" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="de24cc7e-8422-4cdd-83f7-4de36d3d3a78" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 50
         }} whileInView={{
@@ -993,13 +993,13 @@ export default function BMWX3ProjectDetail({
       </SortableContainer>
 
       {/* Final CTA */}
-      <SortableContainer dndKitId="d9116a5f-eb4a-4e18-80e8-e71f3afa695e" containerType="regular" prevTag="section" className="relative w-full bg-black py-32 lg:py-40 border-t border-white/10" data-magicpath-id="172" data-magicpath-path="BMWX3ProjectDetail.tsx">
-        <SortableContainer dndKitId="fc58785f-624f-4dd7-9980-7fcdddea4fe7" containerType="regular" prevTag="div" className="absolute inset-0 z-0 overflow-hidden" data-magicpath-id="173" data-magicpath-path="BMWX3ProjectDetail.tsx">
+      <SortableContainer dndKitId="ff08d30e-1ee1-4f05-81e0-36ccf80e4d05" containerType="regular" prevTag="section" className="relative w-full bg-black py-32 lg:py-40 border-t border-white/10" data-magicpath-id="172" data-magicpath-path="BMWX3ProjectDetail.tsx">
+        <SortableContainer dndKitId="ea4f4c52-784e-47f5-bedf-c12fb6043805" containerType="regular" prevTag="div" className="absolute inset-0 z-0 overflow-hidden" data-magicpath-id="173" data-magicpath-path="BMWX3ProjectDetail.tsx">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-gradient-radial from-[#aec7e9]/20 via-[#aec7e9]/5 to-transparent blur-3xl" data-magicpath-id="174" data-magicpath-path="BMWX3ProjectDetail.tsx" />
         </SortableContainer>
 
-        <SortableContainer dndKitId="4434d8c5-9759-43c3-92c9-6cd51692a251" containerType="regular" prevTag="div" className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16 text-center" data-magicpath-id="175" data-magicpath-path="BMWX3ProjectDetail.tsx">
-          <SortableContainer dndKitId="374ccae5-494f-4ac6-9a75-4ee1997d3583" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="d926d2b2-2217-4618-8f5b-9ba357cb62a7" containerType="regular" prevTag="div" className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16 text-center" data-magicpath-id="175" data-magicpath-path="BMWX3ProjectDetail.tsx">
+          <SortableContainer dndKitId="aaf133ef-fa5e-41ed-8884-a6e4aa25cf6a" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           y: 40
         }} whileInView={{
@@ -1027,12 +1027,12 @@ export default function BMWX3ProjectDetail({
               </span>
             </p>
 
-            <SortableContainer dndKitId="e3519a98-b5a7-4d2d-be0a-2529bc1b13eb" containerType="regular" prevTag="motion.div" whileHover={{
+            <SortableContainer dndKitId="4e13fe53-4b92-40b0-94fa-f3a00ffe12b4" containerType="regular" prevTag="motion.div" whileHover={{
             scale: 1.05
           }} whileTap={{
             scale: 0.98
           }} className="inline-block" data-magicpath-id="181" data-magicpath-path="BMWX3ProjectDetail.tsx">
-              <SortableContainer dndKitId="95aa7da4-838e-4f48-a097-a964c0ff950d" containerType="regular" prevTag="button" onClick={handleContactClick} className="inline-flex items-center gap-4 px-12 py-5 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-[#aec7e9] to-[#8ba8d4] text-black font-medium hover:from-[#bdd5f0] hover:to-[#a0bbde] transition-all duration-300 shadow-lg shadow-[#aec7e9]/20" style={{
+              <SortableContainer dndKitId="56a8b8cd-883f-434c-bc6c-4a36453f3e35" containerType="regular" prevTag="button" onClick={handleContactClick} className="inline-flex items-center gap-4 px-12 py-5 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-[#aec7e9] to-[#8ba8d4] text-black font-medium hover:from-[#bdd5f0] hover:to-[#a0bbde] transition-all duration-300 shadow-lg shadow-[#aec7e9]/20" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 400
             }} data-magicpath-id="182" data-magicpath-path="BMWX3ProjectDetail.tsx">

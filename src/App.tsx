@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Container, Theme } from './settings/types';
 import { TommasoPortfolio } from './components/generated/TommasoPortfolio';
 import { FeaturedProjectsGrid } from './components/generated/FeaturedProjectsGrid';
@@ -12,6 +12,11 @@ let container: Container = 'none';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  // Scroll to top whenever a project is selected or deselected
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [selectedProject]);
 
   function setTheme(theme: Theme) {
     if (theme === 'dark') {
