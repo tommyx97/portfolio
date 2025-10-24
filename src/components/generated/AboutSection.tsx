@@ -1,38 +1,33 @@
 "use client";
 
-import { SortableContainer } from "@/dnd-kit/SortableContainer";
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 export interface AboutSectionProps {
   onScrollToNext?: () => void;
-  mpid?: string;
 }
 const manifestoValues = [{
   id: 'value-1',
-  text: 'Visione',
-  mpid: "722faa1b-439c-4513-8310-a3985a7c618f"
+  text: 'Visione'
 }, {
   id: 'value-2',
-  text: 'Precisione',
-  mpid: "5e372c5c-cfbf-484e-9ee8-a19d497d8766"
+  text: 'Precisione'
 }, {
   id: 'value-3',
-  text: 'Realismo',
-  mpid: "48a14944-e1ec-495a-8a61-03c2cbafc23d"
+  text: 'Realismo'
 }] as const;
 export const AboutSection = ({
   onScrollToNext
 }: AboutSectionProps) => {
-  return <SortableContainer dndKitId="ea622380-cab7-4381-a50a-95bf759c355e" containerType="regular" prevTag="section" id="about" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center" data-magicpath-id="0" data-magicpath-path="AboutSection.tsx">
+  return <section id="about" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center">
       {/* Content container - Two column layout */}
-      <SortableContainer dndKitId="093a8672-be75-4033-9497-c491ac112477" containerType="regular" prevTag="div" className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
       background: "#000000"
-    }} data-magicpath-id="1" data-magicpath-path="AboutSection.tsx">
-        <SortableContainer dndKitId="ddb38214-7ab9-4084-814b-3bedc5f07d92" containerType="regular" prevTag="div" className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 xl:gap-20 items-center" data-magicpath-id="2" data-magicpath-path="AboutSection.tsx">
+    }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 xl:gap-20 items-center">
           
           {/* LEFT COLUMN - Text Content */}
-          <SortableContainer dndKitId="c5472e68-6c29-4b97-b3b9-0fc93263e5bd" containerType="regular" prevTag="motion.div" initial={{
+          <motion.div initial={{
           opacity: 0,
           x: -60
         }} whileInView={{
@@ -44,10 +39,10 @@ export const AboutSection = ({
         }} transition={{
           duration: 1,
           ease: "easeOut"
-        }} className="space-y-8 lg:space-y-10" data-magicpath-id="3" data-magicpath-path="AboutSection.tsx">
+        }} className="space-y-8 lg:space-y-10">
             {/* Title Section */}
-            <SortableContainer dndKitId="d034d393-1e52-47e1-890a-e3ca355b09e0" containerType="regular" prevTag="div" className="space-y-3" data-magicpath-id="4" data-magicpath-path="AboutSection.tsx">
-              <motion.h2 data-magicpath-motion-tag="motion.h2" initial={{
+            <div className="space-y-3">
+              <motion.h2 initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -64,9 +59,9 @@ export const AboutSection = ({
               fontFamily: 'Urbanist, sans-serif',
               letterSpacing: '0.05em',
               color: "#aec7e9"
-            }} data-magicpath-id="5" data-magicpath-path="AboutSection.tsx">CHI SONO</motion.h2>
+            }}>CHI SONO</motion.h2>
               
-              <motion.p data-magicpath-motion-tag="motion.p" initial={{
+              <motion.p initial={{
               opacity: 0,
               y: 10
             }} whileInView={{
@@ -83,13 +78,13 @@ export const AboutSection = ({
               fontFamily: 'Inter, sans-serif',
               letterSpacing: '0.05em',
               display: "none"
-            }} data-magicpath-id="6" data-magicpath-path="AboutSection.tsx">
+            }}>
                 tommaso.piccioli@email.com
               </motion.p>
-            </SortableContainer>
+            </div>
 
             {/* Main Bio Text */}
-            <SortableContainer dndKitId="41f825a5-3b03-41c4-b852-b053ab8c3540" containerType="regular" prevTag="motion.div" initial={{
+            <motion.div initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -102,12 +97,12 @@ export const AboutSection = ({
             duration: 0.8,
             delay: 0.4,
             ease: "easeOut"
-          }} className="space-y-6" data-magicpath-id="7" data-magicpath-path="AboutSection.tsx">
+          }} className="space-y-6">
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 font-light" style={{
               fontFamily: 'Urbanist, sans-serif',
               lineHeight: '1.8',
               letterSpacing: '0.01em'
-            }} data-magicpath-id="8" data-magicpath-path="AboutSection.tsx">
+            }}>
                 Unisco creatività e intelligenza artificiale per creare campagne visive con identità forte e riconoscibile.
               </p>
               
@@ -115,13 +110,13 @@ export const AboutSection = ({
               fontFamily: 'Urbanist, sans-serif',
               lineHeight: '1.8',
               letterSpacing: '0.01em'
-            }} data-magicpath-id="9" data-magicpath-path="AboutSection.tsx">
+            }}>
                 Credo nel potere delle immagini come linguaggio universale capace di connettere emozione e metodo.
               </p>
-            </SortableContainer>
+            </motion.div>
 
             {/* Decorative line */}
-            <motion.div data-magicpath-motion-tag="motion.div" initial={{
+            <motion.div initial={{
             opacity: 0,
             scaleX: 0
           }} whileInView={{
@@ -134,10 +129,10 @@ export const AboutSection = ({
             duration: 1,
             delay: 0.6,
             ease: "easeOut"
-          }} className="w-24 h-px bg-gradient-to-r from-[#aec7e9] to-transparent origin-left" data-magicpath-id="10" data-magicpath-path="AboutSection.tsx" />
+          }} className="w-24 h-px bg-gradient-to-r from-[#aec7e9] to-transparent origin-left" />
 
             {/* Mini Manifesto */}
-            <SortableContainer dndKitId="0daab9b1-c1e1-412d-ac03-63e02a6fcdee" containerType="collection" prevTag="motion.div" initial={{
+            <motion.div initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
@@ -152,21 +147,21 @@ export const AboutSection = ({
             ease: "easeOut"
           }} className="flex flex-wrap items-center gap-4 sm:gap-6" style={{
             display: "none"
-          }} data-magicpath-id="11" data-magicpath-path="AboutSection.tsx">
-              {manifestoValues.map((value, index) => <div key={value.id} className="flex items-center gap-4 sm:gap-6" data-magicpath-uuid={(value as any)["mpid"] ?? "unsafe"} data-magicpath-id="12" data-magicpath-path="AboutSection.tsx">
+          }}>
+              {manifestoValues.map((value, index) => <div key={value.id} className="flex items-center gap-4 sm:gap-6">
                   <span className="text-lg sm:text-xl lg:text-2xl font-medium text-[#aec7e9] tracking-wide" style={{
                 fontFamily: 'Literata, serif'
-              }} data-magicpath-uuid={(value as any)["mpid"] ?? "unsafe"} data-magicpath-field="text:unknown" data-magicpath-id="13" data-magicpath-path="AboutSection.tsx">
+              }}>
                     {value.text}
                   </span>
                   
                   {/* Dot separator - not after last item */}
-                  {index < manifestoValues.length - 1 && <span className="w-1 h-1 rounded-full bg-[#aec7e9]/50" data-magicpath-uuid={(value as any)["mpid"] ?? "unsafe"} data-magicpath-id="14" data-magicpath-path="AboutSection.tsx" />}
+                  {index < manifestoValues.length - 1 && <span className="w-1 h-1 rounded-full bg-[#aec7e9]/50" />}
                 </div>)}
-            </SortableContainer>
+            </motion.div>
 
             {/* CTA Button */}
-            <SortableContainer dndKitId="ea05e871-5b53-426e-b7fc-0ef64f34521a" containerType="regular" prevTag="motion.div" initial={{
+            <motion.div initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
@@ -179,34 +174,34 @@ export const AboutSection = ({
             duration: 0.8,
             delay: 0.9,
             ease: "easeOut"
-          }} className="pt-6" data-magicpath-id="15" data-magicpath-path="AboutSection.tsx">
-              <SortableContainer dndKitId="ee7bc05e-b3f2-4f0e-ad59-22ff8d521619" containerType="regular" prevTag="button" onClick={onScrollToNext} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
+          }} className="pt-6">
+              <button onClick={onScrollToNext} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '13px',
               letterSpacing: '0.15em'
-            }} data-magicpath-id="16" data-magicpath-path="AboutSection.tsx">
+            }}>
                 <span className="relative z-10" style={{
                 color: "#b3d7ff"
-              }} data-magicpath-id="17" data-magicpath-path="AboutSection.tsx">SCOPRI I MIEI PROGETTI</span>
+              }}>SCOPRI I MIEI PROGETTI</span>
                 
-                <motion.span data-magicpath-motion-tag="motion.span" className="relative z-10" animate={{
+                <motion.span className="relative z-10" animate={{
                 x: [0, 6, 0]
               }} transition={{
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
-              }} data-magicpath-id="18" data-magicpath-path="AboutSection.tsx">
-                  <ArrowRight size={18} strokeWidth={1.5} className="text-[#aec7e9] group-hover:text-[#b3d7ff] transition-colors duration-300" data-magicpath-id="19" data-magicpath-path="AboutSection.tsx" />
+              }}>
+                  <ArrowRight size={18} strokeWidth={1.5} className="text-[#aec7e9] group-hover:text-[#b3d7ff] transition-colors duration-300" />
                 </motion.span>
                 
                 {/* Hover underline effect */}
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-[#aec7e9] group-hover:w-[calc(100%-30px)] transition-all duration-500" data-magicpath-id="20" data-magicpath-path="AboutSection.tsx" />
-              </SortableContainer>
-            </SortableContainer>
-          </SortableContainer>
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-[#aec7e9] group-hover:w-[calc(100%-30px)] transition-all duration-500" />
+              </button>
+            </motion.div>
+          </motion.div>
 
           {/* RIGHT COLUMN - Portrait Image */}
-          <SortableContainer dndKitId="8fa15e78-b9ea-4147-a576-120eb5139a73" containerType="regular" prevTag="motion.div" initial={{
+          <motion.div initial={{
           opacity: 0,
           x: 60
         }} whileInView={{
@@ -219,19 +214,19 @@ export const AboutSection = ({
           duration: 1.2,
           delay: 0.4,
           ease: "easeOut"
-        }} className="relative w-full aspect-[3/4] lg:aspect-[4/5] max-w-[600px] mx-auto lg:mx-0 lg:ml-auto" data-magicpath-id="21" data-magicpath-path="AboutSection.tsx">
+        }} className="relative w-full aspect-[3/4] lg:aspect-[4/5] max-w-[600px] mx-auto lg:mx-0 lg:ml-auto">
             {/* Main portrait image with cinematic backlight */}
-            <SortableContainer dndKitId="a3a0419c-3e01-4573-ac18-961638209524" containerType="regular" prevTag="div" className="relative w-full h-full overflow-hidden" data-magicpath-id="22" data-magicpath-path="AboutSection.tsx">
+            <div className="relative w-full h-full overflow-hidden">
               {/* Portrait image */}
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Tommaso Piccioli - AI Creative Director" className="w-full h-full object-cover object-center grayscale" style={{
               filter: 'grayscale(100%) contrast(1.1) brightness(0.85)'
-            }} data-magicpath-id="23" data-magicpath-path="AboutSection.tsx" />
+            }} />
               
               {/* Dark gradient overlay for cinematic mood */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" data-magicpath-id="24" data-magicpath-path="AboutSection.tsx" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
               
               {/* Warm backlight glow from right side */}
-              <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-[#aec7e9]/40 via-[#aec7e9]/10 to-transparent mix-blend-screen" data-magicpath-id="25" data-magicpath-path="AboutSection.tsx" />
+              <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-[#aec7e9]/40 via-[#aec7e9]/10 to-transparent mix-blend-screen" />
               
               {/* Subtle vignette for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-transparent" style={{
@@ -240,23 +235,23 @@ export const AboutSection = ({
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               opacity: "1"
-            }} data-magicpath-id="26" data-magicpath-path="AboutSection.tsx" />
-            </SortableContainer>
+            }} />
+            </div>
 
             {/* Decorative golden glow behind the image */}
-            <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-[400px] h-[500px] bg-gradient-radial from-[#aec7e9]/20 via-[#aec7e9]/5 to-transparent blur-[100px] -z-10" data-magicpath-id="27" data-magicpath-path="AboutSection.tsx" />
+            <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-[400px] h-[500px] bg-gradient-radial from-[#aec7e9]/20 via-[#aec7e9]/5 to-transparent blur-[100px] -z-10" />
             
             {/* Subtle frame effect */}
-            <div className="absolute inset-0 border border-white/5 pointer-events-none" data-magicpath-id="28" data-magicpath-path="AboutSection.tsx" />
-          </SortableContainer>
+            <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+          </motion.div>
 
-        </SortableContainer>
-      </SortableContainer>
+        </div>
+      </div>
 
       {/* Background ambient light - left side */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[600px] bg-gradient-radial from-[#aec7e9]/10 via-[#aec7e9]/5 to-transparent blur-[120px] opacity-40" data-magicpath-id="29" data-magicpath-path="AboutSection.tsx" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[600px] bg-gradient-radial from-[#aec7e9]/10 via-[#aec7e9]/5 to-transparent blur-[120px] opacity-40" />
       
       {/* Bottom fade for smooth section transitions */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" data-magicpath-id="30" data-magicpath-path="AboutSection.tsx" />
-    </SortableContainer>;
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+    </section>;
 };

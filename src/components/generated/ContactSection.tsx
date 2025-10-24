@@ -1,6 +1,5 @@
 "use client";
 
-import { SortableContainer } from "@/dnd-kit/SortableContainer";
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
@@ -8,29 +7,25 @@ export interface ContactSectionProps {
   email?: string;
   instagramUrl?: string;
   linkedinUrl?: string;
-  mpid?: string;
 }
 const contactInfo = [{
   id: 'contact-email',
   icon: Mail,
   label: 'Email',
   value: 'tommaso.piccioli@email.com',
-  href: 'mailto:tommaso.piccioli@email.com',
-  mpid: "12c361c0-923f-4959-972d-daa8191e64fb"
+  href: 'mailto:tommaso.piccioli@email.com'
 }, {
   id: 'contact-instagram',
   icon: Instagram,
   label: 'Instagram',
   value: '@tommasopiccioli',
-  href: 'https://instagram.com/tommasopiccioli',
-  mpid: "fa7cc23f-d83c-4bf4-9862-71fac9408035"
+  href: 'https://instagram.com/tommasopiccioli'
 }, {
   id: 'contact-linkedin',
   icon: Linkedin,
   label: 'LinkedIn',
   value: 'Tommaso Piccioli',
-  href: 'https://linkedin.com/in/tommasopiccioli',
-  mpid: "12bbe623-e2c3-43c2-9402-19055e482f1a"
+  href: 'https://linkedin.com/in/tommasopiccioli'
 }] as const;
 export const ContactSection = ({
   email = 'tommaso.piccioli@email.com',
@@ -38,17 +33,17 @@ export const ContactSection = ({
   linkedinUrl = 'https://linkedin.com'
 }: ContactSectionProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
-  return <SortableContainer dndKitId="65d7726e-1554-4601-be6c-39f4c36fb01a" containerType="regular" prevTag="section" className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden" data-magicpath-id="0" data-magicpath-path="ContactSection.tsx">
+  return <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Background ambient gradient */}
-      <SortableContainer dndKitId="cdb609b9-e52a-4dd2-b2a7-c5d714832afd" containerType="regular" prevTag="div" className="absolute inset-0 z-0" data-magicpath-id="1" data-magicpath-path="ContactSection.tsx">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-[#C8966B]/15 via-[#C8966B]/5 to-transparent blur-3xl" data-magicpath-id="2" data-magicpath-path="ContactSection.tsx" />
-      </SortableContainer>
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-[#C8966B]/15 via-[#C8966B]/5 to-transparent blur-3xl" />
+      </div>
 
       {/* Content Container */}
-      <SortableContainer dndKitId="62aa5cfb-c366-467c-b19e-e808baf3a4ea" containerType="regular" prevTag="div" className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-32" data-magicpath-id="3" data-magicpath-path="ContactSection.tsx">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-32">
         
         {/* Header */}
-        <SortableContainer dndKitId="385f2121-ce59-41d3-9b6d-a7d5ef73b113" containerType="regular" prevTag="motion.div" initial={{
+        <motion.div initial={{
         opacity: 0,
         y: 30
       }} whileInView={{
@@ -60,18 +55,18 @@ export const ContactSection = ({
       }} transition={{
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1]
-      }} className="mb-16 lg:mb-24" data-magicpath-id="4" data-magicpath-path="ContactSection.tsx">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-[0.15em] uppercase mb-6" data-magicpath-id="5" data-magicpath-path="ContactSection.tsx">
-            <span data-magicpath-id="6" data-magicpath-path="ContactSection.tsx">Contattami</span>
+      }} className="mb-16 lg:mb-24">
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-[0.15em] uppercase mb-6">
+            <span>Contattami</span>
           </h2>
-          <div className="w-20 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" data-magicpath-id="7" data-magicpath-path="ContactSection.tsx" />
-        </SortableContainer>
+          <div className="w-20 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" />
+        </motion.div>
 
         {/* Main content grid */}
-        <SortableContainer dndKitId="71023172-98c6-4145-80cb-c39adb575153" containerType="regular" prevTag="div" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start" data-magicpath-id="8" data-magicpath-path="ContactSection.tsx">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* Left: Message */}
-          <SortableContainer dndKitId="3ad42acf-fa76-47a3-be0e-5f987fd74ad3" containerType="regular" prevTag="motion.div" initial={{
+          <motion.div initial={{
           opacity: 0,
           x: -40
         }} whileInView={{
@@ -83,21 +78,21 @@ export const ContactSection = ({
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="space-y-8" data-magicpath-id="9" data-magicpath-path="ContactSection.tsx">
-            <SortableContainer dndKitId="280cb008-5b31-4f46-8564-0e9012164ad5" containerType="regular" prevTag="div" className="space-y-6" data-magicpath-id="10" data-magicpath-path="ContactSection.tsx">
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light leading-relaxed text-white/90" data-magicpath-id="11" data-magicpath-path="ContactSection.tsx">
-                <span data-magicpath-id="12" data-magicpath-path="ContactSection.tsx">Hai un progetto in mente?</span>
+        }} className="space-y-8">
+            <div className="space-y-6">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-light leading-relaxed text-white/90">
+                <span>Hai un progetto in mente?</span>
               </p>
-              <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed text-white/70" data-magicpath-id="13" data-magicpath-path="ContactSection.tsx">
-                <span data-magicpath-id="14" data-magicpath-path="ContactSection.tsx">
+              <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed text-white/70">
+                <span>
                   Sono sempre aperto a nuove collaborazioni e sfide creative. 
                   Lavoriamo insieme per dare vita alla tua visione.
                 </span>
               </p>
-            </SortableContainer>
+            </div>
 
             {/* Decorative element */}
-            <motion.div data-magicpath-motion-tag="motion.div" initial={{
+            <motion.div initial={{
             opacity: 0,
             scaleX: 0
           }} whileInView={{
@@ -108,18 +103,18 @@ export const ContactSection = ({
           }} transition={{
             duration: 1,
             delay: 0.5
-          }} className="w-32 h-[1px] bg-gradient-to-r from-[#E7B979]/60 to-transparent origin-left" data-magicpath-id="15" data-magicpath-path="ContactSection.tsx" />
+          }} className="w-32 h-[1px] bg-gradient-to-r from-[#E7B979]/60 to-transparent origin-left" />
 
             {/* Additional info */}
-            <SortableContainer dndKitId="2d29722c-7279-4f4a-b2b5-ba2baee59746" containerType="regular" prevTag="div" className="pt-4" data-magicpath-id="16" data-magicpath-path="ContactSection.tsx">
-              <p className="text-sm font-light text-white/50 tracking-wide uppercase" data-magicpath-id="17" data-magicpath-path="ContactSection.tsx">
-                <span data-magicpath-id="18" data-magicpath-path="ContactSection.tsx">Rispondo entro 24 ore</span>
+            <div className="pt-4">
+              <p className="text-sm font-light text-white/50 tracking-wide uppercase">
+                <span>Rispondo entro 24 ore</span>
               </p>
-            </SortableContainer>
-          </SortableContainer>
+            </div>
+          </motion.div>
 
           {/* Right: Contact methods */}
-          <SortableContainer dndKitId="a0eb6acc-ac64-44e7-b3a4-e12aed149d52" containerType="collection" prevTag="motion.div" initial={{
+          <motion.div initial={{
           opacity: 0,
           x: 40
         }} whileInView={{
@@ -131,11 +126,11 @@ export const ContactSection = ({
         }} transition={{
           duration: 0.8,
           delay: 0.3
-        }} className="space-y-6" data-magicpath-id="19" data-magicpath-path="ContactSection.tsx">
+        }} className="space-y-6">
             {contactInfo.map((contact, index) => {
             const Icon = contact.icon;
             const isHovered = hoveredIndex === index;
-            return <motion.a data-magicpath-motion-tag="motion.a" key={contact.id} href={contact.href} target={contact.id !== 'contact-email' ? '_blank' : undefined} rel={contact.id !== 'contact-email' ? 'noopener noreferrer' : undefined} initial={{
+            return <motion.a key={contact.id} href={contact.href} target={contact.id !== 'contact-email' ? '_blank' : undefined} rel={contact.id !== 'contact-email' ? 'noopener noreferrer' : undefined} initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -157,17 +152,17 @@ export const ContactSection = ({
               borderLeftColor: "rgb(105 144 199 / 0.4)",
               borderStyle: "solid",
               borderRadius: "0px"
-            }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="20" data-magicpath-path="ContactSection.tsx">
-                  <div className="flex items-start justify-between gap-4" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="21" data-magicpath-path="ContactSection.tsx">
+            }}>
+                  <div className="flex items-start justify-between gap-4">
                     {/* Left: Icon and content */}
-                    <div className="flex items-start gap-4 lg:gap-6 flex-1" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="22" data-magicpath-path="ContactSection.tsx">
+                    <div className="flex items-start gap-4 lg:gap-6 flex-1">
                       {/* Icon */}
-                      <motion.div data-magicpath-motion-tag="motion.div" animate={{
+                      <motion.div animate={{
                     scale: isHovered ? 1.1 : 1,
                     rotate: isHovered ? 5 : 0
                   }} transition={{
                     duration: 0.3
-                  }} className="mt-1" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="23" data-magicpath-path="ContactSection.tsx">
+                  }} className="mt-1">
                         <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-[#C8966B]/30 flex items-center justify-center bg-[#C8966B]/10 group-hover:bg-[#C8966B]/20 group-hover:border-[#C8966B]/50 transition-all duration-500" style={{
                       background: "#3c434c",
                       borderTopWidth: "1px",
@@ -180,30 +175,30 @@ export const ContactSection = ({
                       borderLeftColor: "rgb(59 138 162 / 0.5)",
                       borderStyle: "solid",
                       borderRadius: "2.98262e+07px"
-                    }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="24" data-magicpath-path="ContactSection.tsx">
+                    }}>
                           <Icon className="text-[#E7B979]" size={20} strokeWidth={1.5} style={{
                         color: "#aec7e9"
-                      }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="25" data-magicpath-path="ContactSection.tsx" />
+                      }} />
                         </div>
                       </motion.div>
 
                       {/* Text content */}
-                      <div className="space-y-2 flex-1" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="26" data-magicpath-path="ContactSection.tsx">
-                        <p className="text-xs lg:text-sm font-light text-white/50 tracking-[0.2em] uppercase" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="27" data-magicpath-path="ContactSection.tsx">
-                          <span data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-field="label:unknown" data-magicpath-id="28" data-magicpath-path="ContactSection.tsx">{contact.label}</span>
+                      <div className="space-y-2 flex-1">
+                        <p className="text-xs lg:text-sm font-light text-white/50 tracking-[0.2em] uppercase">
+                          <span>{contact.label}</span>
                         </p>
-                        <motion.p data-magicpath-motion-tag="motion.p" animate={{
+                        <motion.p animate={{
                       x: isHovered ? 4 : 0
                     }} transition={{
                       duration: 0.3
-                    }} className="text-lg lg:text-xl font-light text-white/90 group-hover:text-white transition-colors duration-300" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="29" data-magicpath-path="ContactSection.tsx">
-                          <span data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-field="value:unknown" data-magicpath-id="30" data-magicpath-path="ContactSection.tsx">{contact.value}</span>
+                    }} className="text-lg lg:text-xl font-light text-white/90 group-hover:text-white transition-colors duration-300">
+                          <span>{contact.value}</span>
                         </motion.p>
                       </div>
                     </div>
 
                     {/* Right: Arrow icon */}
-                    <motion.div data-magicpath-motion-tag="motion.div" initial={{
+                    <motion.div initial={{
                   opacity: 0,
                   scale: 0.8
                 }} animate={{
@@ -213,31 +208,31 @@ export const ContactSection = ({
                   y: isHovered ? -4 : 0
                 }} transition={{
                   duration: 0.3
-                }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="31" data-magicpath-path="ContactSection.tsx">
-                      <ArrowUpRight className="text-[#E7B979]" size={20} strokeWidth={1.5} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="32" data-magicpath-path="ContactSection.tsx" />
+                }}>
+                      <ArrowUpRight className="text-[#E7B979]" size={20} strokeWidth={1.5} />
                     </motion.div>
                   </div>
 
                   {/* Bottom accent line */}
-                  <motion.div data-magicpath-motion-tag="motion.div" className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" initial={{
+                  <motion.div className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" initial={{
                 width: "0%"
               }} animate={{
                 width: isHovered ? "100%" : "0%"
               }} transition={{
                 duration: 0.5
-              }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="33" data-magicpath-path="ContactSection.tsx" />
+              }} />
 
                   {/* Glow effect on hover */}
-                  <motion.div data-magicpath-motion-tag="motion.div" className="absolute inset-0 bg-gradient-to-br from-[#C8966B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
+                  <motion.div className="absolute inset-0 bg-gradient-to-br from-[#C8966B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
                 mixBlendMode: 'screen'
-              }} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="34" data-magicpath-path="ContactSection.tsx" />
+              }} />
                 </motion.a>;
           })}
-          </SortableContainer>
-        </SortableContainer>
+          </motion.div>
+        </div>
 
         {/* Bottom decorative line */}
-        <SortableContainer dndKitId="b85569ec-ee2a-4202-a214-62e387b74ccd" containerType="regular" prevTag="motion.div" initial={{
+        <motion.div initial={{
         opacity: 0,
         scaleX: 0
       }} whileInView={{
@@ -248,12 +243,12 @@ export const ContactSection = ({
       }} transition={{
         duration: 1.2,
         delay: 0.8
-      }} className="mt-20 lg:mt-32" data-magicpath-id="35" data-magicpath-path="ContactSection.tsx">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8966B]/30 to-transparent" data-magicpath-id="36" data-magicpath-path="ContactSection.tsx" />
-        </SortableContainer>
+      }} className="mt-20 lg:mt-32">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8966B]/30 to-transparent" />
+        </motion.div>
 
         {/* Footer text */}
-        <SortableContainer dndKitId="44493586-934a-4b74-a582-fdb30c64ca4e" containerType="regular" prevTag="motion.div" initial={{
+        <motion.div initial={{
         opacity: 0
       }} whileInView={{
         opacity: 1
@@ -262,11 +257,11 @@ export const ContactSection = ({
       }} transition={{
         duration: 0.8,
         delay: 1
-      }} className="mt-12 text-center" data-magicpath-id="37" data-magicpath-path="ContactSection.tsx">
-          <p className="text-xs lg:text-sm font-light text-white/40 tracking-[0.2em] uppercase" data-magicpath-id="38" data-magicpath-path="ContactSection.tsx">
-            <span data-magicpath-id="39" data-magicpath-path="ContactSection.tsx">© 2025 Tommaso Piccioli — AI Creator & Creative Director</span>
+      }} className="mt-12 text-center">
+          <p className="text-xs lg:text-sm font-light text-white/40 tracking-[0.2em] uppercase">
+            <span>© 2025 Tommaso Piccioli — AI Creator & Creative Director</span>
           </p>
-        </SortableContainer>
-      </SortableContainer>
-    </SortableContainer>;
+        </motion.div>
+      </div>
+    </section>;
 };

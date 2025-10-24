@@ -1,6 +1,5 @@
 "use client";
 
-import { SortableContainer } from "@/dnd-kit/SortableContainer";
 import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
 const projectsData = [{
@@ -9,28 +8,24 @@ const projectsData = [{
   category: 'AUTOMOTIVE',
   year: '2025',
   image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&h=1600&fit=crop&q=90',
-  bgColor: 'from-slate-500/20 to-blue-900/30',
-  mpid: "7fc2a19c-a8c5-460a-aaa7-d1339ea77b4f"
+  bgColor: 'from-slate-500/20 to-blue-900/30'
 }, {
   id: 'project-innovation',
   title: 'Vision Air',
   category: 'INNOVATION',
   year: '2024',
   image: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1200&h=1600&fit=crop&q=90',
-  bgColor: 'from-amber-500/30 to-yellow-600/40',
-  mpid: "febeec4e-b17a-48e8-854f-6c2039ac080c"
+  bgColor: 'from-amber-500/30 to-yellow-600/40'
 }, {
   id: 'project-product',
   title: 'iPhone Model T',
   category: 'PRODUCT',
   year: '2025',
   image: 'https://images.unsplash.com/photo-1592286927505-b0e2950e3900?w=1200&h=1600&fit=crop&q=90',
-  bgColor: 'from-zinc-900/50 to-black/70',
-  mpid: "d5da6135-23fc-4c16-a212-7bde40d3efb1"
+  bgColor: 'from-zinc-900/50 to-black/70'
 }] as const;
 export interface FeaturedProjectsGridProps {
   onProjectClick?: (projectId: string) => void;
-  mpid?: string;
 }
 export const FeaturedProjectsGrid = ({
   onProjectClick
@@ -41,17 +36,17 @@ export const FeaturedProjectsGrid = ({
     once: true,
     margin: "-100px"
   });
-  return <SortableContainer dndKitId="d866d338-7e76-42b8-befd-4d9a84dc41e3" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="FeaturedProjectsGrid.tsx">
+  return <div className="relative w-full min-h-screen bg-black text-white overflow-hidden">
       {/* Ambient background glow */}
-      <SortableContainer dndKitId="c60bc820-77dd-4fef-930c-b1c09ef7fa1d" containerType="regular" prevTag="div" className="absolute inset-0 z-0 pointer-events-none" data-magicpath-id="1" data-magicpath-path="FeaturedProjectsGrid.tsx">
-        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" data-magicpath-id="2" data-magicpath-path="FeaturedProjectsGrid.tsx" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-amber-500/8 via-transparent to-transparent blur-[100px]" data-magicpath-id="3" data-magicpath-path="FeaturedProjectsGrid.tsx" />
-      </SortableContainer>
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-amber-500/8 via-transparent to-transparent blur-[100px]" />
+      </div>
 
       {/* Main container */}
-      <SortableContainer dndKitId="0b9125a9-2235-484e-8bcf-6f7a3d8ada4a" containerType="regular" prevTag="div" ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32" data-magicpath-id="4" data-magicpath-path="FeaturedProjectsGrid.tsx">
+      <div ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32">
         {/* Header section */}
-        <SortableContainer dndKitId="2db1f997-e4b7-4736-a311-f6fc15c43b77" containerType="regular" prevTag="motion.div" initial={{
+        <motion.div initial={{
         opacity: 0,
         y: 30
       }} animate={isInView ? {
@@ -63,24 +58,24 @@ export const FeaturedProjectsGrid = ({
       }} transition={{
         duration: 0.8,
         ease: [0.25, 0.1, 0.25, 1]
-      }} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24" data-magicpath-id="5" data-magicpath-path="FeaturedProjectsGrid.tsx">
-          <SortableContainer dndKitId="a9627e52-b3fc-4026-a909-aa1a764cf114" containerType="regular" prevTag="div" className="space-y-4 sm:space-y-5 md:space-y-6" data-magicpath-id="6" data-magicpath-path="FeaturedProjectsGrid.tsx">
-            <p className="text-xs sm:text-sm font-light text-white/50 tracking-[0.3em] uppercase" data-magicpath-id="7" data-magicpath-path="FeaturedProjectsGrid.tsx">
-              <span data-magicpath-id="8" data-magicpath-path="FeaturedProjectsGrid.tsx">Progetti Selezionati</span>
+      }} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <div className="space-y-4 sm:space-y-5 md:space-y-6">
+            <p className="text-xs sm:text-sm font-light text-white/50 tracking-[0.3em] uppercase">
+              <span>Progetti Selezionati</span>
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-tight leading-[1.05]" data-magicpath-id="9" data-magicpath-path="FeaturedProjectsGrid.tsx">
-              <span className="block text-white" data-magicpath-id="10" data-magicpath-path="FeaturedProjectsGrid.tsx">Featured</span>
-              <span className="block text-white" data-magicpath-id="11" data-magicpath-path="FeaturedProjectsGrid.tsx">Projects</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-tight leading-[1.05]">
+              <span className="block text-white">Featured</span>
+              <span className="block text-white">Projects</span>
             </h1>
-          </SortableContainer>
-        </SortableContainer>
+          </div>
+        </motion.div>
 
         {/* Three cards grid */}
-        <SortableContainer dndKitId="3adc181e-b2ac-4ab6-b53a-6ae0e51c4b74" containerType="collection" prevTag="div" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8" data-magicpath-id="12" data-magicpath-path="FeaturedProjectsGrid.tsx">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
           {projectsData.map((project, index) => {
           const isHovered = hoveredIndex === index;
           const isBMW = project.id === 'project-automotive';
-          return <motion.div data-magicpath-motion-tag="motion.div" key={project.id} initial={{
+          return <motion.div key={project.id} initial={{
             opacity: 0,
             y: 60
           }} animate={isInView ? {
@@ -97,35 +92,35 @@ export const FeaturedProjectsGrid = ({
             if (isBMW && onProjectClick) {
               onProjectClick('bmw-x3');
             }
-          }} className="group relative w-full" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="13" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                <div className={`relative w-full aspect-[3/4] overflow-hidden bg-zinc-950 ${isBMW ? 'cursor-pointer' : 'cursor-default'}`} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="14" data-magicpath-path="FeaturedProjectsGrid.tsx">
+          }} className="group relative w-full">
+                <div className={`relative w-full aspect-[3/4] overflow-hidden bg-zinc-950 ${isBMW ? 'cursor-pointer' : 'cursor-default'}`}>
                   {/* Background image */}
-                  <motion.div data-magicpath-motion-tag="motion.div" className="absolute inset-0 w-full h-full" animate={{
+                  <motion.div className="absolute inset-0 w-full h-full" animate={{
                 scale: isHovered ? 1.08 : 1
               }} transition={{
                 duration: 0.7,
                 ease: [0.25, 0.1, 0.25, 1]
-              }} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="15" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                    <img src={project.image} alt={`${project.title} - ${project.category}`} className="w-full h-full object-cover" loading="lazy" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-field="image:unknown" data-magicpath-id="16" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+              }}>
+                    <img src={project.image} alt={`${project.title} - ${project.category}`} className="w-full h-full object-cover" loading="lazy" />
                   </motion.div>
 
                   {/* Gradient overlays */}
-                  <div className={`absolute inset-0 bg-gradient-to-b ${project.bgColor} mix-blend-multiply`} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="17" data-magicpath-path="FeaturedProjectsGrid.tsx" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/95" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="18" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+                  <div className={`absolute inset-0 bg-gradient-to-b ${project.bgColor} mix-blend-multiply`} />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/95" />
 
                   {/* Hover glow effect */}
-                  <motion.div data-magicpath-motion-tag="motion.div" className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent" initial={{
+                  <motion.div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent" initial={{
                 opacity: 0
               }} animate={{
                 opacity: isHovered ? 1 : 0
               }} transition={{
                 duration: 0.4
-              }} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="19" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+              }} />
 
                   {/* Content overlay */}
-                  <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 z-10" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="20" data-magicpath-path="FeaturedProjectsGrid.tsx">
+                  <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 z-10">
                     {/* Top: Category badge */}
-                    <motion.div data-magicpath-motion-tag="motion.div" initial={{
+                    <motion.div initial={{
                   opacity: 0,
                   y: -10
                 }} animate={{
@@ -134,45 +129,45 @@ export const FeaturedProjectsGrid = ({
                 }} transition={{
                   duration: 0.6,
                   delay: 0.3 + index * 0.1
-                }} className="flex items-start" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="21" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                      <div className="inline-flex px-3 py-1.5 backdrop-blur-md bg-white/5 border border-white/10 rounded-full" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="22" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                        <span className="text-[10px] sm:text-xs font-light text-white/90 tracking-[0.2em] uppercase" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-field="category:unknown" data-magicpath-id="23" data-magicpath-path="FeaturedProjectsGrid.tsx">
+                }} className="flex items-start">
+                      <div className="inline-flex px-3 py-1.5 backdrop-blur-md bg-white/5 border border-white/10 rounded-full">
+                        <span className="text-[10px] sm:text-xs font-light text-white/90 tracking-[0.2em] uppercase">
                           {project.category}
                         </span>
                       </div>
                     </motion.div>
 
                     {/* Bottom: Project info */}
-                    <motion.div data-magicpath-motion-tag="motion.div" animate={{
+                    <motion.div animate={{
                   y: isHovered ? -6 : 0
                 }} transition={{
                   duration: 0.5,
                   ease: [0.25, 0.1, 0.25, 1]
-                }} className="space-y-3 sm:space-y-4" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="24" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                      <div className="space-y-1.5 sm:space-y-2" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="25" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                        <p className="text-[10px] sm:text-xs font-light text-white/40 tracking-[0.25em] uppercase" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="26" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                          <span data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="27" data-magicpath-path="FeaturedProjectsGrid.tsx">PROGETTO</span>
+                }} className="space-y-3 sm:space-y-4">
+                      <div className="space-y-1.5 sm:space-y-2">
+                        <p className="text-[10px] sm:text-xs font-light text-white/40 tracking-[0.25em] uppercase">
+                          <span>PROGETTO</span>
                         </p>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-5xl font-light tracking-tight text-white leading-tight" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="28" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                          <span data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-field="title:unknown" data-magicpath-id="29" data-magicpath-path="FeaturedProjectsGrid.tsx">{project.title}</span>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-5xl font-light tracking-tight text-white leading-tight">
+                          <span>{project.title}</span>
                         </h2>
-                        <p className="text-xs sm:text-sm font-light text-white/30 tracking-wide" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="30" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                          <span data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-field="year:unknown" data-magicpath-id="31" data-magicpath-path="FeaturedProjectsGrid.tsx">{project.year}</span>
+                        <p className="text-xs sm:text-sm font-light text-white/30 tracking-wide">
+                          <span>{project.year}</span>
                         </p>
                       </div>
 
                       {/* Animated underline */}
-                      <motion.div data-magicpath-motion-tag="motion.div" className="h-[1px] bg-gradient-to-r from-white/60 via-white/30 to-transparent" initial={{
+                      <motion.div className="h-[1px] bg-gradient-to-r from-white/60 via-white/30 to-transparent" initial={{
                     width: "40%"
                   }} animate={{
                     width: isHovered ? "85%" : "40%"
                   }} transition={{
                     duration: 0.6,
                     ease: [0.25, 0.1, 0.25, 1]
-                  }} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="32" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+                  }} />
 
                       {/* Hover reveal: View project */}
-                      <motion.div data-magicpath-motion-tag="motion.div" initial={{
+                      <motion.div initial={{
                     opacity: 0,
                     height: 0
                   }} animate={{
@@ -180,18 +175,18 @@ export const FeaturedProjectsGrid = ({
                     height: isHovered ? "auto" : 0
                   }} transition={{
                     duration: 0.3
-                  }} className="overflow-hidden" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="33" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                        <div className="flex items-center gap-2 pt-1" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="34" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                          <span className="text-xs font-light text-white/70 tracking-[0.15em] uppercase" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="35" data-magicpath-path="FeaturedProjectsGrid.tsx">
+                  }} className="overflow-hidden">
+                        <div className="flex items-center gap-2 pt-1">
+                          <span className="text-xs font-light text-white/70 tracking-[0.15em] uppercase">
                             View project
                           </span>
-                          <motion.svg data-magicpath-motion-tag="motion.svg" animate={{
+                          <motion.svg animate={{
                         x: isHovered ? 3 : 0
                       }} transition={{
                         duration: 0.3
-                      }} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="36" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                            <path d="M7 7h10v10" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="37" data-magicpath-path="FeaturedProjectsGrid.tsx" />
-                            <path d="M7 17 17 7" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="38" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+                      }} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
                           </motion.svg>
                         </div>
                       </motion.div>
@@ -199,29 +194,29 @@ export const FeaturedProjectsGrid = ({
                   </div>
 
                   {/* Border glow on hover */}
-                  <motion.div data-magicpath-motion-tag="motion.div" className="absolute inset-0 pointer-events-none" initial={{
+                  <motion.div className="absolute inset-0 pointer-events-none" initial={{
                 boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0)"
               }} animate={{
                 boxShadow: isHovered ? "inset 0 0 0 1px rgba(255, 255, 255, 0.15)" : "inset 0 0 0 1px rgba(255, 255, 255, 0)"
               }} transition={{
                 duration: 0.4
-              }} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="39" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+              }} />
                 </div>
 
                 {/* Outer glow */}
-                <motion.div data-magicpath-motion-tag="motion.div" className="absolute -inset-1 bg-white/5 blur-2xl -z-10 rounded-sm" initial={{
+                <motion.div className="absolute -inset-1 bg-white/5 blur-2xl -z-10 rounded-sm" initial={{
               opacity: 0
             }} animate={{
               opacity: isHovered ? 1 : 0
             }} transition={{
               duration: 0.5
-            }} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="40" data-magicpath-path="FeaturedProjectsGrid.tsx" />
+            }} />
               </motion.div>;
         })}
-        </SortableContainer>
+        </div>
 
         {/* Bottom spacing */}
-        <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32" data-magicpath-id="41" data-magicpath-path="FeaturedProjectsGrid.tsx" />
-      </SortableContainer>
-    </SortableContainer>;
+        <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32" />
+      </div>
+    </div>;
 };
