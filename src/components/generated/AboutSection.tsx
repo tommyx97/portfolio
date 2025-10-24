@@ -26,7 +26,7 @@ export const AboutSection = ({
     scrollToSection('#progetti');
   };
 
-  return <section id="chi-sono" className="section-with-nav relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center">
+  return <section id="chi-sono" className="section-with-nav relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center about-section">
       {/* Content container - Two column layout */}
       <div className="relative z-10 w-full max-w-[1600px] mx-auto mobile-spacing">
         <div className="desktop-grid desktop-flex">

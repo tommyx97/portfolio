@@ -19,7 +19,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       {/* Social icons removed - now handled by StickyNavigation component */}
 
       {/* Main hero content */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center hero-section" style={{
       backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/2a529ca7-9941-4325-b7ac-0869b90895df.png)",
       backgroundSize: "cover",
       backgroundPosition: "50% 50%",

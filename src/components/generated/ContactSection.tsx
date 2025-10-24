@@ -27,7 +27,7 @@ export const ContactSection = ({
   linkedinUrl = 'https://www.linkedin.com/feed/'
 }: ContactSectionProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
-  return <section id="contatti" className="section-with-nav relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+  return <section id="contatti" className="section-with-nav relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden contact-section">
       {/* Background ambient gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-[#C8966B]/15 via-[#C8966B]/5 to-transparent blur-3xl" />
