@@ -1,0 +1,18 @@
+# Placeholder for img-03.jpg
+
+This is a placeholder file for img-03.jpg.
+
+Instructions:
+1. Replace this file with your actual image
+2. Ensure the image is optimized for web (JPG or WebP)
+3. Recommended dimensions:
+   - cover.jpg: 1920x1080px (16:9 ratio)
+   - thumb.jpg: 400x300px (4:3 ratio)
+   - img-XX.jpg: 1200x800px (3:2 ratio)
+4. Keep file size under 500KB for optimal loading
+
+File naming rules:
+- Use lowercase letters only
+- Use hyphens instead of spaces
+- Use .jpg or .webp extension
+- Number gallery images with two digits (01, 02, 03, etc.)
