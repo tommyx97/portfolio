@@ -60,7 +60,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           {navLinks.map((link, idx) => <a key={link.id} href={link.href} onClick={e => {
           e.preventDefault();
           scrollToSection(link.href);
-        }} className={`relative text-sm lg:text-base font-light tracking-[0.2em] transition-all duration-300 uppercase ${activeSection === link.href ? 'text-[#aec7e9] drop-shadow-[0_0_8px_rgba(174,199,233,0.8)]' : 'text-white/90 hover:text-white'}`} style={{
+        }} className={`nav-link relative text-sm lg:text-base font-light tracking-[0.2em] transition-all duration-300 uppercase ${activeSection === link.href ? 'active text-[#aec7e9] drop-shadow-[0_0_8px_rgba(174,199,233,0.8)]' : 'text-white/90'}`} style={{
           fontFamily: "Inter"
         }}>
               <motion.span initial={{
@@ -112,7 +112,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
     }} className="absolute left-8 lg:left-12 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-8">
         {socialLinks.map((social, idx) => {
         const Icon = social.icon;
-        return <a key={social.id} href={social.href} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors duration-300" aria-label={social.label}>
+        return <a key={social.id} href={social.href} target="_blank" rel="noopener noreferrer" className="nav-link text-white/80 transition-all duration-300" aria-label={social.label}>
               <motion.div initial={{
             opacity: 0,
             x: -10

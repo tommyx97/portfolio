@@ -182,7 +182,7 @@ export const AboutSection = ({
             delay: 0.9,
             ease: "easeOut"
           }} className="pt-6">
-              <button onClick={handleScrollToProjects} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
+              <button onClick={handleScrollToProjects} className="nav-link group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500" style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '13px',
               letterSpacing: '0.15em'
