@@ -102,10 +102,8 @@ export default function BMWX3ProjectDetail({
   const { scrollToProjectSection } = useProjectNavigation();
   
   const handleContactClick = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
-    });
+    // Navigate to homepage with contact section anchor
+    window.location.href = '/#contattami';
   };
 
   const handleBackClick = () => {
@@ -815,7 +813,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 0 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid1} alt="BMW X3 campaign asset 1" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid1} alt="BMW X3 campaign asset 1" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/ab9a72cd-d65a-417b-80e0-4207ee5723a1.jpg)",
               backgroundSize: "cover",
@@ -837,7 +835,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 1 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid2} alt="BMW X3 campaign asset 2" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid2} alt="BMW X3 campaign asset 2" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
             </motion.figure>
 
@@ -853,7 +851,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 2 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid3} alt="BMW X3 campaign asset 3" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid3} alt="BMW X3 campaign asset 3" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/4901a04b-70e2-4961-b6d5-58ebe695d592.png)",
               backgroundSize: "cover",
@@ -875,7 +873,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 3 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid4} alt="BMW X3 campaign asset 4" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid4} alt="BMW X3 campaign asset 4" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
             </motion.figure>
 
@@ -891,7 +889,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 4 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid5} alt="BMW X3 campaign asset 5" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid5} alt="BMW X3 campaign asset 5" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/ea90fe69-7282-4ca3-ab8c-f65428fc9575.png)",
               backgroundSize: "cover",
@@ -913,7 +911,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 5 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid6} alt="BMW X3 campaign asset 6" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid6} alt="BMW X3 campaign asset 6" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
             </motion.figure>
 
@@ -929,7 +927,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 6 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid7} alt="BMW X3 campaign asset 7" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid7} alt="BMW X3 campaign asset 7" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/f55836ef-b9df-46a3-a63a-e14e76bddda3.jpg)",
               backgroundSize: "cover",
@@ -951,7 +949,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 7 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid8} alt="BMW X3 campaign asset 8" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid8} alt="BMW X3 campaign asset 8" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/132ac735-a0a9-492a-b9c5-f9f1f4b3d8b7.png)",
               backgroundSize: "cover",
@@ -973,7 +971,7 @@ export default function BMWX3ProjectDetail({
             duration: 0.5,
             delay: 8 * 0.05
           }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer aspect-square">
-              <img src={images.socialGrid9} alt="BMW X3 campaign asset 9" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={images.socialGrid9} alt="BMW X3 campaign asset 9" className="feed-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" style={{
               backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/d2a0d77a-1e30-47f1-b087-c0c04067eec8.png)",
               backgroundSize: "cover",

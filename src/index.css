@@ -239,4 +239,15 @@ body {
     color: #aec7e9 !important;
     text-shadow: 0 0 8px rgba(174, 199, 233, 0.8);
   }
+  
+  /* Feed image hover effects */
+  .feed-image {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+  }
+  
+  .feed-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
 }
