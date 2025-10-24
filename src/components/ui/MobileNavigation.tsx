@@ -10,16 +10,16 @@ const navLinks = [{
   label: 'Home',
   href: '#home'
 }, {
-  id: 'nav-chi-sono',
-  label: 'Chi Sono',
+  id: 'nav-about',
+  label: 'About',
   href: '#chi-sono'
 }, {
-  id: 'nav-progetti',
-  label: 'Progetti',
+  id: 'nav-projects',
+  label: 'Projects',
   href: '#progetti'
 }, {
-  id: 'nav-contattami',
-  label: 'Contattami',
+  id: 'nav-contact',
+  label: 'Contact',
   href: '#contatti'
 }] as const;
 

@@ -45,7 +45,7 @@ function App() {
     // THIS IS WHERE THE TOP LEVEL GENRATED COMPONENT WILL BE RETURNED!
     return (
       <div className="w-full">
-        <section id="home">
+        <section id="home" className="hero-section">
           <TommasoPortfolio />
         </section>
         <AboutSection />
