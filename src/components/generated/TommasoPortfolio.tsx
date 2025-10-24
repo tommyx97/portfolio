@@ -137,9 +137,9 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
 
       {/* Main hero content */}
       <SortableContainer dndKitId="32ea166d-a0a6-4b82-8030-dcba44634312" containerType="regular" prevTag="div" className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{
-      backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/b079aa99-43af-4843-bba9-7cfabadbc051.png)",
+      backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/2a529ca7-9941-4325-b7ac-0869b90895df.png)",
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: "50% 50%",
       backgroundRepeat: "no-repeat",
       opacity: "1"
     }} data-magicpath-id="13" data-magicpath-path="TommasoPortfolio.tsx">
