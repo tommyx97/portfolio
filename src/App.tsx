@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { Container, Theme } from './settings/types';
 import { TommasoPortfolio } from './components/generated/TommasoPortfolio';
 import { AboutSection } from './components/generated/AboutSection';
-import { FeaturedProjectsGrid } from './components/generated/FeaturedProjectsGrid';
 
 let theme: Theme = 'dark';
 // only use 'centered' container for standalone components, never for full page apps or websites.
@@ -25,7 +24,6 @@ function App() {
       <div className="w-full">
         <TommasoPortfolio />
         <AboutSection />
-        <FeaturedProjectsGrid />
       </div>
     ); // %EXPORT_STATEMENT%
   }, []);
