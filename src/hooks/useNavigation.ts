@@ -10,6 +10,7 @@ export const useNavigation = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isManualNavigation, setIsManualNavigation] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -17,6 +18,10 @@ export const useNavigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
+      // Disable automatic section detection during manual navigation
+      setIsManualNavigation(true);
+      setActiveSection(null); // Clear active section immediately
+      
       setIsScrolling(true);
       element.scrollIntoView({
         behavior: 'smooth',
@@ -30,6 +35,10 @@ export const useNavigation = () => {
       
       scrollTimeoutRef.current = setTimeout(() => {
         setIsScrolling(false);
+        // Re-enable automatic section detection after scroll completes
+        setTimeout(() => {
+          setIsManualNavigation(false);
+        }, 500); // Additional delay to prevent immediate reactivation
       }, 1000);
     }
   };
@@ -52,10 +61,10 @@ export const useNavigation = () => {
       // Debounce the section change to prevent flickering
       debounceTimeoutRef.current = setTimeout(() => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !isScrolling) {
+          if (entry.isIntersecting && !isScrolling && !isManualNavigation) {
             const sectionId = `#${entry.target.id}`;
             if (sections.includes(sectionId)) {
-              // Simplified logic - no special handling for home
+              // Only set active section if not in manual navigation mode
               setActiveSection(sectionId);
               
               // Mark that user has scrolled and sections are being observed
@@ -99,13 +108,18 @@ export const useNavigation = () => {
         clearTimeout(debounceTimeoutRef.current);
       }
     };
-  }, [isScrolling, hasScrolled]);
+  }, [isScrolling, hasScrolled, isManualNavigation]);
 
   // Scroll listener to detect when user starts scrolling
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50 && !hasScrolled) {
         setHasScrolled(true);
+      }
+      
+      // Re-enable automatic section detection if user scrolls manually
+      if (isManualNavigation && !isScrolling) {
+        setIsManualNavigation(false);
       }
     };
 
@@ -114,7 +128,7 @@ export const useNavigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [hasScrolled]);
+  }, [hasScrolled, isManualNavigation, isScrolling]);
 
   return {
     activeSection,
