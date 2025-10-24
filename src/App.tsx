@@ -5,6 +5,7 @@ import { FeaturedProjectsGrid } from './components/generated/FeaturedProjectsGri
 import { AboutSection } from './components/generated/AboutSection';
 import { ContactSection } from './components/generated/ContactSection';
 import BMWX3ProjectDetail from './components/generated/BMWX3ProjectDetail';
+import { useProjectNavigation } from './hooks/useNavigation';
 
 let theme: Theme = 'dark';
 // only use 'centered' container for standalone components, never for full page apps or websites.
@@ -12,6 +13,7 @@ let container: Container = 'none';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const { scrollToProjectSection } = useProjectNavigation();
 
   // Scroll to top whenever a project is selected or deselected
   useEffect(() => {
@@ -41,7 +43,9 @@ function App() {
     // THIS IS WHERE THE TOP LEVEL GENRATED COMPONENT WILL BE RETURNED!
     return (
       <div className="w-full">
-        <TommasoPortfolio />
+        <section id="home">
+          <TommasoPortfolio />
+        </section>
         <AboutSection />
         <FeaturedProjectsGrid onProjectClick={(projectId) => setSelectedProject(projectId)} />
         <ContactSection />

@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { ArrowLeft, Play, Camera, Palette, Eye, Zap, Film, Sparkles } from 'lucide-react';
+import { useProjectNavigation } from '../../hooks/useNavigation';
 export interface BMWX3ProjectDetailProps {
   onBack?: () => void;
 }
@@ -98,11 +99,23 @@ export default function BMWX3ProjectDetail({
     margin: "-150px"
   });
   const [activeProcess, setActiveProcess] = React.useState<number | null>(null);
+  const { scrollToProjectSection } = useProjectNavigation();
+  
   const handleContactClick = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: 'smooth'
     });
+  };
+
+  const handleBackClick = () => {
+    if (onBack) {
+      onBack();
+      // Use smart navigation to return to projects section
+      setTimeout(() => {
+        scrollToProjectSection();
+      }, 100);
+    }
   };
   return <div className="relative w-full min-h-screen bg-black text-white overflow-x-hidden" style={{
     fontFamily: 'Montserrat, sans-serif'
@@ -120,18 +133,7 @@ export default function BMWX3ProjectDetail({
     }} className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 lg:px-16 py-6 backdrop-blur-xl bg-black/60 border-b border-white/5">
         <nav className="max-w-[1800px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <h2 onClick={() => {
-            if (onBack) {
-              onBack();
-              // Scroll to top after navigation
-              setTimeout(() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                });
-              }, 100);
-            }
-          }} className="text-xs sm:text-sm tracking-[0.3em] uppercase font-light text-white/80 flex items-center gap-2 cursor-pointer hover:text-white transition-colors duration-300" style={{
+            <h2 onClick={handleBackClick} className="text-xs sm:text-sm tracking-[0.3em] uppercase font-light text-white/80 flex items-center gap-2 cursor-pointer hover:text-white transition-colors duration-300" style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 300
           }}>

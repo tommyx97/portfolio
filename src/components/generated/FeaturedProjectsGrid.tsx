@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useProjectNavigation } from '../../hooks/useNavigation';
 const projectsData = [{
   id: 'project-automotive',
   title: 'BMW X3',
@@ -32,11 +33,21 @@ export const FeaturedProjectsGrid = ({
 }: FeaturedProjectsGridProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const { saveProjectIntent } = useProjectNavigation();
   const isInView = useInView(containerRef, {
     once: true,
     margin: "-100px"
   });
-  return <div className="relative w-full min-h-screen bg-black text-white overflow-hidden">
+
+  const handleProjectClick = (projectId: string) => {
+    // Save the current section for smart return
+    saveProjectIntent('#progetti');
+    if (onProjectClick) {
+      onProjectClick(projectId);
+    }
+  };
+
+  return <section id="progetti" className="relative w-full min-h-screen bg-black text-white overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" />
@@ -89,8 +100,8 @@ export const FeaturedProjectsGrid = ({
             delay: 0.1 + index * 0.15,
             ease: [0.25, 0.1, 0.25, 1]
           }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} onClick={() => {
-            if (isBMW && onProjectClick) {
-              onProjectClick('bmw-x3');
+            if (isBMW) {
+              handleProjectClick('bmw-x3');
             }
           }} className="group relative w-full">
                 <div className={`relative w-full aspect-[3/4] overflow-hidden bg-zinc-950 ${isBMW ? 'cursor-pointer' : 'cursor-default'}`}>
@@ -101,12 +112,18 @@ export const FeaturedProjectsGrid = ({
                 duration: 0.7,
                 ease: [0.25, 0.1, 0.25, 1]
               }}>
-                    <img src={project.image} alt={`${project.title} - ${project.category}`} className="w-full h-full object-cover" loading="lazy" />
+                    <img src={project.image} alt={`${project.title} - ${project.category}`} className="w-full h-full object-cover transition-all duration-700" loading="lazy" />
                   </motion.div>
 
-                  {/* Gradient overlays */}
+                  {/* Cinematic overlays */}
                   <div className={`absolute inset-0 bg-gradient-to-b ${project.bgColor} mix-blend-multiply`} />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/95" />
+                  
+                  {/* Cinematic lighting effect */}
+                  <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-[#aec7e9]/20 via-transparent to-transparent mix-blend-screen" />
+                  
+                  {/* Subtle vignette for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-transparent" />
 
                   {/* Hover glow effect */}
                   <motion.div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent" initial={{
@@ -218,5 +235,5 @@ export const FeaturedProjectsGrid = ({
         {/* Bottom spacing */}
         <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32" />
       </div>
-    </div>;
+    </section>;
 };

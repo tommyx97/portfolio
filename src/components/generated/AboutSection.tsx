@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useNavigation } from '../../hooks/useNavigation';
 export interface AboutSectionProps {
   onScrollToNext?: () => void;
 }
@@ -19,7 +20,13 @@ const manifestoValues = [{
 export const AboutSection = ({
   onScrollToNext
 }: AboutSectionProps) => {
-  return <section id="about" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center">
+  const { scrollToSection } = useNavigation();
+  
+  const handleScrollToProjects = () => {
+    scrollToSection('#progetti');
+  };
+
+  return <section id="chi-sono" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center">
       {/* Content container - Two column layout */}
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
       background: "#000000"
@@ -175,7 +182,7 @@ export const AboutSection = ({
             delay: 0.9,
             ease: "easeOut"
           }} className="pt-6">
-              <button onClick={onScrollToNext} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
+              <button onClick={handleScrollToProjects} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '13px',
               letterSpacing: '0.15em'

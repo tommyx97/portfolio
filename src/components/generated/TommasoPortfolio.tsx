@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
+import { useNavigation } from '../../hooks/useNavigation';
 type TommasoPortfolioProps = Record<string, never>;
 const navLinks = [{
   id: 'nav-home',
@@ -35,7 +36,7 @@ const socialLinks = [{
 
 // @component: TommasoPortfolio
 export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
-  const [activeSection, setActiveSection] = React.useState<string>('#home');
+  const { activeSection, scrollToSection } = useNavigation();
 
   // @return
   return <div className="relative w-full h-screen bg-black text-white overflow-hidden">
@@ -58,7 +59,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} className="max-w-[1800px] mx-auto flex items-center justify-between">
           {navLinks.map((link, idx) => <a key={link.id} href={link.href} onClick={e => {
           e.preventDefault();
-          setActiveSection(link.href);
+          scrollToSection(link.href);
         }} className={`relative text-sm lg:text-base font-light tracking-[0.2em] transition-all duration-300 uppercase ${activeSection === link.href ? 'text-[#aec7e9] drop-shadow-[0_0_8px_rgba(174,199,233,0.8)]' : 'text-white/90 hover:text-white'}`} style={{
           fontFamily: "Inter"
         }}>
