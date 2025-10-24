@@ -63,7 +63,7 @@ export const AboutSection = ({
             }} className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-[0.02em] text-white" style={{
               fontFamily: 'Urbanist, sans-serif',
               letterSpacing: '0.05em',
-              color: "#c4b287"
+              color: "#f0cc3c"
             }} data-magicpath-id="5" data-magicpath-path="AboutSection.tsx">CHI SONO</motion.h2>
               
               <motion.p data-magicpath-motion-tag="motion.p" initial={{
@@ -186,7 +186,7 @@ export const AboutSection = ({
               letterSpacing: '0.15em'
             }} data-magicpath-id="16" data-magicpath-path="AboutSection.tsx">
                 <span className="relative z-10" data-magicpath-id="17" data-magicpath-path="AboutSection.tsx" style={{
-                color: "#c4b287"
+                color: "#f0cc3c"
               }}>SCOPRI I MIEI PROGETTI</span>
                 
                 <motion.span data-magicpath-motion-tag="motion.span" className="relative z-10" animate={{
