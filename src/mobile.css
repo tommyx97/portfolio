@@ -22,6 +22,18 @@
   --mobile-spacing-2xl: clamp(3rem, 12vw, 6rem);
 }
 
+/* Hide mobile menu button on desktop */
+@media (min-width: 768px) {
+  .mobile-menu-button,
+  button.mobile-menu-button,
+  [class*="mobile-menu-button"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
 /* Mobile-only styles */
 @media (max-width: 767px) {
   /* Hide desktop navigation completely - AGGRESSIVE RULES */

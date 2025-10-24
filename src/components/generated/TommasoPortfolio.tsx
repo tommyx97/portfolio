@@ -33,36 +33,20 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         duration: 1,
         delay: 0.8
       }} className="absolute bottom-[25%] left-[5%] right-[5%] text-left lg:bottom-[15%] lg:left-[5%] lg:right-auto">
-          <div className="space-y-1 lg:space-y-2">
-            <p className="font-light tracking-[0.2em] text-white uppercase mobile-safe-area" style={{
+          <p className="font-light tracking-[0.2em] text-white uppercase mobile-safe-area" style={{
             fontFamily: "Inter",
             textAlign: "left",
             fontSize: "clamp(0.75rem, 4vw, 1.25rem)",
             letterSpacing: "0.2em",
             fontWeight: "300",
             lineHeight: "1.2",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-            hyphens: "auto",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
             margin: 0
           }}>
-              Tommaso Piccioli
-            </p>
-            <p className="font-light tracking-[0.2em] text-white uppercase mobile-safe-area" style={{
-            fontFamily: "Inter",
-            textAlign: "left",
-            fontSize: "clamp(0.75rem, 4vw, 1.25rem)",
-            letterSpacing: "0.2em",
-            fontWeight: "300",
-            lineHeight: "1.2",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-            hyphens: "auto",
-            margin: 0
-          }}>
-              AI Creator & Creative Director
-            </p>
-          </div>
+            Tommaso Piccioli • AI Creator & Creative Director
+          </p>
         </motion.div>
 
         {/* Large PORTFOLIO text - desktop aligned positioning */}
