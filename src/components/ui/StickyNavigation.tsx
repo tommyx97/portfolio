@@ -38,19 +38,37 @@ const socialLinks = [{
 export const StickyNavigation = () => {
   const { activeSection, scrollToSection } = useNavigation();
   const { scrollY } = useScroll();
+  const navRef = React.useRef<HTMLElement>(null);
   
-  // Transform values for smooth animations
-  const navOpacity = useTransform(scrollY, [0, 100], [0, 1]);
-  const navY = useTransform(scrollY, [0, 100], [-100, 0]);
-  const backgroundOpacity = useTransform(scrollY, [0, 200], [0, 0.95]);
+  // Transform values for smooth animations - navbar always visible
+  const navOpacity = useTransform(scrollY, [0, 100], [1, 1]); // Always visible
+  const navY = useTransform(scrollY, [0, 100], [0, 0]); // No vertical movement
+  const backgroundOpacity = useTransform(scrollY, [0, 200], [0.3, 0.95]); // Background appears gradually
+
+  // Add scrolled class for enhanced background
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        if (window.scrollY > 50) {
+          navRef.current.classList.add('scrolled');
+        } else {
+          navRef.current.classList.remove('scrolled');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav 
+      ref={navRef}
       style={{
         opacity: navOpacity,
         y: navY,
       }}
-      className="fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-6 backdrop-blur-xl border-b border-white/10 shadow-lg"
+      className="sticky-nav fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-6 backdrop-blur-xl border-b border-white/10 shadow-lg"
     >
       {/* Background with dynamic opacity */}
       <motion.div 

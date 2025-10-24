@@ -266,4 +266,24 @@ body {
       padding-top: 100px; /* Larger padding on desktop */
     }
   }
+  
+  /* Sticky navigation - always visible */
+  .sticky-nav {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+  
+  /* Ensure navbar is always visible even without JavaScript */
+  .sticky-nav {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Enhanced background on scroll */
+  .sticky-nav.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+  }
 }
