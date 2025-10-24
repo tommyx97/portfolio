@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommaso Piccioli - AI Creator & Creative Director</title>
+    <meta name="description" content="Portfolio di Tommaso Piccioli, AI Creative Director specializzato in contenuti creativi e campagne per brand di lusso.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS Variables and Base Styles -->
+    <style>
+        /* ========================================
+           CSS VARIABLES - DESIGN SYSTEM
+           ======================================== */
+        :root {
+            /* Typography Scale */
+            --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+            --font-size-sm: clamp(0.875rem, 3vw, 1rem);
+            --font-size-base: clamp(1rem, 4vw, 1.125rem);
+            --font-size-lg: clamp(1.125rem, 5vw, 1.25rem);
+            --font-size-xl: clamp(1.25rem, 6vw, 1.5rem);
+            --font-size-2xl: clamp(1.5rem, 8vw, 2rem);
+            --font-size-3xl: clamp(1.75rem, 10vw, 2.5rem);
+            --font-size-4xl: clamp(2rem, 12vw, 3rem);
+            --font-size-5xl: clamp(2.5rem, 15vw, 4rem);
+            --font-size-6xl: clamp(3rem, 18vw, 5rem);
+
+            /* Spacing Scale */
+            --spacing-xs: clamp(0.5rem, 2vw, 1rem);
+            --spacing-sm: clamp(0.75rem, 3vw, 1.5rem);
+            --spacing-md: clamp(1rem, 4vw, 2rem);
+            --spacing-lg: clamp(1.5rem, 6vw, 3rem);
+            --spacing-xl: clamp(2rem, 8vw, 4rem);
+            --spacing-2xl: clamp(3rem, 12vw, 6rem);
+
+            /* Colors */
+            --color-primary: #aec7e9;
+            --color-primary-light: #b3d7ff;
+            --color-primary-dark: #8bb3d9;
+            --color-text: #ffffff;
+            --color-text-muted: rgba(255, 255, 255, 0.7);
+            --color-background: #000000;
+            --color-surface: rgba(255, 255, 255, 0.05);
+            --color-border: rgba(255, 255, 255, 0.1);
+
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+            --shadow-glow: 0 0 20px rgba(174, 199, 233, 0.3);
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* ========================================
+           BASE STYLES
+           ======================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========================================
+           SEMANTIC HTML ELEMENTS
+           ======================================== */
+        header {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        main {
+            position: relative;
+            width: 100%;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: var(--spacing-2xl) var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+            background: var(--color-background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .hero-name {
+            font-size: var(--font-size-5xl);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-title {
+            font-size: var(--font-size-lg);
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: var(--color-text);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* ========================================
+           ABOUT SECTION
+           ======================================== */
+        .about-section {
+            background: var(--color-background);
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .about-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .about-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .about-description {
+            font-size: var(--font-size-base);
+            line-height: 1.8;
+            color: var(--color-text-muted);
+        }
+
+        .about-image {
+            position: relative;
+            aspect-ratio: 3/4;
+            max-width: 600px;
+            margin-left: auto;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1) brightness(0.85);
+        }
+
+        /* ========================================
+           PROJECTS SECTION
+           ======================================== */
+        .projects-section {
+            background: var(--color-background);
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .projects-content {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .project-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform var(--transition-normal);
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.08);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(0, 0, 0, 0.95) 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: var(--spacing-lg);
+        }
+
+        .project-info {
+            margin-top: auto;
+        }
+
+        .project-category {
+            font-size: var(--font-size-xs);
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .project-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 300;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .project-year {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+        }
+
+        /* ========================================
+           CONTACT SECTION
+           ======================================== */
+        .contact-section {
+            background: var(--color-background);
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .contact-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-message {
+            font-size: var(--font-size-xl);
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(174, 199, 233, 0.1);
+            border: 1px solid var(--color-primary);
+            border-radius: 50%;
+            color: var(--color-primary);
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: var(--font-size-xs);
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .contact-value {
+            font-size: var(--font-size-lg);
+            color: var(--color-text);
+        }
+
+        /* ========================================
+           NAVIGATION
+           ======================================== */
+        .nav-desktop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: var(--spacing-lg) var(--spacing-xl);
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .nav-content {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xl);
+        }
+
+        .nav-link {
+            font-size: var(--font-size-sm);
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color var(--transition-normal);
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-primary);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                var(--color-primary),
+                transparent
+            );
+            box-shadow: 0 0 10px var(--color-primary);
+        }
+
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-social-link {
+            color: var(--color-text-muted);
+            transition: color var(--transition-normal);
+        }
+
+        .nav-social-link:hover {
+            color: var(--color-primary);
+        }
+
+        /* Mobile Navigation */
+        .nav-mobile {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10000;
+            display: none;
+        }
+
+        .nav-mobile-button {
+            width: 48px;
+            height: 48px;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .nav-mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 9999;
+            padding: 5rem var(--spacing-md) var(--spacing-2xl);
+        }
+
+        .nav-mobile-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-mobile-link {
+            font-size: var(--font-size-xl);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: color var(--transition-normal);
+        }
+
+        .nav-mobile-link:hover,
+        .nav-mobile-link.active {
+            color: var(--color-primary);
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+           ======================================== */
+        @media (max-width: 767px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .nav-mobile {
+                display: block;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            section {
+                padding: var(--spacing-xl) var(--spacing-sm);
+            }
+            
+            .hero-name {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .hero-title {
+                font-size: var(--font-size-base);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ========================================
+           UTILITIES
+           ======================================== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .gap-sm {
+            gap: var(--spacing-sm);
+        }
+
+        .gap-md {
+            gap: var(--spacing-md);
+        }
+
+        .gap-lg {
+            gap: var(--spacing-lg);
+        }
+
+        .mb-sm {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .mb-md {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .mb-lg {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .mt-sm {
+            margin-top: var(--spacing-sm);
+        }
+
+        .mt-md {
+            margin-top: var(--spacing-md);
+        }
+
+        .mt-lg {
+            margin-top: var(--spacing-lg);
+        }
+
+        /* ========================================
+           ANIMATIONS
+           ======================================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.6s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.6s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ========================================
+           ACCESSIBILITY
+           ======================================== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--color-primary);
+            color: var(--color-background);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            transition: top var(--transition-fast);
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        *:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
+        /* ========================================
+           PERFORMANCE OPTIMIZATIONS
+           ======================================== */
+        .gpu-accelerated {
+            transform: translateZ(0);
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-social">
+                <a href="mailto:tpiccioli97@gmail.com" class="nav-social-link" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Button -->
+    <div class="nav-mobile">
+        <button class="nav-mobile-button" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="nav-mobile-menu" style="display: none;">
+        <div style="padding: 0 1.5rem 5rem;">
+            <div class="nav-mobile-links">
+                <a href="#hero" class="nav-mobile-link" onclick="scrollToSection('#hero'); closeMobileMenu();">Home</a>
+                <a href="#about" class="nav-mobile-link" onclick="scrollToSection('#about'); closeMobileMenu();">About</a>
+                <a href="#projects" class="nav-mobile-link" onclick="scrollToSection('#projects'); closeMobileMenu();">Projects</a>
+                <a href="#contact" class="nav-mobile-link" onclick="scrollToSection('#contact'); closeMobileMenu();">Contact</a>
+            </div>
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; gap: 1.5rem; justify-content: center;">
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <a href="mailto:tpiccioli97@gmail.com" class="nav-mobile-social-link" aria-label="Email" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; text-decoration: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="nav-mobile-social-link" aria-label="Instagram" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; text-decoration: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="nav-mobile-social-link" aria-label="LinkedIn" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; text-decoration: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <header id="hero" class="hero-section">
+            <!-- Background Image -->
+            <div class="hero-background" style="position: absolute; inset: 0; background-image: url('https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/2a529ca7-9941-4325-b7ac-0869b90895df.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; z-index: 1;"></div>
+            
+            <!-- Background Gradient Overlay -->
+            <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%); z-index: 2;"></div>
+            
+            <!-- Content Container -->
+            <div class="hero-content" style="z-index: 10;">
+                <!-- Name -->
+                <h1 class="hero-name">TOMMASO PICCIOLI</h1>
+                
+                <!-- Professional Title -->
+                <p class="hero-title" style="margin: 0;">AI CREATOR & CREATIVE DIRECTOR</p>
+            </div>
+            
+            <!-- Ambient Glow Effect -->
+            <div class="hero-glow" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(174, 199, 233, 0.1) 0%, transparent 70%); filter: blur(100px); z-index: 1;"></div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <!-- Content Container -->
+            <div class="about-content">
+                <!-- Left Column - Text Content -->
+                <div class="about-text">
+                    <!-- Title -->
+                    <h2 class="about-title">CHI SONO</h2>
+                    
+                    <!-- Description -->
+                    <div class="about-description">
+                        <p style="margin: 0;">Sono Tommaso Piccioli, AI Creative Director & Content Designer.</p>
+                        <p style="margin: 0;">Realizzo campagne e contenuti per brand che vogliono un'immagine pulita, distintiva e professionale.</p>
+                        <p style="margin: 0;">Ogni progetto nasce da un processo preciso, dove estetica e strategia si incontrano.</p>
+                    </div>
+                    
+                    <!-- Decorative Line -->
+                    <div style="width: 6rem; height: 1px; background: linear-gradient(to right, #aec7e9, transparent); margin-top: 2rem;"></div>
+                    
+                    <!-- CTA Button -->
+                    <button onclick="scrollToSection('#projects')" style="margin-top: 2rem; padding: 0.5rem 0; background: none; border: none; color: #b3d7ff; font-size: clamp(0.75rem, 2.5vw, 0.875rem); font-weight: 300; letter-spacing: clamp(0.1em, 0.5vw, 0.15em); text-transform: uppercase; cursor: pointer; font-family: 'Inter', sans-serif; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;" onmouseover="this.style.color='#aec7e9'" onmouseout="this.style.color='#b3d7ff'">
+                        <span>SCOPRI I MIEI PROGETTI</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Right Column - Portrait Image -->
+                <div class="about-image">
+                    <!-- Main Portrait Image -->
+                    <div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Tommaso Piccioli - AI Creative Director" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.85);">
+                        
+                        <!-- Dark Gradient Overlay -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2), transparent);"></div>
+                        
+                        <!-- Warm Backlight Glow -->
+                        <div style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(to left, rgba(174, 199, 233, 0.4), rgba(174, 199, 233, 0.1), transparent); mix-blend-mode: screen;"></div>
+                        
+                        <!-- Subtle Vignette -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent);"></div>
+                    </div>
+                    
+                    <!-- Decorative Glow Behind Image -->
+                    <div style="position: absolute; right: -3rem; top: 50%; transform: translateY(-50%); width: 400px; height: 500px; background: radial-gradient(circle, rgba(174, 199, 233, 0.2), rgba(174, 199, 233, 0.05), transparent); filter: blur(100px); z-index: -1;"></div>
+                    
+                    <!-- Frame Effect -->
+                    <div style="position: absolute; inset: 0; border: 1px solid rgba(255, 255, 255, 0.05); pointer-events: none;"></div>
+                </div>
+            </div>
+            
+            <!-- Background Ambient Light -->
+            <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 500px; height: 600px; background: radial-gradient(circle, rgba(174, 199, 233, 0.1), rgba(174, 199, 233, 0.05), transparent); filter: blur(120px); opacity: 0.4; z-index: 0;"></div>
+            
+            <!-- Bottom Fade -->
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 8rem; background: linear-gradient(to top, #000000, transparent); z-index: 1;"></div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <!-- Background Ambient Glow -->
+            <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none;">
+                <div style="position: absolute; top: 0; left: 25%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent, transparent); filter: blur(120px);"></div>
+                <div style="position: absolute; bottom: 0; right: 25%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245, 158, 11, 0.08), transparent, transparent); filter: blur(100px);"></div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="projects-content" style="position: relative; z-index: 10; max-width: 1920px; margin: 0 auto; padding: 0 1rem;">
+                <!-- Header Section -->
+                <div style="margin-bottom: 6rem;">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <p style="font-size: clamp(0.75rem, 2vw, 0.875rem); font-weight: 300; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.3em; text-transform: uppercase; margin: 0;">Progetti Selezionati</p>
+                        <h1 style="font-size: clamp(2.5rem, 12vw, 6rem); font-weight: 100; letter-spacing: -0.02em; line-height: 1.05; margin: 0;">
+                            <span style="display: block; color: #ffffff;">Featured</span>
+                            <span style="display: block; color: #ffffff;">Projects</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- BMW X3 Project -->
+                    <div class="project-card" onclick="window.location.href='/project/bmw-x3'" style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; background-color: #0a0a0a; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        <!-- Background Image -->
+                        <div style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&h=1600&fit=crop&q=90" alt="BMW X3 - AUTOMOTIVE" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
+                        </div>
+
+                        <!-- Cinematic Overlays -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(100, 116, 139, 0.2), rgba(30, 58, 138, 0.3)); mix-blend-mode: multiply;"></div>
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.95));"></div>
+                        
+                        <!-- Cinematic Lighting Effect -->
+                        <div style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(to left, rgba(174, 199, 233, 0.2), transparent, transparent); mix-blend-mode: screen;"></div>
+                        
+                        <!-- Subtle Vignette -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(0,0,0,0.6), transparent, transparent);"></div>
+
+                        <!-- Content Overlay -->
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; z-index: 10;">
+                            <!-- Top: Category Badge -->
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: inline-flex; padding: 0.375rem 0.75rem; backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px;">
+                                    <span style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); letter-spacing: 0.2em; text-transform: uppercase;">AUTOMOTIVE</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom: Project Info -->
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <p style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.4); letter-spacing: 0.25em; text-transform: uppercase; margin: 0;">PROGETTO</p>
+                                    <h2 style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 300; letter-spacing: -0.02em; color: #ffffff; line-height: 1.2; margin: 0;">BMW X3</h2>
+                                    <p style="font-size: 0.875rem; font-weight: 300; color: rgba(255, 255, 255, 0.3); letter-spacing: 0.05em; margin: 0;">2025</p>
+                                </div>
+
+                                <!-- Animated Underline -->
+                                <div style="height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.3), transparent); width: 40%; transition: width 0.6s ease;"></div>
+
+                                <!-- Hover reveal: View project -->
+                                <div style="display: flex; align-items: center; gap: 0.5rem; padding-top: 0.25rem;">
+                                    <span style="font-size: 0.75rem; font-weight: 300; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.15em; text-transform: uppercase;">View project</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style="color: rgba(255, 255, 255, 0.7);">
+                                        <path d="M7 7h10v10" />
+                                        <path d="M7 17 17 7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Border Glow on Hover -->
+                        <div style="position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0); transition: box-shadow 0.4s ease;"></div>
+
+                        <!-- Outer Glow -->
+                        <div style="position: absolute; inset: -4px; background: rgba(255, 255, 255, 0.05); filter: blur(8px); z-index: -1; opacity: 0; transition: opacity 0.5s ease;"></div>
+                    </div>
+
+                    <!-- Vision Air Project -->
+                    <div class="project-card" style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; background-color: #0a0a0a; cursor: default; transition: transform 0.3s ease;">
+                        <!-- Background Image -->
+                        <div style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1200&h=1600&fit=crop&q=90" alt="Vision Air - INNOVATION" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
+                        </div>
+
+                        <!-- Cinematic Overlays -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.4)); mix-blend-mode: multiply;"></div>
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.95));"></div>
+                        
+                        <!-- Cinematic Lighting Effect -->
+                        <div style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(to left, rgba(174, 199, 233, 0.2), transparent, transparent); mix-blend-mode: screen;"></div>
+                        
+                        <!-- Subtle Vignette -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(0,0,0,0.6), transparent, transparent);"></div>
+
+                        <!-- Content Overlay -->
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; z-index: 10;">
+                            <!-- Top: Category Badge -->
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: inline-flex; padding: 0.375rem 0.75rem; backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px;">
+                                    <span style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); letter-spacing: 0.2em; text-transform: uppercase;">INNOVATION</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom: Project Info -->
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <p style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.4); letter-spacing: 0.25em; text-transform: uppercase; margin: 0;">PROGETTO</p>
+                                    <h2 style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 300; letter-spacing: -0.02em; color: #ffffff; line-height: 1.2; margin: 0;">Vision Air</h2>
+                                    <p style="font-size: 0.875rem; font-weight: 300; color: rgba(255, 255, 255, 0.3); letter-spacing: 0.05em; margin: 0;">2024</p>
+                                </div>
+
+                                <!-- Animated Underline -->
+                                <div style="height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.3), transparent); width: 40%; transition: width 0.6s ease;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iPhone Model T Project -->
+                    <div class="project-card" style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; background-color: #0a0a0a; cursor: default; transition: transform 0.3s ease;">
+                        <!-- Background Image -->
+                        <div style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1592286927505-b0e2950e3900?w=1200&h=1600&fit=crop&q=90" alt="iPhone Model T - PRODUCT" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
+                        </div>
+
+                        <!-- Cinematic Overlays -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(24, 24, 27, 0.5), rgba(0, 0, 0, 0.7)); mix-blend-mode: multiply;"></div>
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.95));"></div>
+                        
+                        <!-- Cinematic Lighting Effect -->
+                        <div style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(to left, rgba(174, 199, 233, 0.2), transparent, transparent); mix-blend-mode: screen;"></div>
+                        
+                        <!-- Subtle Vignette -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(0,0,0,0.6), transparent, transparent);"></div>
+
+                        <!-- Content Overlay -->
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; z-index: 10;">
+                            <!-- Top: Category Badge -->
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: inline-flex; padding: 0.375rem 0.75rem; backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px;">
+                                    <span style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); letter-spacing: 0.2em; text-transform: uppercase;">PRODUCT</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom: Project Info -->
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <p style="font-size: 0.625rem; font-weight: 300; color: rgba(255, 255, 255, 0.4); letter-spacing: 0.25em; text-transform: uppercase; margin: 0;">PROGETTO</p>
+                                    <h2 style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 300; letter-spacing: -0.02em; color: #ffffff; line-height: 1.2; margin: 0;">iPhone Model T</h2>
+                                    <p style="font-size: 0.875rem; font-weight: 300; color: rgba(255, 255, 255, 0.3); letter-spacing: 0.05em; margin: 0;">2025</p>
+                                </div>
+
+                                <!-- Animated Underline -->
+                                <div style="height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.3), transparent); width: 40%; transition: width 0.6s ease;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Spacing -->
+                <div style="margin-top: 8rem;"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <!-- Background Ambient Gradient -->
+            <div style="position: absolute; inset: 0; z-index: 0;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(174, 199, 233, 0.15), rgba(174, 199, 233, 0.05), transparent); filter: blur(96px);"></div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="contact-content" style="position: relative; z-index: 10; max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+                <!-- Header -->
+                <div style="margin-bottom: 6rem;">
+                    <h2 style="font-size: clamp(2.5rem, 10vw, 5rem); font-weight: 100; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 1.5rem 0; color: #ffffff;">Contattami</h2>
+                    <div style="width: 5rem; height: 1px; background: linear-gradient(to right, #aec7e9, transparent);"></div>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                    <!-- Left: Message -->
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="font-size: clamp(1.25rem, 4vw, 1.875rem); font-weight: 300; line-height: 1.6; color: rgba(255, 255, 255, 0.9); margin: 0;">Hai un progetto in mente?</p>
+                            <p style="font-size: clamp(1rem, 3vw, 1.25rem); font-weight: 300; line-height: 1.6; color: rgba(255, 255, 255, 0.7); margin: 0;">Sono sempre aperto a nuove collaborazioni e sfide creative. Lavoriamo insieme per dare vita alla tua visione.</p>
+                        </div>
+
+                        <!-- Decorative Element -->
+                        <div style="width: 8rem; height: 1px; background: linear-gradient(to right, rgba(174, 199, 233, 0.6), transparent); transform-origin: left;"></div>
+
+                        <!-- Additional Info -->
+                        <div style="padding-top: 1rem;">
+                            <p style="font-size: 0.875rem; font-weight: 300; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.05em; text-transform: uppercase; margin: 0;">Rispondo entro 24 ore</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Methods -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <!-- Email Contact -->
+                        <a href="mailto:tpiccioli97@gmail.com" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(174, 199, 233, 0.4); border-radius: 0px; transition: all 0.5s ease; cursor: pointer; text-decoration: none; color: inherit; position: relative;" onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(174, 199, 233, 0.4)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(174, 199, 233, 0.4)'; this.style.transform='translateY(0)'">
+                            <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex: 1;">
+                                <!-- Icon -->
+                                <div style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; background: rgba(174, 199, 233, 0.1); border: 1px solid rgba(174, 199, 233, 0.5); border-radius: 50%; color: #aec7e9; transition: all 0.5s ease;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Text Content -->
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+                                    <p style="font-size: 0.75rem; font-weight: 300; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; text-transform: uppercase; margin: 0;">Email</p>
+                                    <p style="font-size: clamp(1.125rem, 3vw, 1.25rem); font-weight: 300; color: rgba(255, 255, 255, 0.9); margin: 0; transition: color 0.3s ease;">tpiccioli97@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Right: Arrow Icon -->
+                            <div style="color: #aec7e9; transition: all 0.3s ease;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M7 7h10v10" />
+                                    <path d="M7 17 17 7" />
+                                </svg>
+                            </div>
+
+                            <!-- Bottom Accent Line -->
+                            <div style="position: absolute; bottom: 0; left: 0; height: 1px; background: linear-gradient(to right, #aec7e9, transparent); width: 0%; transition: width 0.5s ease;"></div>
+
+                            <!-- Glow Effect on Hover -->
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(174, 199, 233, 0.05), transparent); opacity: 0; transition: opacity 0.5s ease; pointer-events: none; mix-blend-mode: screen;"></div>
+                        </a>
+
+                        <!-- LinkedIn Contact -->
+                        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(174, 199, 233, 0.4); border-radius: 0px; transition: all 0.5s ease; cursor: pointer; text-decoration: none; color: inherit; position: relative;" onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(174, 199, 233, 0.4)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(174, 199, 233, 0.4)'; this.style.transform='translateY(0)'">
+                            <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex: 1;">
+                                <!-- Icon -->
+                                <div style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; background: rgba(174, 199, 233, 0.1); border: 1px solid rgba(174, 199, 233, 0.5); border-radius: 50%; color: #aec7e9; transition: all 0.5s ease;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Text Content -->
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+                                    <p style="font-size: 0.75rem; font-weight: 300; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; text-transform: uppercase; margin: 0;">LinkedIn</p>
+                                    <p style="font-size: clamp(1.125rem, 3vw, 1.25rem); font-weight: 300; color: rgba(255, 255, 255, 0.9); margin: 0; transition: color 0.3s ease;">Tommaso Piccioli</p>
+                                </div>
+                            </div>
+
+                            <!-- Right: Arrow Icon -->
+                            <div style="color: #aec7e9; transition: all 0.3s ease;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M7 7h10v10" />
+                                    <path d="M7 17 17 7" />
+                                </svg>
+                            </div>
+
+                            <!-- Bottom Accent Line -->
+                            <div style="position: absolute; bottom: 0; left: 0; height: 1px; background: linear-gradient(to right, #aec7e9, transparent); width: 0%; transition: width 0.5s ease;"></div>
+
+                            <!-- Glow Effect on Hover -->
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(174, 199, 233, 0.05), transparent); opacity: 0; transition: opacity 0.5s ease; pointer-events: none; mix-blend-mode: screen;"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom Decorative Line -->
+                <div style="margin-top: 8rem;">
+                    <div style="height: 1px; background: linear-gradient(to right, transparent, rgba(174, 199, 233, 0.3), transparent);"></div>
+                </div>
+
+                <!-- Footer Text -->
+                <div style="margin-top: 3rem; text-align: center;">
+                    <p style="font-size: clamp(0.75rem, 2vw, 0.875rem); font-weight: 300; color: rgba(255, 255, 255, 0.4); letter-spacing: 0.2em; text-transform: uppercase; margin: 0;">© 2025 Tommaso Piccioli — AI Creator & Creative Director</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for Mobile Menu and Smooth Scrolling -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.querySelector('.nav-mobile-button');
+            
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+                button.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                `;
+            } else {
+                menu.style.display = 'none';
+                button.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                `;
+            }
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.querySelector('.nav-mobile-button');
+            
+            menu.style.display = 'none';
+            button.innerHTML = `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            `;
+        }
+
+        // Smooth Scrolling
+        function scrollToSection(sectionId) {
+            const element = document.querySelector(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Active Navigation Link
+        function updateActiveNavLink() {
+            const sections = ['#hero', '#about', '#projects', '#contact'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.nav-mobile-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(sectionId => {
+                const element = document.querySelector(sectionId);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = sectionId;
+                    }
+                }
+            });
+            
+            // Update desktop nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Update mobile nav links
+            mobileNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Scroll event listener
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Initial call
+        updateActiveNavLink();
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
