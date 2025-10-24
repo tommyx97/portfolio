@@ -322,7 +322,7 @@ export default function BMWX3ProjectDetail({
       </section>
 
       {/* Project Overview */}
-      <section className="relative w-full bg-black py-24 lg:py-32">
+      <section className="relative w-full bg-black py-16 lg:py-24">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-[#aec7e9]/10 via-transparent to-transparent blur-3xl" />
         </div>
@@ -375,7 +375,7 @@ export default function BMWX3ProjectDetail({
       </section>
 
       {/* Visual Direction Section - 3 IMMAGINI SEPARATE */}
-      <section className="relative w-full bg-black py-24 lg:py-32">
+      <section className="relative w-full bg-black py-16 lg:py-24">
         <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16">
           {/* Section Header */}
           <motion.div initial={{
@@ -389,7 +389,7 @@ export default function BMWX3ProjectDetail({
           margin: "-100px"
         }} transition={{
           duration: 0.8
-        }} className="text-center mb-16 lg:mb-20">
+        }} className="text-center mb-12 lg:mb-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl tracking-[0.15em] uppercase mb-4" style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 200,
@@ -423,7 +423,7 @@ export default function BMWX3ProjectDetail({
           margin: "-150px"
         }} transition={{
           duration: 1
-        }} className="mb-8 lg:mb-12">
+        }} className="mb-6 lg:mb-8">
             <figure className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5">
               <div className="relative w-full" style={{
               paddingBottom: `${9 / 21 * 100}%`
@@ -435,7 +435,7 @@ export default function BMWX3ProjectDetail({
           </motion.div>
 
           {/* Supporting Images Grid - 2 IMMAGINI SEPARATE */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             <motion.figure initial={{
             opacity: 0,
             y: 50
@@ -487,155 +487,9 @@ export default function BMWX3ProjectDetail({
         </div>
       </section>
 
-      {/* Design Philosophy Section - 3 IMMAGINI SEPARATE */}
-      <section className="relative w-full bg-[#0D0D0D] text-white py-24 lg:py-32">
-        <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16" style={{
-        display: "none"
-      }}>
-          {/* Section Header */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 40
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true,
-          margin: "-100px"
-        }} transition={{
-          duration: 0.8
-        }} className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl tracking-[0.15em] uppercase mb-8" style={{
-            fontFamily: 'Montserrat, sans-serif',
-            fontWeight: 200,
-            color: '#aec7e9'
-          }}>
-              <span>{designPhilosophy.title}</span>
-            </h2>
-
-            {/* Description */}
-            <div className="max-w-3xl mx-auto">
-              <motion.p initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} className="text-[15px] leading-[2] text-white/80" style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 300,
-              textAlign: 'center'
-            }}>
-                <span>{designPhilosophy.description}</span>
-              </motion.p>
-            </div>
-          </motion.div>
-
-          {/* Three Highlights Grid - 3 IMMAGINI SEPARATE */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16">
-            <motion.figure initial={{
-            opacity: 0,
-            y: 50
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.8,
-            delay: 0
-          }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer">
-              <div className="relative w-full" style={{
-              paddingBottom: `${4 / 3 * 100}%`
-            }}>
-                <img src={images.philosophyHighlight1} alt="Urban Context" className="gallery-image absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Caption Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300
-                }}>
-                    <span>Urban Context</span>
-                  </p>
-                </div>
-              </div>
-            </motion.figure>
-
-            <motion.figure initial={{
-            opacity: 0,
-            y: 50
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.8,
-            delay: 0.15
-          }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer">
-              <div className="relative w-full" style={{
-              paddingBottom: `${4 / 3 * 100}%`
-            }}>
-                <img src={images.philosophyHighlight2} alt="Cinematic Lighting" className="gallery-image absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Caption Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300
-                }}>
-                    <span>Cinematic Lighting</span>
-                  </p>
-                </div>
-              </div>
-            </motion.figure>
-
-            <motion.figure initial={{
-            opacity: 0,
-            y: 50
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.8,
-            delay: 0.3
-          }} className="relative w-full overflow-hidden bg-zinc-900/30 border border-white/5 group cursor-pointer">
-              <div className="relative w-full" style={{
-              paddingBottom: `${4 / 3 * 100}%`
-            }}>
-                <img src={images.philosophyHighlight3} alt="Material Details" className="gallery-image absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Caption Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-sm tracking-[0.2em] uppercase text-white" style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 300
-                }}>
-                    <span>Material Details</span>
-                  </p>
-                </div>
-              </div>
-            </motion.figure>
-          </div>
-        </div>
-      </section>
 
       {/* Gallery Grid - 4 IMMAGINI SEPARATE */}
-      <section className="relative w-full bg-black py-24 lg:py-32">
+      <section className="relative w-full bg-black py-16 lg:py-24">
         <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16">
           {/* Section Header */}
           <motion.div initial={{
@@ -649,7 +503,7 @@ export default function BMWX3ProjectDetail({
           margin: "-100px"
         }} transition={{
           duration: 0.8
-        }} className="mb-16 lg:mb-20">
+        }} className="mb-12 lg:mb-16">
             <h2 className="text-4xl lg:text-5xl tracking-[0.1em] uppercase mb-6" style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 200,
@@ -672,7 +526,7 @@ export default function BMWX3ProjectDetail({
           margin: "-100px"
         }} transition={{
           duration: 0.9
-        }} className="mb-8 lg:mb-12">
+        }} className="mb-6 lg:mb-8">
             <figure className="relative w-full overflow-hidden group">
               <div className="relative w-full" style={{
               paddingBottom: `${9 / 16 * 100}%`
@@ -690,7 +544,7 @@ export default function BMWX3ProjectDetail({
           </motion.div>
 
           {/* Three Column Grid - 3 IMMAGINI SEPARATE */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-8">
             <motion.figure initial={{
             opacity: 0,
             y: 40
@@ -797,8 +651,8 @@ export default function BMWX3ProjectDetail({
       </section>
 
       {/* Social Grid Preview - 9 IMMAGINI SEPARATE */}
-      <section className="relative w-full bg-black py-24 lg:py-32 border-t border-white/10">
-        <div className="max-w-[1800px] mx-auto px-8 sm:px-12 lg:px-20">
+      <section className="relative w-full bg-black py-16 lg:py-24 border-t border-white/5">
+        <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-16">
           {/* Section Header */}
           <motion.div initial={{
           opacity: 0,
@@ -811,7 +665,7 @@ export default function BMWX3ProjectDetail({
           margin: "-100px"
         }} transition={{
           duration: 0.8
-        }} className="text-center mb-16 lg:mb-20">
+        }} className="text-center mb-12 lg:mb-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl tracking-[0.15em] uppercase mb-6" style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 200,
@@ -845,7 +699,7 @@ export default function BMWX3ProjectDetail({
           margin: "-150px"
         }} transition={{
           duration: 1
-        }} className="grid grid-cols-3 gap-3 lg:gap-4 max-w-4xl mx-auto">
+        }} className="grid grid-cols-3 gap-2 lg:gap-3 max-w-4xl mx-auto">
             <motion.figure initial={{
             opacity: 0,
             scale: 0.9
@@ -1030,7 +884,7 @@ export default function BMWX3ProjectDetail({
       </section>
 
       {/* Final CTA */}
-      <section className="relative w-full bg-black py-32 lg:py-40 border-t border-white/10">
+      <section className="relative w-full bg-black py-20 lg:py-32 border-t border-white/5">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-gradient-radial from-[#aec7e9]/20 via-[#aec7e9]/5 to-transparent blur-3xl" />
         </div>
@@ -1046,7 +900,7 @@ export default function BMWX3ProjectDetail({
           once: true
         }} transition={{
           duration: 0.9
-        }} className="space-y-12">
+        }} className="space-y-8">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl tracking-[0.1em] uppercase" style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 200
@@ -1069,7 +923,7 @@ export default function BMWX3ProjectDetail({
           }} whileTap={{
             scale: 0.98
           }} className="inline-block">
-              <button onClick={handleContactClick} className="inline-flex items-center gap-4 px-12 py-5 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-[#aec7e9] to-[#8ba8d4] text-black font-medium hover:from-[#bdd5f0] hover:to-[#a0bbde] transition-all duration-300 shadow-lg shadow-[#aec7e9]/20" style={{
+              <button onClick={handleContactClick} className="inline-flex items-center gap-4 px-12 py-5 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-[#aec7e9] to-[#aec7e9]/80 text-black font-medium hover:from-[#aec7e9]/90 hover:to-[#aec7e9]/70 transition-all duration-300 shadow-lg shadow-[#aec7e9]/20" style={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 400
             }}>

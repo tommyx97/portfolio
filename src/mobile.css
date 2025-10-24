@@ -132,9 +132,9 @@
   /* Mobile menu button - always visible */
   .mobile-menu-button {
     position: fixed !important;
-    top: var(--mobile-spacing-sm) !important;
-    right: var(--mobile-spacing-sm) !important;
-    z-index: 1000 !important;
+    top: max(1rem, env(safe-area-inset-top)) !important;
+    right: max(1rem, env(safe-area-inset-right)) !important;
+    z-index: 9999 !important;
     width: 48px !important;
     height: 48px !important;
     background: rgba(0, 0, 0, 0.9) !important;
@@ -147,6 +147,9 @@
     transition: all 0.3s ease !important;
     visibility: visible !important;
     opacity: 1 !important;
+    cursor: pointer !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   }
   
   /* Ensure mobile menu button is always visible */
@@ -157,6 +160,11 @@
     visibility: visible !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+  }
+  
+  .mobile-menu-button:hover {
+    background: rgba(0, 0, 0, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
   }
   
   .mobile-menu-button:active {
@@ -170,9 +178,10 @@
     inset: 0 !important;
     background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(20px) !important;
-    z-index: 999 !important;
+    z-index: 9998 !important;
     visibility: visible !important;
     opacity: 1 !important;
+    -webkit-backdrop-filter: blur(20px) !important;
   }
   
   /* Mobile menu content */
@@ -183,44 +192,63 @@
     right: 0 !important;
     background: rgba(0, 0, 0, 0.98) !important;
     backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    z-index: 1000 !important;
-    padding: var(--mobile-spacing-2xl) var(--mobile-spacing-sm) var(--mobile-spacing-xl) !important;
+    z-index: 9999 !important;
+    padding: max(5rem, env(safe-area-inset-top)) 1rem 2rem !important;
     visibility: visible !important;
     opacity: 1 !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
   
   /* Mobile menu links */
   .mobile-menu-link {
     display: block !important;
     width: 100% !important;
-    padding: var(--mobile-spacing-md) 0 !important;
-    font-size: var(--mobile-font-xl) !important;
+    padding: 1rem 0 !important;
+    font-size: 1.5rem !important;
     font-weight: 300 !important;
     letter-spacing: 0.1em !important;
     text-transform: uppercase !important;
     color: rgba(255, 255, 255, 0.9) !important;
     text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
     transition: all 0.3s ease !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    font-family: "Inter", sans-serif !important;
+    text-align: left !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  .mobile-menu-link:hover {
+    color: #aec7e9 !important;
+    text-shadow: 0 0 8px rgba(174, 199, 233, 0.6) !important;
   }
   
   .mobile-menu-link:active {
     color: #aec7e9 !important;
-    transform: translateX(8px) !important;
+    transform: scale(0.98) !important;
   }
   
   .mobile-menu-link.active {
     color: #aec7e9 !important;
+    text-shadow: 0 0 8px rgba(174, 199, 233, 0.8) !important;
   }
   
   /* Mobile social links */
   .mobile-social-links {
-    margin-top: var(--mobile-spacing-xl) !important;
-    padding-top: var(--mobile-spacing-lg) !important;
+    margin-top: 2rem !important;
+    padding-top: 1.5rem !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
     display: flex !important;
-    gap: var(--mobile-spacing-lg) !important;
+    gap: 1.5rem !important;
     justify-content: center !important;
   }
   
@@ -231,14 +259,27 @@
     align-items: center !important;
     justify-content: center !important;
     background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 12px !important;
     color: rgba(255, 255, 255, 0.8) !important;
     transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .mobile-social-link:hover {
+    background: rgba(174, 199, 233, 0.1) !important;
+    border-color: rgba(174, 199, 233, 0.3) !important;
+    color: #aec7e9 !important;
+    transform: scale(1.05) !important;
   }
   
   .mobile-social-link:active {
-    background: rgba(174, 199, 233, 0.2) !important;
-    color: #aec7e9 !important;
     transform: scale(0.95) !important;
   }
   
@@ -264,6 +305,9 @@
   }
   
   /* Mobile specific spacing */
+  .mobile-spacing { 
+    padding: var(--mobile-spacing-xl) var(--mobile-spacing-sm) !important; 
+  }
   .mobile-spacing-xs { padding: var(--mobile-spacing-xs) !important; }
   .mobile-spacing-sm { padding: var(--mobile-spacing-sm) !important; }
   .mobile-spacing-md { padding: var(--mobile-spacing-md) !important; }
@@ -283,10 +327,37 @@
   .mobile-text-5xl { font-size: var(--mobile-font-5xl) !important; }
   
   /* Disable all hover effects on mobile */
-  *:hover {
-    transform: none !important;
-    filter: none !important;
-    box-shadow: none !important;
+  @media (hover: none) {
+    *:hover {
+      transform: none !important;
+      filter: none !important;
+      box-shadow: none !important;
+    }
+    
+    .mobile-menu-button:hover {
+      background: rgba(0, 0, 0, 0.9) !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .mobile-menu-link:hover {
+      color: rgba(255, 255, 255, 0.9) !important;
+      text-shadow: none !important;
+    }
+    
+    .mobile-social-link:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      transform: none !important;
+    }
+  }
+  
+  /* Enhanced touch interactions */
+  .mobile-menu-button:active,
+  .mobile-menu-link:active,
+  .mobile-social-link:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
   }
   
   /* Mobile scrollbar */
@@ -321,12 +392,80 @@
   /* Mobile hero section */
   .hero-section {
     min-height: 100vh !important;
-    padding: var(--mobile-spacing-xl) var(--mobile-spacing-sm) !important;
+    padding: 0 !important;
+    margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  /* Specific hero portfolio title styling to prevent duplication */
+  .hero-section .hero-portfolio-title {
+    position: relative !important;
+    z-index: 10 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Ensure no duplicate h1 elements */
+  .hero-section h1:not(.hero-portfolio-title) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Mobile hero text positioning */
+  .hero-section .hero-portfolio-title,
+  .hero-section p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+  }
+  
+  /* Override any global h1 styles in hero section */
+  .hero-section h1 {
+    font-size: clamp(1.5rem, 8vw, 6rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: clamp(0.3em, 2vw, 0.8em) !important;
+    font-weight: 100 !important;
+    font-family: "Inter", sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Mobile hero text spacing */
+  .hero-section .absolute {
+    position: absolute !important;
+    z-index: 10 !important;
+  }
+  
+  /* Prevent any duplicate or conflicting text elements */
+  .hero-section *:not(.hero-portfolio-title):not(.mobile-safe-area):not(.space-y-1):not(.space-y-2) {
+    position: relative !important;
+  }
+  
+  /* Ensure only one PORTFOLIO text is visible */
+  .hero-section .hero-portfolio-title span {
+    display: block !important;
+    position: relative !important;
+    z-index: 11 !important;
+  }
+  
+  /* Mobile safe area adjustments */
+  .mobile-safe-area {
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    padding-top: max(0.5rem, env(safe-area-inset-top)) !important;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom)) !important;
   }
   
   /* Mobile about section */
@@ -372,6 +511,58 @@
   /* Mobile-specific body adjustments */
   html, body {
     overflow-x: hidden !important;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+  }
+  
+  /* Mobile viewport optimization */
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  /* Allow text selection for content */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+  
+  /* Mobile performance optimizations */
+  .hero-section,
+  .mobile-menu-content,
+  .mobile-menu-overlay,
+  .mobile-menu-button {
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+  }
+  
+  /* Prevent mobile zoom on input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+  
+  /* Mobile touch optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+  }
+  
+  /* Allow text selection for content */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
   }
   
   /* Additional mobile navigation fixes */
