@@ -267,29 +267,69 @@ body {
     }
   }
   
-  /* Sticky navigation - always visible */
+  /* Sticky navigation - always visible with smooth transitions */
   .sticky-nav {
     opacity: 1 !important;
     transform: translateY(0) !important;
     visibility: visible !important;
     display: block !important;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   
-  /* Enhanced background on scroll */
+  /* Minimal state - subtle background for immersive experience */
+  .sticky-nav.minimal {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Scrolled state - more prominent background for readability */
   .sticky-nav.scrolled {
-    background: rgba(0, 0, 0, 0.95) !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
-  /* Ensure navbar background is always visible */
+  /* Ensure navbar background transitions smoothly */
   .sticky-nav .absolute {
-    background: rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .sticky-nav.minimal .absolute {
+    background: rgba(0, 0, 0, 0.2);
   }
   
   .sticky-nav.scrolled .absolute {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.85);
+  }
+  
+  /* Smooth text color transitions */
+  .sticky-nav .nav-link {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .sticky-nav.minimal .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .sticky-nav.scrolled .nav-link {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  /* Email icon specific styling */
+  .sticky-nav .nav-link[href^="mailto:"]:hover {
+    color: #aec7e9 !important;
+    text-shadow: 0 0 8px rgba(174, 199, 233, 0.6);
+  }
+  
+  /* Social icons spacing */
+  .sticky-nav .flex.items-center.gap-6 {
+    gap: 1.5rem;
   }
 }

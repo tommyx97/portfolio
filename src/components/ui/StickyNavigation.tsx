@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 import { useNavigation } from '../../hooks/useNavigation';
 
 const navLinks = [{
@@ -24,6 +24,11 @@ const navLinks = [{
 }] as const;
 
 const socialLinks = [{
+  id: 'social-email',
+  icon: Mail,
+  href: 'mailto:tpiccioli97@gmail.com',
+  label: 'Email'
+}, {
   id: 'social-instagram',
   icon: Instagram,
   href: 'https://instagram.com',
@@ -31,27 +36,36 @@ const socialLinks = [{
 }, {
   id: 'social-linkedin',
   icon: Linkedin,
-  href: 'https://linkedin.com',
+  href: 'https://www.linkedin.com/feed/',
   label: 'LinkedIn'
 }] as const;
 
 export const StickyNavigation = () => {
   const { activeSection, scrollToSection } = useNavigation();
   const navRef = React.useRef<HTMLElement>(null);
+  const [scrollY, setScrollY] = React.useState(0);
 
-  // Add scrolled class for enhanced background
+  // Enhanced scroll handling for smoother, more minimal experience
   React.useEffect(() => {
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
       if (navRef.current) {
-        if (window.scrollY > 50) {
+        // More gradual background changes for immersive experience
+        if (currentScrollY > 100) {
           navRef.current.classList.add('scrolled');
-        } else {
+          navRef.current.classList.remove('minimal');
+        } else if (currentScrollY > 20) {
+          navRef.current.classList.add('minimal');
           navRef.current.classList.remove('scrolled');
+        } else {
+          navRef.current.classList.remove('scrolled', 'minimal');
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
