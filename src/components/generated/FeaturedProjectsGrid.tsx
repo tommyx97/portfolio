@@ -3,7 +3,6 @@
 import { SortableContainer } from "@/dnd-kit/SortableContainer";
 import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
-type FeaturedProjectsGridProps = Record<string, never>;
 const projectsData = [{
   id: 'project-automotive',
   title: 'BMW X3',
@@ -11,7 +10,7 @@ const projectsData = [{
   year: '2025',
   image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-slate-500/20 to-blue-900/30',
-  mpid: "ab32408e-ae51-4f7e-8c2e-f2d3cd18a037"
+  mpid: "e18663ba-4a57-44be-9737-9499e1f55f7c"
 }, {
   id: 'project-innovation',
   title: 'Vision Air',
@@ -19,7 +18,7 @@ const projectsData = [{
   year: '2024',
   image: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-amber-500/30 to-yellow-600/40',
-  mpid: "b6de6804-ee93-4e18-934b-309da57d033c"
+  mpid: "69ee6ded-e8f1-44ba-9e62-c6b78f45558e"
 }, {
   id: 'project-product',
   title: 'iPhone Model T',
@@ -27,26 +26,32 @@ const projectsData = [{
   year: '2025',
   image: 'https://images.unsplash.com/photo-1592286927505-b0e2950e3900?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-zinc-900/50 to-black/70',
-  mpid: "1a3cba5f-0741-40b4-93d8-08e201258c66"
+  mpid: "1ca9d120-0827-4d81-ba56-d9e17fb555f1"
 }] as const;
-export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
+export interface FeaturedProjectsGridProps {
+  onProjectClick?: (projectId: string) => void;
+  mpid?: string;
+}
+export const FeaturedProjectsGrid = ({
+  onProjectClick
+}: FeaturedProjectsGridProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
     margin: "-100px"
   });
-  return <SortableContainer dndKitId="4627bd2d-66c9-42df-8094-6ba548ba6ae8" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="FeaturedProjectsGrid.tsx">
+  return <SortableContainer dndKitId="2d5bb85c-551e-4775-8bee-4f1c689d35c5" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="FeaturedProjectsGrid.tsx">
       {/* Ambient background glow */}
-      <SortableContainer dndKitId="769aa585-5265-4bed-8cc7-ac7f5c875589" containerType="regular" prevTag="div" className="absolute inset-0 z-0 pointer-events-none" data-magicpath-id="1" data-magicpath-path="FeaturedProjectsGrid.tsx">
+      <SortableContainer dndKitId="b280fb5e-e9c8-4b24-8c96-6070c027e7f7" containerType="regular" prevTag="div" className="absolute inset-0 z-0 pointer-events-none" data-magicpath-id="1" data-magicpath-path="FeaturedProjectsGrid.tsx">
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" data-magicpath-id="2" data-magicpath-path="FeaturedProjectsGrid.tsx" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-amber-500/8 via-transparent to-transparent blur-[100px]" data-magicpath-id="3" data-magicpath-path="FeaturedProjectsGrid.tsx" />
       </SortableContainer>
 
       {/* Main container */}
-      <SortableContainer dndKitId="dadc9ba6-4fa3-49fc-b1a4-89ab15da6c0f" containerType="regular" prevTag="div" ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32" data-magicpath-id="4" data-magicpath-path="FeaturedProjectsGrid.tsx">
+      <SortableContainer dndKitId="166d2ae2-810b-479b-8552-827b1da956a4" containerType="regular" prevTag="div" ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32" data-magicpath-id="4" data-magicpath-path="FeaturedProjectsGrid.tsx">
         {/* Header section */}
-        <SortableContainer dndKitId="52aaee68-6be0-4873-b7e9-492e9b6b3d0f" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="079ff84b-ec37-46f3-8ba3-e1aeeb6053e6" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0,
         y: 30
       }} animate={isInView ? {
@@ -59,7 +64,7 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
         duration: 0.8,
         ease: [0.25, 0.1, 0.25, 1]
       }} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24" data-magicpath-id="5" data-magicpath-path="FeaturedProjectsGrid.tsx">
-          <SortableContainer dndKitId="5981724f-28bf-4b7b-ac13-9da03ae115e7" containerType="regular" prevTag="div" className="space-y-4 sm:space-y-5 md:space-y-6" data-magicpath-id="6" data-magicpath-path="FeaturedProjectsGrid.tsx">
+          <SortableContainer dndKitId="21f70b17-ebf1-4326-a8ba-888e3ea74772" containerType="regular" prevTag="div" className="space-y-4 sm:space-y-5 md:space-y-6" data-magicpath-id="6" data-magicpath-path="FeaturedProjectsGrid.tsx">
             <p className="text-xs sm:text-sm font-light text-white/50 tracking-[0.3em] uppercase" data-magicpath-id="7" data-magicpath-path="FeaturedProjectsGrid.tsx">
               <span data-magicpath-id="8" data-magicpath-path="FeaturedProjectsGrid.tsx">Progetti Selezionati</span>
             </p>
@@ -71,9 +76,10 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
         </SortableContainer>
 
         {/* Three cards grid */}
-        <SortableContainer dndKitId="9ae66eb9-1f11-422b-a40f-e053cc7579cc" containerType="collection" prevTag="div" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8" data-magicpath-id="12" data-magicpath-path="FeaturedProjectsGrid.tsx">
+        <SortableContainer dndKitId="32d0505d-fe1b-4881-aa75-99455e8097d9" containerType="collection" prevTag="div" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8" data-magicpath-id="12" data-magicpath-path="FeaturedProjectsGrid.tsx">
           {projectsData.map((project, index) => {
           const isHovered = hoveredIndex === index;
+          const isBMW = project.id === 'project-automotive';
           return <motion.div data-magicpath-motion-tag="motion.div" key={project.id} initial={{
             opacity: 0,
             y: 60
@@ -87,8 +93,12 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
             duration: 0.9,
             delay: 0.1 + index * 0.15,
             ease: [0.25, 0.1, 0.25, 1]
-          }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="group relative w-full" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="13" data-magicpath-path="FeaturedProjectsGrid.tsx">
-                <div className="relative w-full aspect-[3/4] overflow-hidden bg-zinc-950 cursor-pointer" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="14" data-magicpath-path="FeaturedProjectsGrid.tsx">
+          }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} onClick={() => {
+            if (isBMW && onProjectClick) {
+              onProjectClick('bmw-x3');
+            }
+          }} className="group relative w-full" data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="13" data-magicpath-path="FeaturedProjectsGrid.tsx">
+                <div className={`relative w-full aspect-[3/4] overflow-hidden bg-zinc-950 ${isBMW ? 'cursor-pointer' : 'cursor-default'}`} data-magicpath-uuid={(project as any)["mpid"] ?? "unsafe"} data-magicpath-id="14" data-magicpath-path="FeaturedProjectsGrid.tsx">
                   {/* Background image */}
                   <motion.div data-magicpath-motion-tag="motion.div" className="absolute inset-0 w-full h-full" animate={{
                 scale: isHovered ? 1.08 : 1

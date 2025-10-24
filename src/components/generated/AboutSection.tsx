@@ -11,28 +11,28 @@ export interface AboutSectionProps {
 const manifestoValues = [{
   id: 'value-1',
   text: 'Visione',
-  mpid: "e33d068c-82c1-412f-99c8-f603538fbc24"
+  mpid: "d47fe55a-300c-4b4e-95b9-0f27557b9754"
 }, {
   id: 'value-2',
   text: 'Precisione',
-  mpid: "b9ababf8-4a4e-4d20-aeb8-9724c4816439"
+  mpid: "7d644bd0-3a08-4801-a737-dd367b40e6b1"
 }, {
   id: 'value-3',
   text: 'Realismo',
-  mpid: "64574843-d726-4fee-81c1-bee38c854acd"
+  mpid: "887bbd2a-9117-42b5-b40d-010dbafcdd42"
 }] as const;
 export const AboutSection = ({
   onScrollToNext
 }: AboutSectionProps) => {
-  return <SortableContainer dndKitId="88fe3f01-10b6-4d79-a38f-99d2a75c2b48" containerType="regular" prevTag="section" id="about" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center" data-magicpath-id="0" data-magicpath-path="AboutSection.tsx">
+  return <SortableContainer dndKitId="48c8e283-69a6-42be-a4a9-c7f697978f29" containerType="regular" prevTag="section" id="about" className="relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center" data-magicpath-id="0" data-magicpath-path="AboutSection.tsx">
       {/* Content container - Two column layout */}
-      <SortableContainer dndKitId="44fbadf1-9119-46d9-ac88-674d83e6bfee" containerType="regular" prevTag="div" className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
+      <SortableContainer dndKitId="ec6b84e6-e16f-4303-8c5d-54317cd9cd17" containerType="regular" prevTag="div" className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
       background: "#000000"
     }} data-magicpath-id="1" data-magicpath-path="AboutSection.tsx">
-        <SortableContainer dndKitId="4a888fb8-3025-47ee-b722-e142b122c589" containerType="regular" prevTag="div" className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 xl:gap-20 items-center" data-magicpath-id="2" data-magicpath-path="AboutSection.tsx">
+        <SortableContainer dndKitId="08d68a9e-b0b4-4fdf-bdcd-f21f6b0b4f54" containerType="regular" prevTag="div" className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 xl:gap-20 items-center" data-magicpath-id="2" data-magicpath-path="AboutSection.tsx">
           
           {/* LEFT COLUMN - Text Content */}
-          <SortableContainer dndKitId="46845c2b-79d5-4982-b257-887c82b942aa" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="08423472-d9a4-4b96-aa16-ac022af97a4c" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           x: -60
         }} whileInView={{
@@ -46,7 +46,7 @@ export const AboutSection = ({
           ease: "easeOut"
         }} className="space-y-8 lg:space-y-10" data-magicpath-id="3" data-magicpath-path="AboutSection.tsx">
             {/* Title Section */}
-            <SortableContainer dndKitId="00eda271-7ab9-46fc-8432-2f68bc3842a8" containerType="regular" prevTag="div" className="space-y-3" data-magicpath-id="4" data-magicpath-path="AboutSection.tsx">
+            <SortableContainer dndKitId="64da4c59-4b19-4445-80da-8c074388660d" containerType="regular" prevTag="div" className="space-y-3" data-magicpath-id="4" data-magicpath-path="AboutSection.tsx">
               <motion.h2 data-magicpath-motion-tag="motion.h2" initial={{
               opacity: 0,
               y: 20
@@ -89,7 +89,7 @@ export const AboutSection = ({
             </SortableContainer>
 
             {/* Main Bio Text */}
-            <SortableContainer dndKitId="43e2d24f-ee12-436d-9e2c-f728f5188dec" containerType="regular" prevTag="motion.div" initial={{
+            <SortableContainer dndKitId="6c51a1ee-c2de-48c6-b046-d0ae48d51915" containerType="regular" prevTag="motion.div" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -137,7 +137,7 @@ export const AboutSection = ({
           }} className="w-24 h-px bg-gradient-to-r from-[#aec7e9] to-transparent origin-left" data-magicpath-id="10" data-magicpath-path="AboutSection.tsx" />
 
             {/* Mini Manifesto */}
-            <SortableContainer dndKitId="ff11d802-8f65-4ef1-ba7c-3bac83b9a6bc" containerType="collection" prevTag="motion.div" initial={{
+            <SortableContainer dndKitId="bb862e7f-d323-4dab-9e17-1783d9762490" containerType="collection" prevTag="motion.div" initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
@@ -166,7 +166,7 @@ export const AboutSection = ({
             </SortableContainer>
 
             {/* CTA Button */}
-            <SortableContainer dndKitId="f9b98dbb-9f46-4e71-9c74-b776bfd1afc4" containerType="regular" prevTag="motion.div" initial={{
+            <SortableContainer dndKitId="f8fadfa4-e8dd-4abf-8830-29d75a52135e" containerType="regular" prevTag="motion.div" initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
@@ -180,7 +180,7 @@ export const AboutSection = ({
             delay: 0.9,
             ease: "easeOut"
           }} className="pt-6" data-magicpath-id="15" data-magicpath-path="AboutSection.tsx">
-              <SortableContainer dndKitId="bd40dfbb-1f56-431a-8ab6-e7eb2f31ed1e" containerType="regular" prevTag="button" onClick={onScrollToNext} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
+              <SortableContainer dndKitId="737a7b47-9e70-4852-bf1b-6be2a016bfd4" containerType="regular" prevTag="button" onClick={onScrollToNext} className="group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 hover:text-white" style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '13px',
               letterSpacing: '0.15em'
@@ -206,7 +206,7 @@ export const AboutSection = ({
           </SortableContainer>
 
           {/* RIGHT COLUMN - Portrait Image */}
-          <SortableContainer dndKitId="caa4ba72-9cd7-4364-8253-fdc8caf4befd" containerType="regular" prevTag="motion.div" initial={{
+          <SortableContainer dndKitId="bdcbfbc2-e5b6-4e63-ab5c-42fa4a36e59d" containerType="regular" prevTag="motion.div" initial={{
           opacity: 0,
           x: 60
         }} whileInView={{
@@ -221,7 +221,7 @@ export const AboutSection = ({
           ease: "easeOut"
         }} className="relative w-full aspect-[3/4] lg:aspect-[4/5] max-w-[600px] mx-auto lg:mx-0 lg:ml-auto" data-magicpath-id="21" data-magicpath-path="AboutSection.tsx">
             {/* Main portrait image with cinematic backlight */}
-            <SortableContainer dndKitId="6677ac98-f4b0-412d-94b8-929f8dc57257" containerType="regular" prevTag="div" className="relative w-full h-full overflow-hidden" data-magicpath-id="22" data-magicpath-path="AboutSection.tsx">
+            <SortableContainer dndKitId="84d3071a-1331-4dfa-a22b-c00e4c779981" containerType="regular" prevTag="div" className="relative w-full h-full overflow-hidden" data-magicpath-id="22" data-magicpath-path="AboutSection.tsx">
               {/* Portrait image */}
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Tommaso Piccioli - AI Creative Director" className="w-full h-full object-cover object-center grayscale" style={{
               filter: 'grayscale(100%) contrast(1.1) brightness(0.85)'
