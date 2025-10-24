@@ -328,6 +328,21 @@ body {
     text-shadow: 0 0 8px rgba(174, 199, 233, 0.6);
   }
   
+  /* Ensure email icon is always visible */
+  .sticky-nav .nav-link[href^="mailto:"] {
+    color: rgba(255, 255, 255, 0.8) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .sticky-nav.minimal .nav-link[href^="mailto:"] {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .sticky-nav.scrolled .nav-link[href^="mailto:"] {
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+  
   /* Social icons spacing */
   .sticky-nav .flex.items-center.gap-6 {
     gap: 1.5rem;

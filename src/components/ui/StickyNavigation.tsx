@@ -121,12 +121,12 @@ export const StickyNavigation = () => {
         <div className="flex items-center gap-6">
           {socialLinks.map((social, idx) => {
             const Icon = social.icon;
+            const isEmail = social.href.startsWith('mailto:');
             return (
               <a 
                 key={social.id} 
                 href={social.href} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                {...(isEmail ? {} : { target: "_blank", rel: "noopener noreferrer" })}
                 className="nav-link text-white/80 transition-all duration-300" 
                 aria-label={social.label}
               >

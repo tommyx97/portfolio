@@ -55,15 +55,8 @@ export const useNavigation = () => {
           if (entry.isIntersecting && !isScrolling) {
             const sectionId = `#${entry.target.id}`;
             if (sections.includes(sectionId)) {
-              // Special handling for home section
-              if (sectionId === '#home') {
-                // Only activate home if user is at the very top or has scrolled up significantly
-                if (window.scrollY < 100) {
-                  setActiveSection(sectionId);
-                }
-              } else {
-                setActiveSection(sectionId);
-              }
+              // Simplified logic - no special handling for home
+              setActiveSection(sectionId);
               
               // Mark that user has scrolled and sections are being observed
               if (!hasScrolled) {
@@ -72,7 +65,7 @@ export const useNavigation = () => {
             }
           }
         });
-      }, 100); // 100ms debounce
+      }, 150); // Increased debounce time
     }, observerOptions);
 
     // Observe all sections
@@ -114,16 +107,6 @@ export const useNavigation = () => {
       if (window.scrollY > 50 && !hasScrolled) {
         setHasScrolled(true);
       }
-      
-      // Special handling for home section - deactivate if scrolled down
-      if (window.scrollY > 100 && activeSection === '#home') {
-        setActiveSection(null);
-      }
-      
-      // Activate home if user scrolls back to top
-      if (window.scrollY < 50 && hasScrolled) {
-        setActiveSection('#home');
-      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -131,7 +114,7 @@ export const useNavigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [hasScrolled, activeSection]);
+  }, [hasScrolled]);
 
   return {
     activeSection,
