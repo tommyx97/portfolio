@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
 export interface ContactSectionProps {
   email?: string;
   instagramUrl?: string;
@@ -12,25 +12,19 @@ const contactInfo = [{
   id: 'contact-email',
   icon: Mail,
   label: 'Email',
-  value: 'tommaso.piccioli@email.com',
-  href: 'mailto:tommaso.piccioli@email.com'
-}, {
-  id: 'contact-instagram',
-  icon: Instagram,
-  label: 'Instagram',
-  value: '@tommasopiccioli',
-  href: 'https://instagram.com/tommasopiccioli'
+  value: 'tpiccioli97@gmail.com',
+  href: 'mailto:tpiccioli97@gmail.com'
 }, {
   id: 'contact-linkedin',
   icon: Linkedin,
   label: 'LinkedIn',
   value: 'Tommaso Piccioli',
-  href: 'https://linkedin.com/in/tommasopiccioli'
+  href: 'https://www.linkedin.com/feed/'
 }] as const;
 export const ContactSection = ({
-  email = 'tommaso.piccioli@email.com',
+  email = 'tpiccioli97@gmail.com',
   instagramUrl = 'https://instagram.com',
-  linkedinUrl = 'https://linkedin.com'
+  linkedinUrl = 'https://www.linkedin.com/feed/'
 }: ContactSectionProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   return <section id="contattami" className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
