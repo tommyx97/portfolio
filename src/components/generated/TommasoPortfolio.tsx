@@ -9,35 +9,35 @@ const navLinks = [{
   id: 'nav-home',
   label: 'Home',
   href: '#home',
-  mpid: "f984c906-3f60-4158-a4ea-46285814f462"
+  mpid: "72543bd8-5159-4e0a-aaa9-a30a94dd531b"
 }, {
   id: 'nav-progetti',
   label: 'Progetti',
   href: '#progetti',
-  mpid: "4048bc94-b127-488c-b1b8-45730e524649"
+  mpid: "c13cacf1-7601-47d8-8c17-c5350bf10980"
 }, {
   id: 'nav-chi-sono',
   label: 'Chi Sono',
   href: '#chi-sono',
-  mpid: "efba9fe8-51f7-4563-8780-15bc978322db"
+  mpid: "2467de8e-4090-4e4a-8a2a-d4e0587bde48"
 }, {
   id: 'nav-contattami',
   label: 'Contattami',
   href: '#contattami',
-  mpid: "b0b72eac-e53d-444e-b264-d7ed6484b7c4"
+  mpid: "353035de-afe5-401a-a819-e0b71af8e302"
 }] as const;
 const socialLinks = [{
   id: 'social-instagram',
   icon: Instagram,
   href: 'https://instagram.com',
   label: 'Instagram',
-  mpid: "120ab0fd-9426-4a04-9265-31bc44a3e71d"
+  mpid: "1a4338e3-1147-47b0-8831-0954c699c9f5"
 }, {
   id: 'social-linkedin',
   icon: Linkedin,
   href: 'https://linkedin.com',
   label: 'LinkedIn',
-  mpid: "06b560d1-c256-4e0e-9998-fe79645af912"
+  mpid: "e0073afa-f368-48e4-884a-2c608f2d1d95"
 }] as const;
 
 // @component: TommasoPortfolio
@@ -45,15 +45,15 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
   const [activeSection, setActiveSection] = React.useState<string>('#home');
 
   // @return
-  return <SortableContainer dndKitId="3d697899-1c0a-4d71-862a-97b4f207f4f9" containerType="regular" prevTag="div" className="relative w-full h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="TommasoPortfolio.tsx">
+  return <SortableContainer dndKitId="ab2d06cc-fbd6-4b54-bcb2-3bd61fe34a08" containerType="regular" prevTag="div" className="relative w-full h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="TommasoPortfolio.tsx">
       {/* Background gradient glow effect */}
-      <SortableContainer dndKitId="f946edfd-6549-4d86-a583-cc3fae6157a2" containerType="regular" prevTag="div" className="absolute inset-0 z-0" data-magicpath-id="1" data-magicpath-path="TommasoPortfolio.tsx">
+      <SortableContainer dndKitId="06ef8ce1-3580-495c-bf66-48d3e9ccd0eb" containerType="regular" prevTag="div" className="absolute inset-0 z-0" data-magicpath-id="1" data-magicpath-path="TommasoPortfolio.tsx">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#C8966B]/40 via-[#C8966B]/20 to-transparent blur-3xl" data-magicpath-id="2" data-magicpath-path="TommasoPortfolio.tsx" />
       </SortableContainer>
 
       {/* Top Navigation */}
-      <SortableContainer dndKitId="96d8d2f9-a6e0-489c-9103-042b96d43ba1" containerType="regular" prevTag="nav" className="absolute top-0 left-0 right-0 z-50 px-8 lg:px-16 py-8 backdrop-blur-md bg-white/5 border-b border-white/10 shadow-lg shadow-black/20" data-magicpath-id="3" data-magicpath-path="TommasoPortfolio.tsx">
-        <SortableContainer dndKitId="cc9435b4-283e-4cd4-a948-4cfb016406da" containerType="collection" prevTag="motion.div" initial={{
+      <SortableContainer dndKitId="87794d0d-3cb2-4dbc-a936-369a4d9b1fca" containerType="regular" prevTag="nav" className="absolute top-0 left-0 right-0 z-50 px-8 lg:px-16 py-8 backdrop-blur-md bg-white/5 border-b border-white/10 shadow-lg shadow-black/20" data-magicpath-id="3" data-magicpath-path="TommasoPortfolio.tsx">
+        <SortableContainer dndKitId="310daba6-5f35-4fbb-8258-856f1e7603d0" containerType="collection" prevTag="motion.div" initial={{
         opacity: 0,
         y: -20
       }} animate={{
@@ -106,7 +106,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       </SortableContainer>
 
       {/* Left social icons */}
-      <SortableContainer dndKitId="b5bfa7da-1c1d-454e-b83c-0e9fa1ea928a" containerType="collection" prevTag="motion.div" initial={{
+      <SortableContainer dndKitId="86b5a6f9-cc99-4b94-825d-80adbd3264eb" containerType="collection" prevTag="motion.div" initial={{
       opacity: 0,
       x: -20
     }} animate={{
@@ -136,7 +136,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       </SortableContainer>
 
       {/* Main hero content */}
-      <SortableContainer dndKitId="50611261-a92f-40cc-a15d-602a9b182d8e" containerType="regular" prevTag="div" className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{
+      <SortableContainer dndKitId="645b63e1-24d5-4f0c-999a-6d242ff839dd" containerType="regular" prevTag="div" className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{
       backgroundImage: "url(https://storage.googleapis.com/storage.magicpath.ai/user/298335939791556608/assets/2a529ca7-9941-4325-b7ac-0869b90895df.png)",
       backgroundSize: "cover",
       backgroundPosition: "50% 50%",
@@ -144,7 +144,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       opacity: "1"
     }} data-magicpath-id="13" data-magicpath-path="TommasoPortfolio.tsx">
         {/* Subtitle text above */}
-        <SortableContainer dndKitId="d780c589-65a6-4020-be43-e1edfd144ea3" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="a3efddc6-9c90-476f-8e73-1e137c3f4c9c" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0,
         y: 20
       }} animate={{
@@ -178,7 +178,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         </SortableContainer>
 
         {/* Silhouette image placeholder with glow */}
-        <SortableContainer dndKitId="bfebd5b1-af90-4818-a999-cf058d634572" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="2562cb91-7ada-4b77-9ef8-85f2458d94dc" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0,
         scale: 0.95
       }} animate={{
@@ -189,7 +189,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         delay: 0.4
       }} className="relative w-full max-w-[600px] h-[500px] flex items-center justify-center" data-magicpath-id="16" data-magicpath-path="TommasoPortfolio.tsx">
           {/* Background glow behind silhouette */}
-          <SortableContainer dndKitId="7a416df0-fa4b-4ce1-9a79-2eaf701fa7b5" containerType="regular" prevTag="div" className="absolute inset-0 flex items-center justify-center" style={{
+          <SortableContainer dndKitId="ee82fc67-b369-4186-9f21-8644508fada0" containerType="regular" prevTag="div" className="absolute inset-0 flex items-center justify-center" style={{
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center"
@@ -198,7 +198,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           </SortableContainer>
 
           {/* Silhouette - Using a gradient shape as placeholder */}
-          <SortableContainer dndKitId="b35e2347-aa67-430e-80d4-0bd4ba6b0d14" containerType="regular" prevTag="div" className="relative z-10 w-[280px] h-[420px]" style={{
+          <SortableContainer dndKitId="6a377248-607a-4293-8194-7eb30889d008" containerType="regular" prevTag="div" className="relative z-10 w-[280px] h-[420px]" style={{
           display: "none"
         }} data-magicpath-id="19" data-magicpath-path="TommasoPortfolio.tsx">
             <svg viewBox="0 0 280 420" className="w-full h-full" aria-hidden="true" style={{
@@ -222,7 +222,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         </SortableContainer>
 
         {/* Large PORTFOLIO text */}
-        <SortableContainer dndKitId="1ce6ccf4-9f5f-441d-8a0a-8ea1820af0c6" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="9f164275-159b-4013-a6e1-681f4970d064" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0
       }} animate={{
         opacity: 1
