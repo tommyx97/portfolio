@@ -255,4 +255,15 @@ body {
     transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
+  
+  /* Sticky navigation spacing */
+  .section-with-nav {
+    padding-top: 80px; /* Compensate for sticky nav height */
+  }
+  
+  @media (min-width: 1024px) {
+    .section-with-nav {
+      padding-top: 100px; /* Larger padding on desktop */
+    }
+  }
 }

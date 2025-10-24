@@ -47,7 +47,7 @@ export const FeaturedProjectsGrid = ({
     }
   };
 
-  return <section id="progetti" className="relative w-full min-h-screen bg-black text-white overflow-hidden">
+  return <section id="progetti" className="section-with-nav relative w-full min-h-screen bg-black text-white overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" />

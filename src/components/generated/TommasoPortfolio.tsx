@@ -2,41 +2,10 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin } from 'lucide-react';
-import { useNavigation } from '../../hooks/useNavigation';
 type TommasoPortfolioProps = Record<string, never>;
-const navLinks = [{
-  id: 'nav-home',
-  label: 'Home',
-  href: '#home'
-}, {
-  id: 'nav-progetti',
-  label: 'Progetti',
-  href: '#progetti'
-}, {
-  id: 'nav-chi-sono',
-  label: 'Chi Sono',
-  href: '#chi-sono'
-}, {
-  id: 'nav-contattami',
-  label: 'Contattami',
-  href: '#contattami'
-}] as const;
-const socialLinks = [{
-  id: 'social-instagram',
-  icon: Instagram,
-  href: 'https://instagram.com',
-  label: 'Instagram'
-}, {
-  id: 'social-linkedin',
-  icon: Linkedin,
-  href: 'https://linkedin.com',
-  label: 'LinkedIn'
-}] as const;
 
 // @component: TommasoPortfolio
 export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
-  const { activeSection, scrollToSection } = useNavigation();
 
   // @return
   return <div className="relative w-full h-screen bg-black text-white overflow-hidden">
@@ -45,89 +14,9 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#C8966B]/40 via-[#C8966B]/20 to-transparent blur-3xl" />
       </div>
 
-      {/* Top Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50 px-8 lg:px-16 py-8 backdrop-blur-md bg-white/5 border-b border-white/10 shadow-lg shadow-black/20">
-        <motion.div initial={{
-        opacity: 0,
-        y: -20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.8,
-        delay: 0.2
-      }} className="max-w-[1800px] mx-auto flex items-center justify-between">
-          {navLinks.map((link, idx) => <a key={link.id} href={link.href} onClick={e => {
-          e.preventDefault();
-          scrollToSection(link.href);
-        }} className={`nav-link relative text-sm lg:text-base font-light tracking-[0.2em] transition-all duration-300 uppercase ${activeSection === link.href ? 'active text-[#aec7e9] drop-shadow-[0_0_8px_rgba(174,199,233,0.8)]' : 'text-white/90'}`} style={{
-          fontFamily: "Inter"
-        }}>
-              <motion.span initial={{
-            opacity: 0,
-            y: -10
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6,
-            delay: 0.3 + idx * 0.1
-          }} style={{
-            fontFamily: "Inter",
-            letterSpacing: "0.5em",
-            fontSize: "15px"
-          }}>
-                {link.label}
-              </motion.span>
-              {activeSection === link.href && <motion.div className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#aec7e9] to-transparent shadow-[0_0_10px_rgba(174,199,233,0.8)]" initial={{
-            opacity: 0,
-            scaleX: 0
-          }} animate={{
-            opacity: 1,
-            scaleX: 1
-          }} transition={{
-            duration: 0.3
-          }} />}
-              {activeSection === link.href && <motion.div className="absolute inset-0 -z-10 bg-[#C8966B]/40 blur-2xl" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            duration: 0.3
-          }} />}
-            </a>)}
-        </motion.div>
-      </nav>
+      {/* Navigation removed - now handled by StickyNavigation component */}
 
-      {/* Left social icons */}
-      <motion.div initial={{
-      opacity: 0,
-      x: -20
-    }} animate={{
-      opacity: 1,
-      x: 0
-    }} transition={{
-      duration: 0.8,
-      delay: 0.6
-    }} className="absolute left-8 lg:left-12 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-8">
-        {socialLinks.map((social, idx) => {
-        const Icon = social.icon;
-        return <a key={social.id} href={social.href} target="_blank" rel="noopener noreferrer" className="nav-link text-white/80 transition-all duration-300" aria-label={social.label}>
-              <motion.div initial={{
-            opacity: 0,
-            x: -10
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.6,
-            delay: 0.7 + idx * 0.1
-          }}>
-                <Icon size={24} strokeWidth={1.5} />
-              </motion.div>
-            </a>;
-      })}
-      </motion.div>
+      {/* Social icons removed - now handled by StickyNavigation component */}
 
       {/* Main hero content */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{
