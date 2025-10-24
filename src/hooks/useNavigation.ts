@@ -7,8 +7,9 @@ export interface NavigationState {
 }
 
 export const useNavigation = () => {
-  const [activeSection, setActiveSection] = useState('#home');
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Smooth scroll to section
@@ -47,6 +48,10 @@ export const useNavigation = () => {
           const sectionId = `#${entry.target.id}`;
           if (sections.includes(sectionId)) {
             setActiveSection(sectionId);
+            // Mark that user has scrolled and sections are being observed
+            if (!hasScrolled) {
+              setHasScrolled(true);
+            }
           }
         }
       });
@@ -60,13 +65,42 @@ export const useNavigation = () => {
       }
     });
 
+    // Initial check: if user is at the very top, don't set any active section
+    const checkInitialPosition = () => {
+      if (window.scrollY === 0) {
+        setActiveSection(null);
+        setHasScrolled(false);
+      } else {
+        setHasScrolled(true);
+      }
+    };
+
+    // Check initial position after a short delay to ensure DOM is ready
+    const initialCheckTimeout = setTimeout(checkInitialPosition, 100);
+
     return () => {
       observer.disconnect();
+      clearTimeout(initialCheckTimeout);
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
     };
-  }, [isScrolling]);
+  }, [isScrolling, hasScrolled]);
+
+  // Scroll listener to detect when user starts scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50 && !hasScrolled) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasScrolled]);
 
   return {
     activeSection,

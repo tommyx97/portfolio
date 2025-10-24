@@ -240,6 +240,11 @@ body {
     text-shadow: 0 0 8px rgba(174, 199, 233, 0.8);
   }
   
+  /* Default state - no active section */
+  .nav-link:not(.active) {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
   /* Feed image hover effects */
   .feed-image {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
