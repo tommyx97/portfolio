@@ -26,7 +26,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       backgroundRepeat: "no-repeat",
       opacity: "1"
     }}>
-        {/* Subtitle text above */}
+        {/* Subtitle text - positioned bottom left */}
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -36,12 +36,13 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1,
         delay: 0.8
-      }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center px-4">
-          <p className="text-sm sm:text-base lg:text-lg font-light tracking-[0.2em] sm:tracking-[0.3em] text-white/90 uppercase" style={{
+      }} className="absolute bottom-[15%] left-[5%] text-left">
+          <p className="font-light tracking-[0.2em] text-white uppercase" style={{
           fontFamily: "Inter",
-          textAlign: "center",
-          fontSize: "clamp(0.875rem, 3vw, 1.5rem)",
-          letterSpacing: "clamp(0.1em, 1vw, 0.5em)"
+          textAlign: "left",
+          fontSize: "clamp(0.875rem, 2.5vw, 1.25rem)",
+          letterSpacing: "0.2em",
+          fontWeight: "300"
         }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
@@ -94,7 +95,7 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
           </div>
         </motion.div>
 
-        {/* Large PORTFOLIO text */}
+        {/* Large PORTFOLIO text - positioned at bottom with extreme spacing */}
         <motion.div initial={{
         opacity: 0
       }} animate={{
@@ -102,16 +103,17 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1.2,
         delay: 1
-      }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4">
-          <h1 className="text-center">
-            <span className="block font-extralight leading-none tracking-[0.1em] sm:tracking-[0.2em] lg:tracking-[0.35em] text-white" style={{
+      }} className="absolute bottom-[5%] left-0 right-0 px-4">
+          <h1 className="text-left">
+            <span className="block font-extralight leading-none text-white" style={{
             fontFamily: "Inter",
             fontWeight: "100",
-            fontSize: "clamp(3rem, 15vw, 8rem)",
-            lineHeight: "0.8",
-            letterSpacing: "clamp(0.1em, 2vw, 0.35em)"
+            fontSize: "clamp(2.5rem, 12vw, 6rem)",
+            lineHeight: "0.9",
+            letterSpacing: "0.8em",
+            textAlign: "left"
           }}>
-              PORTFOLIO
+              P O R T F O L I O
             </span>
           </h1>
         </motion.div>

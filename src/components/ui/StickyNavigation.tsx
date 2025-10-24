@@ -72,7 +72,7 @@ export const StickyNavigation = () => {
   return (
     <nav 
       ref={navRef}
-      className="sticky-nav fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-6 backdrop-blur-xl border-b border-white/10 shadow-lg hidden lg:block"
+      className="sticky-nav desktop-nav fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-6 backdrop-blur-xl border-b border-white/10 shadow-lg hidden lg:block"
     >
       {/* Background with dynamic opacity */}
       <div className="absolute inset-0 bg-black/30 backdrop-blur-xl transition-all duration-300" />

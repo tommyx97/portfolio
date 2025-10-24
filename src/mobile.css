@@ -24,8 +24,17 @@
 
 /* Mobile-only styles */
 @media (max-width: 767px) {
-  /* Hide desktop navigation completely */
-  .sticky-nav {
+  /* Hide desktop navigation completely - AGGRESSIVE RULES */
+  .sticky-nav,
+  .desktop-nav,
+  nav.sticky-nav,
+  nav.desktop-nav,
+  [class*="sticky-nav"],
+  [class*="desktop-nav"],
+  nav[class*="sticky"],
+  nav[class*="desktop"],
+  .fixed.top-0,
+  nav.fixed.top-0 {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -33,16 +42,34 @@
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
   }
   
-  /* Hide any desktop navigation elements */
-  nav.sticky-nav,
-  .sticky-nav,
-  [class*="sticky-nav"] {
+  /* Additional aggressive hiding for any navigation */
+  nav,
+  .navigation,
+  .navbar,
+  .nav-bar,
+  .header-nav,
+  .main-nav {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
+  }
+  
+  /* Exception: only show mobile menu button */
+  .mobile-menu-button,
+  button.mobile-menu-button,
+  [class*="mobile-menu-button"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
   
   /* Mobile typography */
@@ -349,8 +376,26 @@
   
   /* Additional mobile navigation fixes */
   nav[class*="sticky"],
+  nav[class*="desktop"],
   [class*="sticky-nav"],
+  [class*="desktop-nav"],
   .fixed.top-0 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Force hide any element with hidden class */
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Override Tailwind's lg:block on mobile */
+  .hidden.lg\\:block {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
