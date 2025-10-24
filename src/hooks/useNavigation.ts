@@ -11,6 +11,7 @@ export const useNavigation = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
@@ -38,23 +39,40 @@ export const useNavigation = () => {
     const sections = ['#home', '#chi-sono', '#progetti', '#contattami'];
     const observerOptions = {
       root: null,
-      rootMargin: '-20% 0px -20% 0px',
-      threshold: 0.3,
+      rootMargin: '-10% 0px -10% 0px',
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !isScrolling) {
-          const sectionId = `#${entry.target.id}`;
-          if (sections.includes(sectionId)) {
-            setActiveSection(sectionId);
-            // Mark that user has scrolled and sections are being observed
-            if (!hasScrolled) {
-              setHasScrolled(true);
+      // Clear previous debounce timeout
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
+      }
+
+      // Debounce the section change to prevent flickering
+      debounceTimeoutRef.current = setTimeout(() => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isScrolling) {
+            const sectionId = `#${entry.target.id}`;
+            if (sections.includes(sectionId)) {
+              // Special handling for home section
+              if (sectionId === '#home') {
+                // Only activate home if user is at the very top or has scrolled up significantly
+                if (window.scrollY < 100) {
+                  setActiveSection(sectionId);
+                }
+              } else {
+                setActiveSection(sectionId);
+              }
+              
+              // Mark that user has scrolled and sections are being observed
+              if (!hasScrolled) {
+                setHasScrolled(true);
+              }
             }
           }
-        }
-      });
+        });
+      }, 100); // 100ms debounce
     }, observerOptions);
 
     // Observe all sections
@@ -84,6 +102,9 @@ export const useNavigation = () => {
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
+      }
     };
   }, [isScrolling, hasScrolled]);
 
@@ -93,6 +114,16 @@ export const useNavigation = () => {
       if (window.scrollY > 50 && !hasScrolled) {
         setHasScrolled(true);
       }
+      
+      // Special handling for home section - deactivate if scrolled down
+      if (window.scrollY > 100 && activeSection === '#home') {
+        setActiveSection(null);
+      }
+      
+      // Activate home if user scrolls back to top
+      if (window.scrollY < 50 && hasScrolled) {
+        setActiveSection('#home');
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -100,7 +131,7 @@ export const useNavigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [hasScrolled]);
+  }, [hasScrolled, activeSection]);
 
   return {
     activeSection,
