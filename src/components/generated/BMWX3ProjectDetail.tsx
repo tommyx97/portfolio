@@ -105,17 +105,49 @@ export default function BMWX3ProjectDetail({
     // Navigate back to homepage first, then scroll to contact section
     if (onBack) {
       onBack();
-      // After returning to homepage, scroll to contact section with proper timing
-      setTimeout(() => {
+      
+      // Method 1: Try to scroll to contact section after navigation
+      const scrollToContact = () => {
         const contactSection = document.querySelector('#contatti');
         if (contactSection) {
-          // Scroll to the top of the contact section
           contactSection.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
           });
+          return true; // Success
         }
-      }, 300); // Increased timeout for better reliability
+        return false; // Not found yet
+      };
+      
+      // Method 2: Use URL hash as fallback
+      const useHashFallback = () => {
+        // Set hash in URL to trigger browser's native scroll behavior
+        window.location.hash = '#contatti';
+        // Clear hash after a moment to avoid URL pollution
+        setTimeout(() => {
+          if (window.location.hash === '#contatti') {
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        }, 1000);
+      };
+      
+      // Try multiple approaches
+      const tryScroll = (attempt = 1) => {
+        if (scrollToContact()) {
+          return; // Success with DOM method
+        }
+        
+        if (attempt < 3) {
+          // Try again with increasing delay
+          setTimeout(() => tryScroll(attempt + 1), attempt * 300);
+        } else {
+          // Fallback to hash method
+          useHashFallback();
+        }
+      };
+      
+      // Start trying after initial delay
+      setTimeout(() => tryScroll(), 600);
     }
   };
 
