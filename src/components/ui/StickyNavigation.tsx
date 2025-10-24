@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
 import { useNavigation } from '../../hooks/useNavigation';
 
@@ -37,13 +37,7 @@ const socialLinks = [{
 
 export const StickyNavigation = () => {
   const { activeSection, scrollToSection } = useNavigation();
-  const { scrollY } = useScroll();
   const navRef = React.useRef<HTMLElement>(null);
-  
-  // Transform values for smooth animations - navbar always visible
-  const navOpacity = useTransform(scrollY, [0, 100], [1, 1]); // Always visible
-  const navY = useTransform(scrollY, [0, 100], [0, 0]); // No vertical movement
-  const backgroundOpacity = useTransform(scrollY, [0, 200], [0.3, 0.95]); // Background appears gradually
 
   // Add scrolled class for enhanced background
   React.useEffect(() => {
@@ -62,19 +56,12 @@ export const StickyNavigation = () => {
   }, []);
 
   return (
-    <motion.nav 
+    <nav 
       ref={navRef}
-      style={{
-        opacity: navOpacity,
-        y: navY,
-      }}
       className="sticky-nav fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-6 backdrop-blur-xl border-b border-white/10 shadow-lg"
     >
       {/* Background with dynamic opacity */}
-      <motion.div 
-        style={{ opacity: backgroundOpacity }}
-        className="absolute inset-0 bg-black/80 backdrop-blur-xl"
-      />
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-xl transition-all duration-300" />
       
       {/* Navigation content */}
       <div className="relative z-10 max-w-[1800px] mx-auto flex items-center justify-between">
@@ -135,6 +122,6 @@ export const StickyNavigation = () => {
           })}
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };

@@ -273,10 +273,6 @@ body {
     transform: translateY(0) !important;
     visibility: visible !important;
     display: block !important;
-  }
-  
-  /* Ensure navbar is always visible even without JavaScript */
-  .sticky-nav {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease;
@@ -284,6 +280,16 @@ body {
   
   /* Enhanced background on scroll */
   .sticky-nav.scrolled {
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
+  
+  /* Ensure navbar background is always visible */
+  .sticky-nav .absolute {
+    background: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .sticky-nav.scrolled .absolute {
     background: rgba(0, 0, 0, 0.95);
   }
 }
