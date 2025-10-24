@@ -22,58 +22,50 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "scroll"
     }}>
-        {/* Subtitle text - desktop aligned positioning */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 1,
-        delay: 0.8
-      }} className="absolute bottom-[25%] left-[5%] right-[5%] text-left lg:bottom-[15%] lg:left-[5%] lg:right-auto">
-          <p className="font-light tracking-[0.2em] text-white uppercase mobile-safe-area" style={{
-            fontFamily: "Inter",
-            textAlign: "left",
-            fontSize: "clamp(0.75rem, 4vw, 1.25rem)",
-            letterSpacing: "0.2em",
-            fontWeight: "300",
-            lineHeight: "1.2",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            margin: 0
-          }}>
-            Tommaso Piccioli • AI Creator & Creative Director
-          </p>
-        </motion.div>
+        {/* Centered text layout - matching reference image */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
+          className="flex flex-col items-center justify-center text-center px-6"
+        >
+          {/* Name - TOMMASO PICCIOLI */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-white font-light tracking-[0.3em] uppercase mb-4 hero-name"
+            style={{
+              fontFamily: "Inter",
+              fontSize: "clamp(2rem, 6vw, 4rem)",
+              letterSpacing: "0.3em",
+              fontWeight: "300",
+              lineHeight: "1.1",
+              textAlign: "center",
+              margin: 0
+            }}
+          >
+            TOMMASO PICCIOLI
+          </motion.h1>
 
-        {/* Large PORTFOLIO text - desktop aligned positioning */}
-        <motion.div initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1
-      }} transition={{
-        duration: 1.2,
-        delay: 1
-      }} className="absolute bottom-[12%] left-[5%] right-[5%] lg:bottom-[5%] lg:left-[5%] lg:right-auto mobile-safe-area">
-          <h1 className="text-left hero-portfolio-title">
-            <span className="block font-extralight leading-none text-white" style={{
-            fontFamily: "Inter",
-            fontWeight: "100",
-            fontSize: "clamp(1.5rem, 8vw, 6rem)",
-            lineHeight: "0.9",
-            letterSpacing: "clamp(0.3em, 2vw, 0.8em)",
-            textAlign: "left",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-            hyphens: "auto",
-            margin: 0
-          }}>
-              P O R T F O L I O
-            </span>
-          </h1>
+          {/* Professional title - AI CREATOR & CREATIVE DIRECTOR */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="text-white font-light tracking-[0.2em] uppercase hero-title"
+            style={{
+              fontFamily: "Inter",
+              fontSize: "clamp(0.9rem, 3vw, 1.4rem)",
+              letterSpacing: "0.2em",
+              fontWeight: "300",
+              lineHeight: "1.2",
+              textAlign: "center",
+              margin: 0
+            }}
+          >
+            AI CREATOR & CREATIVE DIRECTOR
+          </motion.p>
         </motion.div>
       </div>
     </div>;
