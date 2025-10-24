@@ -30,7 +30,7 @@ export const ContactSection = ({
   return <section id="contatti" className="section-with-nav relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden contact-section">
       {/* Background ambient gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-[#C8966B]/15 via-[#C8966B]/5 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-[#aec7e9]/15 via-[#aec7e9]/5 to-transparent blur-3xl" />
       </div>
 
       {/* Content Container */}
@@ -55,7 +55,7 @@ export const ContactSection = ({
           }}>
             <span>Contattami</span>
           </h2>
-          <div className="w-20 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" />
+          <div className="w-20 h-[1px] bg-gradient-to-r from-[#aec7e9] to-transparent" />
         </motion.div>
 
         {/* Main content grid */}
@@ -99,7 +99,7 @@ export const ContactSection = ({
           }} transition={{
             duration: 1,
             delay: 0.5
-          }} className="w-32 h-[1px] bg-gradient-to-r from-[#E7B979]/60 to-transparent origin-left" />
+          }} className="w-32 h-[1px] bg-gradient-to-r from-[#aec7e9]/60 to-transparent origin-left" />
 
             {/* Additional info */}
             <div className="pt-4">
@@ -137,15 +137,15 @@ export const ContactSection = ({
             }} transition={{
               duration: 0.6,
               delay: 0.4 + index * 0.1
-            }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="group relative block p-6 lg:p-8 border border-white/10 backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-[#C8966B]/40 transition-all duration-500" style={{
+            }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="group relative block p-6 lg:p-8 border border-white/10 backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-[#aec7e9]/40 transition-all duration-500" style={{
               borderTopWidth: "1px",
-              borderTopColor: "rgb(105 144 199 / 0.4)",
+              borderTopColor: "rgb(174 199 233 / 0.4)",
               borderRightWidth: "1px",
-              borderRightColor: "rgb(105 144 199 / 0.4)",
+              borderRightColor: "rgb(174 199 233 / 0.4)",
               borderBottomWidth: "1px",
-              borderBottomColor: "rgb(105 144 199 / 0.4)",
+              borderBottomColor: "rgb(174 199 233 / 0.4)",
               borderLeftWidth: "1px",
-              borderLeftColor: "rgb(105 144 199 / 0.4)",
+              borderLeftColor: "rgb(174 199 233 / 0.4)",
               borderStyle: "solid",
               borderRadius: "0px"
             }}>
@@ -159,20 +159,20 @@ export const ContactSection = ({
                   }} transition={{
                     duration: 0.3
                   }} className="mt-1">
-                        <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-[#C8966B]/30 flex items-center justify-center bg-[#C8966B]/10 group-hover:bg-[#C8966B]/20 group-hover:border-[#C8966B]/50 transition-all duration-500" style={{
-                      background: "#3c434c",
+                        <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-[#aec7e9]/30 flex items-center justify-center bg-[#aec7e9]/10 group-hover:bg-[#aec7e9]/20 group-hover:border-[#aec7e9]/50 transition-all duration-500" style={{
+                      background: "rgba(174, 199, 233, 0.1)",
                       borderTopWidth: "1px",
-                      borderTopColor: "rgb(59 138 162 / 0.5)",
+                      borderTopColor: "rgb(174 199 233 / 0.5)",
                       borderRightWidth: "1px",
-                      borderRightColor: "rgb(59 138 162 / 0.5)",
+                      borderRightColor: "rgb(174 199 233 / 0.5)",
                       borderBottomWidth: "1px",
-                      borderBottomColor: "rgb(59 138 162 / 0.5)",
+                      borderBottomColor: "rgb(174 199 233 / 0.5)",
                       borderLeftWidth: "1px",
-                      borderLeftColor: "rgb(59 138 162 / 0.5)",
+                      borderLeftColor: "rgb(174 199 233 / 0.5)",
                       borderStyle: "solid",
-                      borderRadius: "2.98262e+07px"
+                      borderRadius: "50%"
                     }}>
-                          <Icon className="text-[#E7B979]" size={20} strokeWidth={1.5} style={{
+                          <Icon className="text-[#aec7e9]" size={20} strokeWidth={1.5} style={{
                         color: "#aec7e9"
                       }} />
                         </div>
@@ -205,12 +205,12 @@ export const ContactSection = ({
                 }} transition={{
                   duration: 0.3
                 }}>
-                      <ArrowUpRight className="text-[#E7B979]" size={20} strokeWidth={1.5} />
+                      <ArrowUpRight className="text-[#aec7e9]" size={20} strokeWidth={1.5} />
                     </motion.div>
                   </div>
 
                   {/* Bottom accent line */}
-                  <motion.div className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" initial={{
+                  <motion.div className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-[#aec7e9] to-transparent" initial={{
                 width: "0%"
               }} animate={{
                 width: isHovered ? "100%" : "0%"
@@ -219,7 +219,7 @@ export const ContactSection = ({
               }} />
 
                   {/* Glow effect on hover */}
-                  <motion.div className="absolute inset-0 bg-gradient-to-br from-[#C8966B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
+                  <motion.div className="absolute inset-0 bg-gradient-to-br from-[#aec7e9]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
                 mixBlendMode: 'screen'
               }} />
                 </motion.a>;
@@ -240,7 +240,7 @@ export const ContactSection = ({
         duration: 1.2,
         delay: 0.8
       }} className="mt-20 lg:mt-32">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8966B]/30 to-transparent" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#aec7e9]/30 to-transparent" />
         </motion.div>
 
         {/* Footer text */}
