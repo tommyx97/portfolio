@@ -105,16 +105,17 @@ export default function BMWX3ProjectDetail({
     // Navigate back to homepage first, then scroll to contact section
     if (onBack) {
       onBack();
-      // After returning to homepage, scroll to contact section
+      // After returning to homepage, scroll to contact section with proper timing
       setTimeout(() => {
-        const contactSection = document.querySelector('#contattami');
+        const contactSection = document.querySelector('#contatti');
         if (contactSection) {
+          // Scroll to the top of the contact section
           contactSection.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
           });
         }
-      }, 200);
+      }, 300); // Increased timeout for better reliability
     }
   };
 

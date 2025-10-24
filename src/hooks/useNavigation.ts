@@ -36,7 +36,7 @@ export const useNavigation = () => {
 
   // Intersection Observer for active section detection
   useEffect(() => {
-    const sections = ['#home', '#chi-sono', '#progetti', '#contattami'];
+    const sections = ['#home', '#chi-sono', '#progetti', '#contatti'];
     const observerOptions = {
       root: null,
       rootMargin: '-10% 0px -10% 0px',

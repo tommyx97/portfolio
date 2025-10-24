@@ -20,7 +20,7 @@ const navLinks = [{
 }, {
   id: 'nav-contattami',
   label: 'Contattami',
-  href: '#contattami'
+  href: '#contatti'
 }] as const;
 
 const socialLinks = [{
