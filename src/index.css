@@ -167,10 +167,20 @@ body {
     background: rgba(174, 199, 233, 0.5);
   }
   
-  /* Focus styles for accessibility */
+  /* Enhanced focus styles for accessibility */
   *:focus-visible {
-    outline: 2px solid rgba(174, 199, 233, 0.6);
-    outline-offset: 2px;
+    outline: 3px solid rgba(174, 199, 233, 0.8);
+    outline-offset: 3px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(174, 199, 233, 0.3);
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    *:focus-visible {
+      outline: 4px solid #ffffff;
+      outline-offset: 2px;
+    }
   }
   
   /* ========================================
@@ -210,28 +220,32 @@ body {
      DESKTOP VERSION (≥1024px) - DEFAULT
      ======================================== */
   
-  /* Desktop typography */
+  /* Desktop typography - Optimized for 4K/Ultrawide */
   h1 {
-    font-size: clamp(3rem, 8vw, 8rem);
-    line-height: 1.1;
+    font-size: clamp(3rem, 6vw, 12rem);
+    line-height: 1.05;
     font-weight: 100;
+    letter-spacing: -0.02em;
   }
   
   h2 {
-    font-size: clamp(2rem, 6vw, 5rem);
-    line-height: 1.2;
+    font-size: clamp(2rem, 4vw, 8rem);
+    line-height: 1.1;
     font-weight: 200;
+    letter-spacing: -0.01em;
   }
   
   h3 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    line-height: 1.3;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    line-height: 1.2;
     font-weight: 300;
+    letter-spacing: 0;
   }
   
   p {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.6;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
   }
   
   /* Desktop navigation */
@@ -266,7 +280,7 @@ body {
      TABLET VERSION (768px - 1023px)
      ======================================== */
   
-  @media (max-width: 1023px) {
+  @media (max-width: 1023px) and (min-width: 768px) {
     /* Tablet typography */
     h1 {
       font-size: clamp(2.5rem, 10vw, 6rem);
@@ -332,10 +346,20 @@ body {
       line-height: 1.6;
     }
     
-    /* Mobile touch targets */
-    button, a {
-      min-height: 44px;
-      min-width: 44px;
+    /* Mobile touch targets - WCAG compliant */
+    button, a, [role="button"] {
+      min-height: 48px;
+      min-width: 48px;
+      padding: 12px;
+      touch-action: manipulation;
+    }
+    
+    /* Ensure interactive elements are easily tappable */
+    .nav-link, .mobile-menu-link, .project-card {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     /* Mobile navigation */
@@ -492,10 +516,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Optimize animations */
+  /* Optimize animations - Only when needed */
   .animate-smooth {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+  
+  .animate-smooth:hover {
     will-change: transform;
   }
   
@@ -505,10 +532,13 @@ body {
     scroll-behavior: smooth;
   }
   
-  /* Optimize images */
+  /* Optimize images - Performance optimized */
   img {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+  
+  img:hover {
     will-change: transform;
   }
   
