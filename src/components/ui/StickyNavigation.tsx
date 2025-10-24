@@ -10,13 +10,13 @@ const navLinks = [{
   label: 'Home',
   href: '#home'
 }, {
-  id: 'nav-progetti',
-  label: 'Progetti',
-  href: '#progetti'
-}, {
   id: 'nav-chi-sono',
   label: 'Chi Sono',
   href: '#chi-sono'
+}, {
+  id: 'nav-progetti',
+  label: 'Progetti',
+  href: '#progetti'
 }, {
   id: 'nav-contattami',
   label: 'Contattami',
