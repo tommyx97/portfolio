@@ -146,7 +146,18 @@ export const ContactSection = ({
             }} transition={{
               duration: 0.6,
               delay: 0.4 + index * 0.1
-            }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="group relative block p-6 lg:p-8 border border-white/10 backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-[#C8966B]/40 transition-all duration-500" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="20" data-magicpath-path="ContactSection.tsx">
+            }} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className="group relative block p-6 lg:p-8 border border-white/10 backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-[#C8966B]/40 transition-all duration-500" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="20" data-magicpath-path="ContactSection.tsx" style={{
+              borderTopWidth: "1px",
+              borderTopColor: "rgb(105 144 199 / 0.4)",
+              borderRightWidth: "1px",
+              borderRightColor: "rgb(105 144 199 / 0.4)",
+              borderBottomWidth: "1px",
+              borderBottomColor: "rgb(105 144 199 / 0.4)",
+              borderLeftWidth: "1px",
+              borderLeftColor: "rgb(105 144 199 / 0.4)",
+              borderStyle: "solid",
+              borderRadius: "0px"
+            }}>
                   <div className="flex items-start justify-between gap-4" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="21" data-magicpath-path="ContactSection.tsx">
                     {/* Left: Icon and content */}
                     <div className="flex items-start gap-4 lg:gap-6 flex-1" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="22" data-magicpath-path="ContactSection.tsx">
@@ -157,8 +168,22 @@ export const ContactSection = ({
                   }} transition={{
                     duration: 0.3
                   }} className="mt-1" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="23" data-magicpath-path="ContactSection.tsx">
-                        <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-[#C8966B]/30 flex items-center justify-center bg-[#C8966B]/10 group-hover:bg-[#C8966B]/20 group-hover:border-[#C8966B]/50 transition-all duration-500" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="24" data-magicpath-path="ContactSection.tsx">
-                          <Icon className="text-[#E7B979]" size={20} strokeWidth={1.5} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="25" data-magicpath-path="ContactSection.tsx" />
+                        <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-[#C8966B]/30 flex items-center justify-center bg-[#C8966B]/10 group-hover:bg-[#C8966B]/20 group-hover:border-[#C8966B]/50 transition-all duration-500" data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="24" data-magicpath-path="ContactSection.tsx" style={{
+                      background: "#3c434c",
+                      borderTopWidth: "1px",
+                      borderTopColor: "rgb(59 138 162 / 0.5)",
+                      borderRightWidth: "1px",
+                      borderRightColor: "rgb(59 138 162 / 0.5)",
+                      borderBottomWidth: "1px",
+                      borderBottomColor: "rgb(59 138 162 / 0.5)",
+                      borderLeftWidth: "1px",
+                      borderLeftColor: "rgb(59 138 162 / 0.5)",
+                      borderStyle: "solid",
+                      borderRadius: "2.98262e+07px"
+                    }}>
+                          <Icon className="text-[#E7B979]" size={20} strokeWidth={1.5} data-magicpath-uuid={(contact as any)["mpid"] ?? "unsafe"} data-magicpath-id="25" data-magicpath-path="ContactSection.tsx" style={{
+                        color: "#aec7e9"
+                      }} />
                         </div>
                       </motion.div>
 
