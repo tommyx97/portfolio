@@ -28,10 +28,8 @@ export const AboutSection = ({
 
   return <section id="chi-sono" className="section-with-nav relative w-full min-h-screen bg-[#000000] text-white overflow-hidden flex items-center">
       {/* Content container - Two column layout */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-24" style={{
-      background: "#000000"
-    }}>
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 xl:gap-20 items-center">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto mobile-spacing">
+        <div className="desktop-grid desktop-flex">
           
           {/* LEFT COLUMN - Text Content */}
           <motion.div initial={{
@@ -62,10 +60,11 @@ export const AboutSection = ({
               duration: 0.8,
               delay: 0.2,
               ease: "easeOut"
-            }} className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-[0.02em] text-white" style={{
+            }} className="font-light tracking-[0.02em] text-white" style={{
               fontFamily: 'Urbanist, sans-serif',
               letterSpacing: '0.05em',
-              color: "#aec7e9"
+              color: "#aec7e9",
+              fontSize: "clamp(2.5rem, 10vw, 5rem)"
             }}>CHI SONO</motion.h2>
               
               <motion.p initial={{
@@ -105,18 +104,20 @@ export const AboutSection = ({
             delay: 0.4,
             ease: "easeOut"
           }} className="space-y-6">
-              <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 font-light" style={{
+              <p className="leading-relaxed text-white/90 font-light" style={{
               fontFamily: 'Urbanist, sans-serif',
               lineHeight: '1.8',
-              letterSpacing: '0.01em'
+              letterSpacing: '0.01em',
+              fontSize: "clamp(0.875rem, 3vw, 1.25rem)"
             }}>
                 Unisco creatività e intelligenza artificiale per creare campagne visive con identità forte e riconoscibile.
               </p>
               
-              <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/80 font-light" style={{
+              <p className="leading-relaxed text-white/80 font-light" style={{
               fontFamily: 'Urbanist, sans-serif',
               lineHeight: '1.8',
-              letterSpacing: '0.01em'
+              letterSpacing: '0.01em',
+              fontSize: "clamp(0.875rem, 3vw, 1.25rem)"
             }}>
                 Credo nel potere delle immagini come linguaggio universale capace di connettere emozione e metodo.
               </p>
@@ -182,10 +183,10 @@ export const AboutSection = ({
             delay: 0.9,
             ease: "easeOut"
           }} className="pt-6">
-              <button onClick={handleScrollToProjects} className="nav-link group relative inline-flex items-center gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500" style={{
+              <button onClick={handleScrollToProjects} className="nav-link group relative inline-flex items-center gap-2 sm:gap-3 text-white/80 font-light tracking-[0.1em] uppercase transition-all duration-500 min-h-[44px] px-2" style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: '13px',
-              letterSpacing: '0.15em'
+              fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
+              letterSpacing: 'clamp(0.1em, 0.5vw, 0.15em)'
             }}>
                 <span className="relative z-10" style={{
                 color: "#b3d7ff"
@@ -198,7 +199,7 @@ export const AboutSection = ({
                 repeat: Infinity,
                 ease: "easeInOut"
               }}>
-                  <ArrowRight size={18} strokeWidth={1.5} className="text-[#aec7e9] group-hover:text-[#b3d7ff] transition-colors duration-300" />
+                  <ArrowRight size={16} strokeWidth={1.5} className="text-[#aec7e9] group-hover:text-[#b3d7ff] transition-colors duration-300" />
                 </motion.span>
                 
                 {/* Hover underline effect */}

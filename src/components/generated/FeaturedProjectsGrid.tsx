@@ -55,7 +55,7 @@ export const FeaturedProjectsGrid = ({
       </div>
 
       {/* Main container */}
-      <div ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32">
+      <div ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto mobile-spacing">
         {/* Header section */}
         <motion.div initial={{
         opacity: 0,
@@ -71,10 +71,14 @@ export const FeaturedProjectsGrid = ({
         ease: [0.25, 0.1, 0.25, 1]
       }} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <div className="space-y-4 sm:space-y-5 md:space-y-6">
-            <p className="text-xs sm:text-sm font-light text-white/50 tracking-[0.3em] uppercase">
+            <p className="font-light text-white/50 tracking-[0.3em] uppercase" style={{
+              fontSize: "clamp(0.75rem, 2vw, 0.875rem)"
+            }}>
               <span>Progetti Selezionati</span>
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-tight leading-[1.05]">
+            <h1 className="font-extralight tracking-tight leading-[1.05]" style={{
+              fontSize: "clamp(2.5rem, 12vw, 6rem)"
+            }}>
               <span className="block text-white">Featured</span>
               <span className="block text-white">Projects</span>
             </h1>
@@ -82,7 +86,7 @@ export const FeaturedProjectsGrid = ({
         </motion.div>
 
         {/* Three cards grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
+        <div className="desktop-grid">
           {projectsData.map((project, index) => {
           const isHovered = hoveredIndex === index;
           const isBMW = project.id === 'project-automotive';

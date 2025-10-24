@@ -34,7 +34,7 @@ export const ContactSection = ({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-20 py-20 lg:py-32">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto mobile-spacing">
         
         {/* Header */}
         <motion.div initial={{
@@ -50,14 +50,16 @@ export const ContactSection = ({
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1]
       }} className="mb-16 lg:mb-24">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extralight tracking-[0.15em] uppercase mb-6">
+          <h2 className="font-extralight tracking-[0.15em] uppercase mb-6" style={{
+            fontSize: "clamp(2.5rem, 10vw, 5rem)"
+          }}>
             <span>Contattami</span>
           </h2>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#C8966B] to-transparent" />
         </motion.div>
 
         {/* Main content grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="desktop-grid desktop-flex">
           
           {/* Left: Message */}
           <motion.div initial={{

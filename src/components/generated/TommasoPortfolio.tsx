@@ -36,25 +36,12 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1,
         delay: 0.8
-      }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center" style={{
-        height: "437.5px",
-        minHeight: "auto",
-        width: "4244.71px",
-        maxWidth: "4244.71px"
-      }}>
-          <p className="text-xs sm:text-sm lg:text-base font-light tracking-[0.3em] text-white/90 uppercase" style={{
+      }} className="absolute top-[38%] left-1/2 -translate-x-1/2 w-full text-center px-4">
+          <p className="text-sm sm:text-base lg:text-lg font-light tracking-[0.2em] sm:tracking-[0.3em] text-white/90 uppercase" style={{
           fontFamily: "Inter",
-          textAlign: "left",
-          justifyContent: "flex-start",
-          marginTop: "400px",
-          width: "100%",
-          maxWidth: "100%",
-          height: "100%",
-          minHeight: "100%",
-          marginLeft: "1000px",
-          fontSize: "25px",
-          letterSpacing: "0.5em",
-          marginRight: "3020px"
+          textAlign: "center",
+          fontSize: "clamp(0.875rem, 3vw, 1.5rem)",
+          letterSpacing: "clamp(0.1em, 1vw, 0.5em)"
         }}>
             Tommaso Piccioli - AI Creator & Creative Director
           </p>
@@ -115,26 +102,14 @@ export const TommasoPortfolio = (_props: TommasoPortfolioProps) => {
       }} transition={{
         duration: 1.2,
         delay: 1
-      }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full" style={{
-        height: "160px",
-        minHeight: "auto",
-        width: "fit-content",
-        maxWidth: "fit-content"
-      }}>
+      }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4">
           <h1 className="text-center">
-            <span className="block text-[clamp(3rem,12vw,10rem)] font-extralight leading-none tracking-[0.35em] text-white" style={{
+            <span className="block font-extralight leading-none tracking-[0.1em] sm:tracking-[0.2em] lg:tracking-[0.35em] text-white" style={{
             fontFamily: "Inter",
             fontWeight: "100",
-            paddingTop: "150px",
-            height: "100%",
-            minHeight: "100%",
-            marginTop: "400px",
-            marginRight: "200px",
-            width: "100%",
-            maxWidth: "100%",
+            fontSize: "clamp(3rem, 15vw, 8rem)",
             lineHeight: "0.8",
-            letterSpacing: "2.5em",
-            fontSize: "80px"
+            letterSpacing: "clamp(0.1em, 2vw, 0.35em)"
           }}>
               PORTFOLIO
             </span>

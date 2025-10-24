@@ -7,6 +7,7 @@ import { ContactSection } from './components/generated/ContactSection';
 import BMWX3ProjectDetail from './components/generated/BMWX3ProjectDetail';
 import { useProjectNavigation } from './hooks/useNavigation';
 import { StickyNavigation } from './components/ui/StickyNavigation';
+import { MobileNavigation } from './components/ui/MobileNavigation';
 
 let theme: Theme = 'dark';
 // only use 'centered' container for standalone components, never for full page apps or websites.
@@ -60,14 +61,15 @@ function App() {
         {generatedComponent}
       </div>
     );
-  } else {
-    return (
-      <>
-        <StickyNavigation />
-        {generatedComponent}
-      </>
-    );
-  }
+          } else {
+            return (
+              <>
+                <StickyNavigation />
+                <MobileNavigation />
+                {generatedComponent}
+              </>
+            );
+          }
 }
 
 export default App;
