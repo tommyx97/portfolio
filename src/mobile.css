@@ -22,15 +22,25 @@
   --mobile-spacing-2xl: clamp(3rem, 12vw, 6rem);
 }
 
-/* Hide mobile menu button on desktop */
+/* Hide mobile menu button on desktop - AGGRESSIVE RULES */
 @media (min-width: 768px) {
   .mobile-menu-button,
   button.mobile-menu-button,
-  [class*="mobile-menu-button"] {
+  [class*="mobile-menu-button"],
+  button[class*="mobile-menu"],
+  .lg\\:hidden {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
   }
 }
 
@@ -435,12 +445,22 @@
   }
   
   /* Mobile hero text positioning */
-  .hero-section .hero-portfolio-title,
-  .hero-section p {
+  .hero-section .hero-portfolio-title {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     hyphens: auto !important;
     max-width: 100% !important;
+  }
+  
+  /* Hero subtitle - keep on single line */
+  .hero-section p {
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
   
   /* Override any global h1 styles in hero section */
