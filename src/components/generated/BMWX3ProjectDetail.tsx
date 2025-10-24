@@ -102,8 +102,20 @@ export default function BMWX3ProjectDetail({
   const { scrollToProjectSection } = useProjectNavigation();
   
   const handleContactClick = () => {
-    // Navigate to homepage with contact section anchor
-    window.location.href = '/#contattami';
+    // Navigate back to homepage first, then scroll to contact section
+    if (onBack) {
+      onBack();
+      // After returning to homepage, scroll to contact section
+      setTimeout(() => {
+        const contactSection = document.querySelector('#contattami');
+        if (contactSection) {
+          contactSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }, 200);
+    }
   };
 
   const handleBackClick = () => {
