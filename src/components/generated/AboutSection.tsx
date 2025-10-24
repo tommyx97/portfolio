@@ -110,7 +110,7 @@ export const AboutSection = ({
               letterSpacing: '0.01em',
               fontSize: "clamp(0.875rem, 3vw, 1.25rem)"
             }}>
-                Unisco creatività e intelligenza artificiale per creare campagne visive con identità forte e riconoscibile.
+                Sono Tommaso Piccioli, AI Creative Director & Content Designer.
               </p>
               
               <p className="leading-relaxed text-white/80 font-light" style={{
@@ -119,7 +119,16 @@ export const AboutSection = ({
               letterSpacing: '0.01em',
               fontSize: "clamp(0.875rem, 3vw, 1.25rem)"
             }}>
-                Credo nel potere delle immagini come linguaggio universale capace di connettere emozione e metodo.
+                Realizzo campagne e contenuti per brand che vogliono un'immagine pulita, distintiva e professionale.
+              </p>
+              
+              <p className="leading-relaxed text-white/80 font-light" style={{
+              fontFamily: 'Urbanist, sans-serif',
+              lineHeight: '1.8',
+              letterSpacing: '0.01em',
+              fontSize: "clamp(0.875rem, 3vw, 1.25rem)"
+            }}>
+                Ogni progetto nasce da un processo preciso, dove estetica e strategia si incontrano.
               </p>
             </motion.div>
 
