@@ -64,9 +64,15 @@ function App() {
           } else {
             return (
               <>
+                {/* Skip link for accessibility */}
+                <a href="#main-content" className="skip-link">
+                  Skip to main content
+                </a>
                 <StickyNavigation />
                 <MobileNavigation />
-                {generatedComponent}
+                <main id="main-content">
+                  {generatedComponent}
+                </main>
               </>
             );
           }

@@ -41,8 +41,14 @@ export const MobileNavigation = () => {
       {/* Mobile menu button */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed top-4 right-4 z-50 p-3 bg-black/80 backdrop-blur-md rounded-lg border border-white/10"
+        className="lg:hidden fixed top-4 right-4 z-50 p-3 bg-black/80 backdrop-blur-md rounded-lg border border-white/10 min-h-[44px] min-w-[44px] flex items-center justify-center"
         aria-label="Toggle menu"
+        style={{
+          WebkitTapHighlightColor: 'rgba(174, 199, 233, 0.3)',
+          WebkitTouchCallout: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none'
+        }}
       >
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
@@ -89,12 +95,18 @@ export const MobileNavigation = () => {
                     >
                       <button
                         onClick={() => handleLinkClick(link.href)}
-                        className={`block w-full text-left text-2xl font-light tracking-[0.2em] uppercase transition-all duration-300 ${
+                        className={`block w-full text-left text-2xl font-light tracking-[0.2em] uppercase transition-all duration-300 min-h-[44px] py-3 ${
                           activeSection === link.href
                             ? 'text-[#aec7e9]'
                             : 'text-white/90 hover:text-white'
                         }`}
-                        style={{ fontFamily: "Inter" }}
+                        style={{ 
+                          fontFamily: "Inter",
+                          WebkitTapHighlightColor: 'rgba(174, 199, 233, 0.3)',
+                          WebkitTouchCallout: 'none',
+                          WebkitUserSelect: 'none',
+                          userSelect: 'none'
+                        }}
                       >
                         {link.label}
                       </button>
@@ -112,8 +124,14 @@ export const MobileNavigation = () => {
                   <div className="flex items-center gap-6">
                     <a
                       href="mailto:tpiccioli97@gmail.com"
-                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300"
+                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center"
                       aria-label="Email"
+                      style={{
+                        WebkitTapHighlightColor: 'rgba(174, 199, 233, 0.3)',
+                        WebkitTouchCallout: 'none',
+                        WebkitUserSelect: 'none',
+                        userSelect: 'none'
+                      }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -124,8 +142,14 @@ export const MobileNavigation = () => {
                       href="https://instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300"
+                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center"
                       aria-label="Instagram"
+                      style={{
+                        WebkitTapHighlightColor: 'rgba(174, 199, 233, 0.3)',
+                        WebkitTouchCallout: 'none',
+                        WebkitUserSelect: 'none',
+                        userSelect: 'none'
+                      }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -137,8 +161,14 @@ export const MobileNavigation = () => {
                       href="https://www.linkedin.com/feed/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300"
+                      className="text-white/80 hover:text-[#aec7e9] transition-colors duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center"
                       aria-label="LinkedIn"
+                      style={{
+                        WebkitTapHighlightColor: 'rgba(174, 199, 233, 0.3)',
+                        WebkitTouchCallout: 'none',
+                        WebkitUserSelect: 'none',
+                        userSelect: 'none'
+                      }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
