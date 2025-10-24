@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { Container, Theme } from './settings/types';
 import { TommasoPortfolio } from './components/generated/TommasoPortfolio';
+import { AboutSection } from './components/generated/AboutSection';
 
 let theme: Theme = 'dark';
 // only use 'centered' container for standalone components, never for full page apps or websites.
@@ -19,7 +20,12 @@ function App() {
 
   const generatedComponent = useMemo(() => {
     // THIS IS WHERE THE TOP LEVEL GENRATED COMPONENT WILL BE RETURNED!
-    return <TommasoPortfolio />; // %EXPORT_STATEMENT%
+    return (
+      <div className="w-full">
+        <TommasoPortfolio />
+        <AboutSection />
+      </div>
+    ); // %EXPORT_STATEMENT%
   }, []);
 
   if (container === 'centered') {
