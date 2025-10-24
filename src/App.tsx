@@ -25,8 +25,8 @@ function App() {
     return (
       <div className="w-full">
         <TommasoPortfolio />
-        <FeaturedProjectsGrid />
         <AboutSection />
+        <FeaturedProjectsGrid />
         <ContactSection />
       </div>
     ); // %EXPORT_STATEMENT%

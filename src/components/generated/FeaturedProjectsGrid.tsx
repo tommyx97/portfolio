@@ -11,7 +11,7 @@ const projectsData = [{
   year: '2025',
   image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-slate-500/20 to-blue-900/30',
-  mpid: "db8144b9-3d08-476b-80e5-9810c9e748a1"
+  mpid: "ab32408e-ae51-4f7e-8c2e-f2d3cd18a037"
 }, {
   id: 'project-innovation',
   title: 'Vision Air',
@@ -19,7 +19,7 @@ const projectsData = [{
   year: '2024',
   image: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-amber-500/30 to-yellow-600/40',
-  mpid: "2f3d12c8-dc04-4d5f-92b2-5ed55c6594b1"
+  mpid: "b6de6804-ee93-4e18-934b-309da57d033c"
 }, {
   id: 'project-product',
   title: 'iPhone Model T',
@@ -27,7 +27,7 @@ const projectsData = [{
   year: '2025',
   image: 'https://images.unsplash.com/photo-1592286927505-b0e2950e3900?w=1200&h=1600&fit=crop&q=90',
   bgColor: 'from-zinc-900/50 to-black/70',
-  mpid: "15c68787-99ad-40e1-94c7-d14c8295e814"
+  mpid: "1a3cba5f-0741-40b4-93d8-08e201258c66"
 }] as const;
 export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
@@ -36,17 +36,17 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
     once: true,
     margin: "-100px"
   });
-  return <SortableContainer dndKitId="2c9e57f3-f0fa-41e5-b604-9247b384b2c1" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="FeaturedProjectsGrid.tsx">
+  return <SortableContainer dndKitId="4627bd2d-66c9-42df-8094-6ba548ba6ae8" containerType="regular" prevTag="div" className="relative w-full min-h-screen bg-black text-white overflow-hidden" data-magicpath-id="0" data-magicpath-path="FeaturedProjectsGrid.tsx">
       {/* Ambient background glow */}
-      <SortableContainer dndKitId="98cd2b5d-b872-481b-8345-04431235f0aa" containerType="regular" prevTag="div" className="absolute inset-0 z-0 pointer-events-none" data-magicpath-id="1" data-magicpath-path="FeaturedProjectsGrid.tsx">
+      <SortableContainer dndKitId="769aa585-5265-4bed-8cc7-ac7f5c875589" containerType="regular" prevTag="div" className="absolute inset-0 z-0 pointer-events-none" data-magicpath-id="1" data-magicpath-path="FeaturedProjectsGrid.tsx">
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-transparent to-transparent blur-[120px]" data-magicpath-id="2" data-magicpath-path="FeaturedProjectsGrid.tsx" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-amber-500/8 via-transparent to-transparent blur-[100px]" data-magicpath-id="3" data-magicpath-path="FeaturedProjectsGrid.tsx" />
       </SortableContainer>
 
       {/* Main container */}
-      <SortableContainer dndKitId="4fdfa102-c49f-4514-966b-abf651f7ec56" containerType="regular" prevTag="div" ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32" data-magicpath-id="4" data-magicpath-path="FeaturedProjectsGrid.tsx">
+      <SortableContainer dndKitId="dadc9ba6-4fa3-49fc-b1a4-89ab15da6c0f" containerType="regular" prevTag="div" ref={containerRef} className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-32" data-magicpath-id="4" data-magicpath-path="FeaturedProjectsGrid.tsx">
         {/* Header section */}
-        <SortableContainer dndKitId="c6a6ec8c-0a5e-4d64-b2b9-686bf85941ca" containerType="regular" prevTag="motion.div" initial={{
+        <SortableContainer dndKitId="52aaee68-6be0-4873-b7e9-492e9b6b3d0f" containerType="regular" prevTag="motion.div" initial={{
         opacity: 0,
         y: 30
       }} animate={isInView ? {
@@ -59,7 +59,7 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
         duration: 0.8,
         ease: [0.25, 0.1, 0.25, 1]
       }} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24" data-magicpath-id="5" data-magicpath-path="FeaturedProjectsGrid.tsx">
-          <SortableContainer dndKitId="06357dcc-b079-4c28-9993-9952abf69839" containerType="regular" prevTag="div" className="space-y-4 sm:space-y-5 md:space-y-6" data-magicpath-id="6" data-magicpath-path="FeaturedProjectsGrid.tsx">
+          <SortableContainer dndKitId="5981724f-28bf-4b7b-ac13-9da03ae115e7" containerType="regular" prevTag="div" className="space-y-4 sm:space-y-5 md:space-y-6" data-magicpath-id="6" data-magicpath-path="FeaturedProjectsGrid.tsx">
             <p className="text-xs sm:text-sm font-light text-white/50 tracking-[0.3em] uppercase" data-magicpath-id="7" data-magicpath-path="FeaturedProjectsGrid.tsx">
               <span data-magicpath-id="8" data-magicpath-path="FeaturedProjectsGrid.tsx">Progetti Selezionati</span>
             </p>
@@ -71,7 +71,7 @@ export const FeaturedProjectsGrid = (_props: FeaturedProjectsGridProps) => {
         </SortableContainer>
 
         {/* Three cards grid */}
-        <SortableContainer dndKitId="df47dc1d-c3ba-4986-95d5-d58b3fcaae60" containerType="collection" prevTag="div" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8" data-magicpath-id="12" data-magicpath-path="FeaturedProjectsGrid.tsx">
+        <SortableContainer dndKitId="9ae66eb9-1f11-422b-a40f-e053cc7579cc" containerType="collection" prevTag="div" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8" data-magicpath-id="12" data-magicpath-path="FeaturedProjectsGrid.tsx">
           {projectsData.map((project, index) => {
           const isHovered = hoveredIndex === index;
           return <motion.div data-magicpath-motion-tag="motion.div" key={project.id} initial={{
