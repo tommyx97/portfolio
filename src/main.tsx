@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 
-// Force dark mode for the portfolio
-document.documentElement.classList.add('dark');
+// Set light theme as default for crisp current style
+document.documentElement.setAttribute('data-theme', 'light');
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -1,151 +1,172 @@
-# 🎨 Tommaso Piccioli - Portfolio
+# 🎬 Tommaso Piccioli - AI Content Creator & Director Portfolio
 
-Portfolio professionale di Tommaso Piccioli, AI Creator & Creative Director specializzato in comunicazione visiva per il mondo automotive.
+Un portfolio moderno e minimalista che unisce creatività AI e design visivo per presentare il lavoro di Tommaso Piccioli come AI Content Creator & Director.
 
-## 🚀 Caratteristiche
+## ✨ Caratteristiche
 
-### 📱 **Mobile-First Design**
-- **Navigazione mobile ottimizzata** con menu burger funzionale
-- **Hero section responsive** con posizionamento perfetto
-- **Safe area support** per dispositivi con notch
-- **Touch interactions** ottimizzate per mobile
-- **Performance GPU** per animazioni fluide
+### 🎨 Design "Crisp Current"
+- **Stile Ultra-Minimalista**: Design pulito con molto spazio bianco
+- **Tipografia Moderna**: Inter per testi, JetBrains Mono per codice
+- **Layout Asimmetrico**: Design dinamico e fluido
+- **Colori Neutri**: Palette neutra con accenti sottili
+- **Animazioni Fluide**: Micro-interazioni eleganti
+- **Stile Brutalist Elegante**: Design essenziale ma sofisticato
 
-### 🎨 **Design System**
-- **Palette colori coerente** con `#aec7e9` come colore principale
-- **Typography responsive** con sistema `clamp()` per scalabilità
-- **Spacing system** ottimizzato per tutti i dispositivi
-- **Animazioni fluide** con Framer Motion
-- **Layout moderno** con glassmorphism effects
+### 📱 Responsive Design
+- **Mobile-first**: Breakpoints ottimizzati
+- **Layout fluidi**: CTA responsive, immagini lazy-load
+- **Accessibilità**: WCAG 2.2 AA compliant
 
-### 🛠️ **Tecnologie**
-- **React 18** con TypeScript
-- **Vite** per build veloce e HMR
-- **Tailwind CSS** per styling
-- **Framer Motion** per animazioni
-- **Lucide React** per icone
-- **Netlify** per deployment
+### 🚀 Performance
+- **Ottimizzato**: CLS <0.1, LCP <2.5s
+- **Immagini responsive**: srcset, AVIF/WebP
+- **Font preload**: Swap per performance ottimali
+- **Lazy-load**: Video e immagini per caricamento veloce
 
-## 📁 Struttura Progetto
+## 🏗️ Struttura
+
+### Homepage
+1. **Hero Section** - Titolo principale con CTA
+2. **Value Proposition** - Visione, Metodo, Impatto
+3. **Featured Projects** - BMW X3, Vortex Energy, Ripar Caviar
+4. **Capabilities** - 6 competenze chiave
+5. **Toolkit** - 10 strumenti AI utilizzati
+6. **About Mini** - Presentazione personale
+7. **Proof Metrics** - Risultati concreti
+8. **Contact CTA** - Call-to-action finale
+9. **Footer** - Manifesto e link social
+
+### Project Pages
+- **BMW X3 "Vision Motion"** - Automotive AI-generated content
+- **Vortex Energy** - Energy drink con effetti neon
+- **Ripar Caviar** - Luxury brand con macro texture
+
+## 🛠️ Tecnologie
+
+- **React 19** - Framework principale
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling moderno
+- **Vite** - Build tool veloce
+- **CSS-in-JS** - Styling componenti
+
+## 📦 Dipendenze
+
+### Core
+- `react` - Framework UI
+- `react-dom` - Rendering DOM
+
+### Development
+- `typescript` - Type safety
+- `vite` - Build tool
+- `tailwindcss` - CSS framework
+- `eslint` - Code linting
+
+## 🚀 Installazione
+
+```bash
+# Clona il repository
+git clone [repository-url]
+
+# Installa le dipendenze
+npm install
+
+# Avvia il server di sviluppo
+npm run dev
+
+# Build per produzione
+npm run build
+
+# Preview del build
+npm run preview
+```
+
+## 📁 Struttura File
 
 ```
 src/
-├── components/
-│   ├── generated/          # Componenti principali
-│   │   ├── TommasoPortfolio.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── FeaturedProjectsGrid.tsx
-│   │   ├── ContactSection.tsx
-│   │   └── BMWX3ProjectDetail.tsx
-│   └── ui/                 # Componenti UI
-│       ├── MobileNavigation.tsx
-│       └── StickyNavigation.tsx
-├── hooks/                  # Custom hooks
-├── lib/                    # Utilities
-├── settings/               # Configurazioni
-├── mobile.css              # Stili mobile-specifici
-└── index.css               # Stili principali
+├── components/          # Componenti React
+│   ├── Navigation.tsx   # Navigazione principale
+│   ├── HeroSection.tsx # Sezione hero
+│   ├── ValueProposition.tsx
+│   ├── FeaturedProjects.tsx
+│   ├── Capabilities.tsx
+│   ├── Toolkit.tsx
+│   ├── AboutMini.tsx
+│   ├── ProofMetrics.tsx
+│   ├── ContactCTA.tsx
+│   └── Footer.tsx
+├── pages/               # Pagine progetto
+│   ├── BMWX3Project.tsx
+│   ├── VortexEnergyProject.tsx
+│   └── RiparCaviarProject.tsx
+├── assets/              # Asset statici
+│   ├── images/
+│   └── videos/
+├── utils/               # Utility functions
+├── App.tsx              # Componente principale
+├── main.tsx             # Entry point
+└── index.css            # Stili globali
 ```
 
-## 🎯 Progetti
+## 🎯 Funzionalità
 
-### 🚗 **BMW X3 Project**
-- **Campagna automotive** con AI-generated content
-- **Visual direction** moderna e minimale
-- **Gallery responsive** con immagini ottimizzate
-- **Social grid** in stile Instagram feed
-- **Layout ottimizzato** senza spazi vuoti
+### Navigazione
+- **Sticky Navigation**: Sempre visibile con blur effect
+- **Mobile Menu**: Hamburger menu per dispositivi mobili
+- **Theme Toggle**: Switch Dark/Light mode
+- **Smooth Scroll**: Navigazione fluida tra sezioni
 
-### 📱 **Mobile Optimization**
-- **Hero section** con testo perfettamente posizionato
-- **Menu burger** completamente funzionale
-- **Navigazione touch-friendly** con feedback visivo
-- **Performance ottimizzate** per dispositivi mobile
-- **Safe area support** per iPhone e Android
+### Interazioni
+- **Hover Effects**: Animazioni eleganti
+- **Fade-in**: Animazioni di entrata fluide
+- **Motion Reduction**: Supporto per utenti con preferenze di movimento ridotto
 
-## 🚀 Deployment
+### Accessibilità
+- **Skip Links**: Navigazione rapida per screen reader
+- **Focus Visible**: Indicatori di focus chiari
+- **Alt Text**: Descrizioni complete per immagini
+- **ARIA Labels**: Etichette per elementi interattivi
 
-Il sito è configurato per **Netlify** con:
-- **Build automatico** su push a main
-- **Redirect SPA** per routing client-side
-- **Headers di sicurezza** ottimizzati
-- **Cache ottimizzato** per assets statici
+## 🎨 Palette Colori
 
-### 📋 Comandi
-
-```bash
-# Sviluppo
-npm run dev
-
-# Build produzione
-npm run build
-
-# Preview build
-npm run preview
-
-# Linting
-npm run lint
-```
-
-## 🎨 Aggiungere Nuovi Progetti
-
-### 📁 Struttura Raccomandata
-```
-projects/
-└── [nome-progetto]/
-    ├── assets/
-    │   ├── cover.jpg      # 1920x1080px - Hero
-    │   ├── thumb.jpg      # 400x300px - Thumbnail
-    │   └── img-01.jpg     # 1200x800px - Gallery
-    └── index.html         # Pagina progetto
-```
-
-### 📐 Specifiche Immagini
-- **Formato**: JPG o WebP
-- **Dimensione**: <500KB per ottimizzazione
-- **Naming**: lowercase con hyphens
-- **Numerazione**: img-01.jpg, img-02.jpg, etc.
-
-## 🔧 Configurazione
-
-### 📱 Mobile CSS
-- **Breakpoints**: 767px (mobile), 479px (extra small)
-- **Typography**: Sistema responsive con `clamp()`
-- **Spacing**: Variabili CSS per coerenza
-- **Performance**: GPU acceleration e ottimizzazioni
-
-### 🎨 Design Tokens
 ```css
-/* Colori principali */
---primary-color: #aec7e9;
---background: #000000;
---text-primary: #ffffff;
-
-/* Typography */
---font-family: 'Inter', sans-serif;
---font-weight-light: 300;
---font-weight-normal: 400;
+:root {
+  --color-white: #FFFFFF;      /* Sfondo principale */
+  --color-black: #000000;      /* Testo principale */
+  --color-gray-50: #FAFAFA;    /* Sfondo sezioni */
+  --color-gray-100: #F5F5F5;   /* Sfondo elementi */
+  --color-gray-200: #E5E5E5;   /* Bordi */
+  --color-gray-300: #D4D4D4;   /* Bordi hover */
+  --color-gray-400: #A3A3A3;   /* Testo secondario */
+  --color-gray-500: #737373;   /* Testo micro */
+  --color-gray-600: #525252;   /* Testo corpo */
+  --color-gray-700: #404040;   /* Testo scuro */
+  --color-gray-800: #262626;   /* Testo molto scuro */
+  --color-gray-900: #171717;   /* Testo più scuro */
+}
 ```
 
-## 📈 Performance
+## 📱 Breakpoints
 
-- **Lighthouse Score**: 95+ su mobile e desktop
-- **Core Web Vitals**: Ottimizzati per performance
-- **Bundle Size**: <500KB gzipped
-- **Loading Time**: <2s su connessioni 3G
+```css
+/* Mobile First */
+@media (max-width: 767px) { /* Mobile */ }
+@media (min-width: 768px) { /* Tablet */ }
+@media (min-width: 1024px) { /* Desktop */ }
+@media (min-width: 1280px) { /* Large Desktop */ }
+```
 
-## 🤝 Contributi
+## 🔧 Scripts Disponibili
 
-Per contribuire al progetto:
-1. Fork del repository
-2. Crea feature branch
-3. Commit delle modifiche
-4. Push e crea Pull Request
+- `npm run dev` - Server di sviluppo
+- `npm run build` - Build produzione
+- `npm run preview` - Preview build
+- `npm run lint` - Linting codice
 
 ## 📄 Licenza
 
-© 2024 Tommaso Piccioli. Tutti i diritti riservati.
+© 2025 Tommaso Piccioli. Tutti i diritti riservati.
 
 ---
 
-**🚀 Portfolio ottimizzato per performance, accessibilità e user experience su tutti i dispositivi.**
+**"Less chaos, more vision."** - Tommaso Piccioli

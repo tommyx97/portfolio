@@ -1,81 +1,100 @@
-import { useMemo, useState, useEffect } from 'react';
-import { Container, Theme } from './settings/types';
-import { TommasoPortfolio } from './components/generated/TommasoPortfolio';
-import { FeaturedProjectsGrid } from './components/generated/FeaturedProjectsGrid';
-import { AboutSection } from './components/generated/AboutSection';
-import { ContactSection } from './components/generated/ContactSection';
-import BMWX3ProjectDetail from './components/generated/BMWX3ProjectDetail';
-import { useProjectNavigation } from './hooks/useNavigation';
-import { StickyNavigation } from './components/ui/StickyNavigation';
-import { MobileNavigation } from './components/ui/MobileNavigation';
+import React, { useState, useEffect } from 'react';
+import './index.css';
 
-let theme: Theme = 'dark';
-// only use 'centered' container for standalone components, never for full page apps or websites.
-let container: Container = 'none';
+// Import components
+import Navigation from './components/Navigation';
+import HeroSection from './components/HeroSection';
+import ValueProposition from './components/ValueProposition';
+import FeaturedProjects from './components/FeaturedProjects';
+import Capabilities from './components/Capabilities';
+import Toolkit from './components/Toolkit';
+import AboutMini from './components/AboutMini';
+import ProofMetrics from './components/ProofMetrics';
+import ContactCTA from './components/ContactCTA';
+import Footer from './components/Footer';
+
+// Import project pages
+import BMWX3Project from './pages/BMWX3Project';
+import VortexEnergyProject from './pages/VortexEnergyProject';
+import RiparCaviarProject from './pages/RiparCaviarProject';
+
+type ProjectPage = 'bmw-x3' | 'vortex-energy' | 'ripar-caviar' | null;
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const { scrollToProjectSection } = useProjectNavigation();
+  const [currentProject, setCurrentProject] = useState<ProjectPage>(null);
+  const [theme, setTheme] = useState<'dark' | 'light'>('light');
 
-  // Scroll to top whenever a project is selected or deselected
+  // Set theme on document
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [selectedProject]);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
-  function setTheme(theme: Theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+  // Handle project navigation
+  const handleProjectClick = (projectId: ProjectPage) => {
+    setCurrentProject(projectId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToHome = () => {
+    setCurrentProject(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Render project page if selected
+  if (currentProject === 'bmw-x3') {
+    return <BMWX3Project onBack={handleBackToHome} />;
   }
 
-  setTheme(theme);
+  if (currentProject === 'vortex-energy') {
+    return <VortexEnergyProject onBack={handleBackToHome} />;
+  }
 
-  const generatedComponent = useMemo(() => {
-    // Show project detail page if a project is selected
-    if (selectedProject === 'bmw-x3') {
-      return (
-        <BMWX3ProjectDetail 
-          onBack={() => setSelectedProject(null)}
-        />
-      );
-    }
+  if (currentProject === 'ripar-caviar') {
+    return <RiparCaviarProject onBack={handleBackToHome} />;
+  }
 
-    // THIS IS WHERE THE TOP LEVEL GENRATED COMPONENT WILL BE RETURNED!
-    return (
-      <div className="w-full">
-        <section id="home" className="hero-section">
-          <TommasoPortfolio />
-        </section>
-        <AboutSection />
-        <FeaturedProjectsGrid onProjectClick={(projectId) => setSelectedProject(projectId)} />
-        <ContactSection />
-      </div>
-    ); // %EXPORT_STATEMENT%
-  }, [selectedProject]);
+  // Render homepage
+  return (
+    <div className="App">
+      {/* Skip Link for Accessibility */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
 
-  if (container === 'centered') {
-    return (
-      <div className="h-full w-full flex flex-col items-center justify-center">
-        {generatedComponent}
-      </div>
-    );
-          } else {
-            return (
-              <>
-                {/* Skip link for accessibility */}
-                <a href="#main-content" className="skip-link">
-                  Skip to main content
-                </a>
-                <StickyNavigation />
-                <MobileNavigation />
-                <main id="main-content">
-                  {generatedComponent}
-                </main>
-              </>
-            );
-          }
+      {/* Navigation */}
+      <Navigation theme={theme} onThemeChange={setTheme} />
+
+      {/* Main Content */}
+      <main id="main-content">
+        {/* Hero Section */}
+        <HeroSection />
+
+        {/* Value Proposition */}
+        <ValueProposition />
+
+        {/* Featured Projects */}
+        <FeaturedProjects onProjectClick={handleProjectClick} />
+
+        {/* Capabilities */}
+        <Capabilities />
+
+        {/* Toolkit */}
+        <Toolkit />
+
+        {/* About Mini */}
+        <AboutMini />
+
+        {/* Proof Metrics */}
+        <ProofMetrics />
+
+        {/* Contact CTA */}
+        <ContactCTA />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
